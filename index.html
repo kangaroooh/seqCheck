@@ -5,9 +5,8 @@
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
-    <meta charset="utf-8">
+        <meta charset="utf-8">
         <div class="mdl-layout__header-row">
-            <!-- Title -->
             <span class="mdl-layout-title">Key Sequence checker</span>
         </div>
     </header>
@@ -25,43 +24,44 @@
                                onkeyup="ksHandler()">
                         <label class="mdl-textfield__label" for="sample1">พิมพ์ตรงนี้</label>
                     </div>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+
+                    <button class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect" onclick="klear();">
                         RESET
                     </button>
-                    
+
                     <div>
-                        <h6 class = "center">All Text</h6>
-                        <p id ="dbug1"></p>
+                        <h6 class="center">All Text</h6>
+                        <p id="dbug1"></p>
                     </div>
 
                     <div>
                         <h6>Last Key</h6>
-                        <p id ="dbug2"></p>
+                        <p id="dbug2"></p>
                     </div>
 
-                     <div>
+                    <div>
                         <h6>Returned</h6>
-                        <p id ="dbug3"></p>
+                        <p id="dbug3"></p>
                     </div>
-
 
                 </div>
+                
                 <div = "mdl-cell mdl-cell--4-col"></div>
 
-            </div>
-
         </div>
-    </main>
-    <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer--center-section">
-            <ul class="mdl-mini-footer--link-list">
-                <li><a href="http://www.nectec.or.th/it-standards/keyboard_layout/thai-key.htm">nectec</a></li>
-                <li><a href="http://linux.thai.net/~thep/th-xim/">WTT2.0</a></li>
-                <li><a href="http://jrgraphix.net/r/Unicode/0E00-0E7F">Thai Unicode</a></li>
 
-            </ul>
-        </div>
-    </footer>
+</div>
+</main>
+<footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer--center-section">
+        <ul class="mdl-mini-footer--link-list">
+            <li><a href="http://www.nectec.or.th/it-standards/keyboard_layout/thai-key.htm">nectec</a></li>
+            <li><a href="http://linux.thai.net/~thep/th-xim/">WTT2.0</a></li>
+            <li><a href="http://jrgraphix.net/r/Unicode/0E00-0E7F">Thai Unicode</a></li>
+
+        </ul>
+    </div>
+</footer>
 </div>
 
 

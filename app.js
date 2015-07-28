@@ -33,9 +33,18 @@ function keySequenceCheck(all, lastKey) {
     
     // the special case to check only the first to NOT having TONE and FOLLOWING Vowel infront
     checkFirst = all.concat(lastKey).charCodeAt(0);
+    checkFirstClass = getClass(checkFirst);
 
     if ((checkFirst >= 3632 && checkFirst <= 3646) || (checkFirst >= 3653 && checkFirst <= 3662)){
         return '';
+
+    // if the first is leading vowel, then need to reject everything except CONS
+    }else if (checkFirstClass == 3){
+        checkSecondClass = getClass(all.concat(lastKey).charCodeAt(1));
+        
+        if (checkSecondClass == 2 ){
+            return all.concat(lastKey)[1];
+        }
     }
 
     /*
@@ -71,8 +80,13 @@ function keySequenceCheck(all, lastKey) {
         
     // 2nd case if LV1, FV1, BD, TONE, AD2 has TONE, reject
     } else if ([3, 4, 5, 13].indexOf(yClass) != -1 && [10,12,13,14,15,16].indexOf(zClass) != -1) {
-        y = [z, z = y][0];
-        z = '';
+        if ([10,12,13,14,15,16].indexOf(xClass) != -1){
+            x = [z, z = x][0];
+            z = '';    
+        }else{
+            y = [z, z = y][0];
+            z = '';
+        }
 
     // 3rd case TONE + AV1-3 SWAP
     } else if (yClass == 10 && [14, 15, 16].indexOf(zClass) != -1) {
@@ -118,6 +132,13 @@ function keySequenceCheck(all, lastKey) {
     }
 
     return base.concat(x).concat(y).concat(z);
+}
+
+function klear(){
+     document.getElementById("input").value = "";
+     document.getElementById("dbug1").innerHTML = "";
+     document.getElementById("dbug2").innerHTML = "";
+     document.getElementById("dbug3").innerHTML = "";
 }
 
 function getClass(ch) {
