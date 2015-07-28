@@ -68,7 +68,7 @@ function keySequenceCheck(all, lastKey) {
 
 
     // 1st case if FV1 is in front of TONE
-   if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+  if (yClass == 4 && (zClass == 10 || zClass == 12)) {
 
         // to handle AV with maitaiku
 //         if ([10,12].indexOf(xClass) != -1 && [10,12].indexOf(zClass) != -1 ){
@@ -80,12 +80,20 @@ function keySequenceCheck(all, lastKey) {
         
     // 2nd case if LV1, FV1, BD, TONE, AD2 has TONE, reject
     } else if ([3, 4, 5, 13].indexOf(yClass) != -1 && [10,12,13,14,15,16].indexOf(zClass) != -1) {
+           // 16th case 2 times swapping
+           if (xClass == 10){
+               y = [z, z = y][0];
+               x = [y, y = x][0];
+                z = ''; 
+           }else{
+                y = [z, z = y][0];
+                z = '';               
+           }
 //         if ([10,12,13,14,15,16].indexOf(xClass) != -1){
 //             x = [z, z = x][0];
 //             z = '';    
 //         }else{
-            y = [z, z = y][0];
-            z = '';
+
 //         }
 
     // 3rd case TONE + AV1-3 SWAP
@@ -117,9 +125,10 @@ function keySequenceCheck(all, lastKey) {
                 z = '';
                 
             // 10th case for replace of AV when it's with karant
-            }else if ([14,15,16].indexOf(xClass) != -1 && [14,15,16].indexOf(zClass) != -1){
+            }else if ([14,15,16].indexOf(xClass) != -1 && [14,15,16].indexOf(zClass) != -1) {
                 x = [z, z = x][0];
                 z = '';
+            }
            
     // 6th case for DUPLICATE of AV type, reject 
     }else if ([7,8,12,13,14,15,16].indexOf(yClass) != -1 && [7,8,12,13,14,15,16].indexOf(zClass) != -1){
@@ -315,3 +324,4 @@ function genCP() {
 
     return tabl;
 }
+
