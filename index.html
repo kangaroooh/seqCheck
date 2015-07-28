@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+    <meta charset="utf-8">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Key Sequence checker</span>
+        </div>
+    </header>
+
+    <main class="mdl-layout__content">
+        <div class="page-content">
+
+            <!-- Your content goes here -->
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col"></div>
+                <div class="mdl-cell mdl-cell--4-col content mdl-color-text--grey-800">
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="input"
+                               onkeyup="ksHandler()">
+                        <label class="mdl-textfield__label" for="sample1">พิมพ์ตรงนี้</label>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        RESET
+                    </button>
+                    
+                    <div>
+                        <h6 class = "center">All Text</h6>
+                        <p id ="dbug1"></p>
+                    </div>
+
+                    <div>
+                        <h6>Last Key</h6>
+                        <p id ="dbug2"></p>
+                    </div>
+
+                     <div>
+                        <h6>Returned</h6>
+                        <p id ="dbug3"></p>
+                    </div>
+
+
+                </div>
+                <div = "mdl-cell mdl-cell--4-col"></div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer--center-section">
+            <ul class="mdl-mini-footer--link-list">
+                <li><a href="http://www.nectec.or.th/it-standards/keyboard_layout/thai-key.htm">nectec</a></li>
+                <li><a href="http://linux.thai.net/~thep/th-xim/">WTT2.0</a></li>
+                <li><a href="http://jrgraphix.net/r/Unicode/0E00-0E7F">Thai Unicode</a></li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+<script src="app.js"></script>
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+</html>
