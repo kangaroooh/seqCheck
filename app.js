@@ -42,8 +42,8 @@ function keySequenceCheck(all, lastKey) {
     }else if (checkFirstClass == 3){
         checkSecondClass = getClass(all.concat(lastKey).charCodeAt(1));
         
-        if (checkSecondClass == 2 ){
-            return all.concat(lastKey)[1];
+        if (checkSecondClass != 2 ){
+            return lastKey;
         }
     }
 
@@ -68,39 +68,59 @@ function keySequenceCheck(all, lastKey) {
 
 
     // 1st case if FV1 is in front of TONE
-    if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+   if (yClass == 4 && (zClass == 10 || zClass == 12)) {
 
         // to handle AV with maitaiku
-        if ([10,12].indexOf(xClass) != -1 && [10,12].indexOf(zClass) != -1 ){
-            x = [z, z = x][0];
-            z = '';
-        }else{
+//         if ([10,12].indexOf(xClass) != -1 && [10,12].indexOf(zClass) != -1 ){
+//             x = [z, z = x][0];
+//             z = '';
+//         }else{
             y = [z, z = y][0];    
-        }
+//         }
         
     // 2nd case if LV1, FV1, BD, TONE, AD2 has TONE, reject
     } else if ([3, 4, 5, 13].indexOf(yClass) != -1 && [10,12,13,14,15,16].indexOf(zClass) != -1) {
-        if ([10,12,13,14,15,16].indexOf(xClass) != -1){
-            x = [z, z = x][0];
-            z = '';    
-        }else{
+//         if ([10,12,13,14,15,16].indexOf(xClass) != -1){
+//             x = [z, z = x][0];
+//             z = '';    
+//         }else{
             y = [z, z = y][0];
             z = '';
-        }
+//         }
 
     // 3rd case TONE + AV1-3 SWAP
     } else if (yClass == 10 && [14, 15, 16].indexOf(zClass) != -1) {
-        y = [z, z = y][0];
-
+//         if ([14,15,16].indexOf(xClass) != -1 && yClass == 10){
+//             x = [z, z = x][0];
+//             z = '';    
+//         }else{
+            y = [z, z = y][0];    
+//         }
+        
     // 4th case DUPLICATE of ALL except ctrl,non,cons , reject
     }else if ([0, 1, 2].indexOf(yClass) == -1 && yClass == zClass) {
         y = [z, z = y][0];
         z = '';
 
-    // 5th case karant and sara-i
-    }else if (yClass == 11 && zClass == 14){
-        y = [z, z = y][0];
+    // 5th case karant and sara-i = swap, 
+    }else if (yClass == 11){
+            if (zClass == 14){
+                y = [z, z = y][0];
+            // other ad,av reject
+            }else if ([10,12,13].indexOf(zClass) != -1){
+                y = [z, z = y][0];
+                z = '';
 
+            // 9th case for replace of BV when it's with karant
+            }else if ([7,8].indexOf(xClass) != -1 && [7,8].indexOf(zClass) != -1){
+                x = [z, z = x][0];
+                z = '';
+                
+            // 10th case for replace of AV when it's with karant
+            }else if ([14,15,16].indexOf(xClass) != -1 && [14,15,16].indexOf(zClass) != -1){
+                x = [z, z = x][0];
+                z = '';
+           
     // 6th case for DUPLICATE of AV type, reject 
     }else if ([7,8,12,13,14,15,16].indexOf(yClass) != -1 && [7,8,12,13,14,15,16].indexOf(zClass) != -1){
         y = [z, z = y][0];
@@ -115,10 +135,10 @@ function keySequenceCheck(all, lastKey) {
         y = [z, z = y][0];
         z = '';
 
-    // 9th case for replace of BV when it's with karant
-    }else if ([7,8].indexOf(xClass) != -1 && [10,11].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
-        x = [z, z = x][0];
-        z = '';
+//     // 9th case for replace of BV when it's with karant
+//     }else if ([7,8].indexOf(xClass) != -1 && [10,11].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
+//         x = [z, z = x][0];
+//         z = '';
 
     // 10th case for replace of AV when it's with karant
     }else if ([14,15,16].indexOf(xClass) != -1 && yClass == 11 && [14,15,16].indexOf(zClass) != -1){
@@ -129,6 +149,25 @@ function keySequenceCheck(all, lastKey) {
     }else if (xClass == 10 && y.charCodeAt(0) == 3635 && zClass == 10){
         x = [z, z = x][0];
         z = '';   
+
+    // 12th case to reject all vowel out of karant
+    }else if (y.charCodeAt(0) == 3660 && [10,12,15,16].indexOf(zClass) != -1){
+        y = [z, z = y][0];
+        z = '';
+
+    // 13th case to reject karant out of all vowel
+    }else if ([10,12,13,15,16].indexOf(yClass) != -1 && z.charCodeAt(0) == 3660){
+        y = [z, z = y][0];
+        z = '';        
+
+    // 14th case dealing with mai taikhu
+    }else if (yClass == 12 && zClass == 10 ){
+        y = [z, z = y][0];
+        z = '';        
+    // 15th case 
+    }else if (yClass == 10 && zClass == 12 ){
+        y = [z, z = y][0];
+        z = '';        
     }
 
     return base.concat(x).concat(y).concat(z);
