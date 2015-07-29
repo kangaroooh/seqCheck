@@ -68,26 +68,26 @@ function keySequenceCheck(all, lastKey) {
 
 
     // 1st case if FV1 is in front of TONE
-if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+    if (yClass == 4 && (zClass == 10 || zClass == 12)) {
 
         // to handle AV with maitaiku
-//         if ([10,12].indexOf(xClass) != -1 && [10,12].indexOf(zClass) != -1 ){
-//             x = [z, z = x][0];
-//             z = '';
-//         }else{
+        if (xClass == zClass){
+            z = '';
+            
+        }else{
             y = [z, z = y][0];    
-//         }
+        }
         
-    // 2nd case if LV1, FV1, BD, TONE, AD2 has TONE OR //17th BV, reject
-    } else if ([3, 4, 5, 13].indexOf(yClass) != -1 && [7,8,9,10,12,13,14,15,16].indexOf(zClass) != -1) {
+    // 2nd case if LV1, FV1, TONE, AD2 has TONE OR //17th BV, reject
+    } else if ([3, 4, 5].indexOf(yClass) != -1 && [7,8,9,11,10,12,13,14,15,16].indexOf(zClass) != -1) {
            // 16th case 2 times swapping
            if (xClass == 10){
                y = [z, z = y][0];
                x = [y, y = x][0];
-                z = ''; 
+               z = ''; 
            }else{
-                y = [z, z = y][0];
-                z = '';               
+//                 y = [z, z = y][0];
+               z = '';               
            }
 //         if ([10,12,13,14,15,16].indexOf(xClass) != -1){
 //             x = [z, z = x][0];
@@ -99,10 +99,14 @@ if (yClass == 4 && (zClass == 10 || zClass == 12)) {
     // 3rd case TONE + AV1-3 SWAP 
     // 18th x,z swapping if there is AV in front of TONE
     } else if (yClass == 10 && [14, 15, 16].indexOf(zClass) != -1) {
-        if ([13,14,15,16].indexOf(xClass)){
+        if ([13,14,15,16].indexOf(xClass) != -1){
             x = [z, z = x][0];
             z = '';    
-        }else{
+//         }else if (xClass == 2){
+//             y = [z, z = y][0];
+//             z = '';
+        }
+        else{
             y = [z, z = y][0];    
         }
         
@@ -137,14 +141,20 @@ if (yClass == 4 && (zClass == 10 || zClass == 12)) {
                 z = '';
             }
            
-    // 6th case for DUPLICATE of AV type, reject 
+    // 6th case for DUPLICATE of AV,BV type, reject 
     }else if ([7,8,12,13,14,15,16].indexOf(yClass) != -1 && [7,8,12,13,14,15,16].indexOf(zClass) != -1){
         y = [z, z = y][0];
         z = '';
 
     // 7th case for swapping if vowel before bv
+    // 21th case for  ตตรั +ไม้โท + สระอุ
     }else if ([10,11,12,14,15,16].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
-        y = [z, z = y][0];
+        if ( x.charCodeAt(0) == 3633 ){
+            x = [z, z = x][0];
+            z = '';
+        }else{
+            y = [z, z = y][0];
+        }
         
     // 8th case for reject above vowel with below vowel, reject
     }else if ([7,8].indexOf(yClass) != -1 && [14,15,16].indexOf(zClass) != -1){
