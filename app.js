@@ -128,22 +128,24 @@ function keySequenceCheck(all, lastKey) {
             
             // for other ad, av reject
 
-            // 9th case for replace of BV when it's with karant
-//             }else if ([7].indexOf(xClass) != -1 && [7,9].indexOf(zClass) != -1){
-//                 x = [z, z = x][0];
-//                 z = '';
-                
+            // 
+            }else if (xClass == 2 && [7,9].indexOf(zClass) != -1){
+                y = [z, z = y][0];
+                        
             // 10th case for replace of AV when it's with karant
-            }else if ([14].indexOf(xClass) != -1 && [8,9,15,16].indexOf(zClass) != -1) {
+            }else if ([7,14].indexOf(xClass) != -1 && [8,9,15,16].indexOf(zClass) != -1 ){
                 x = [z, z = x][0];
                 y = '';
                 z = '';
-                
+            }
+
+            // M$ style with sara-u from สิทธิ์  + อุ = สิทธุ์
             }else if (xClass == 14 && zClass == 7){
                 x = [z, z = x][0];
                 z = '';
             
-            }else if ([10,12,13,15,16].indexOf(zClass) != -1 && zClass != 7){
+            // to replace with many vowel
+            }else if ([8,9,10,12,13,15,16].indexOf(zClass) != -1){
                 y = [z, z = y][0];
                 z = '';
             }
@@ -184,12 +186,12 @@ function keySequenceCheck(all, lastKey) {
         z = '';   
 
     // 12th case to reject all vowel out of karant
-    }else if (y.charCodeAt(0) == 3660 && [10,12,15,16].indexOf(zClass) != -1){
-        y = [z, z = y][0];
-        z = '';
+//     }else if (y.charCodeAt(0) == 3660 && [8,9,10,12,13,15,16].indexOf(zClass) != -1){
+//         y = [z, z = y][0];
+//         z = '';
 
     // 13th case to reject karant out of all vowel
-    }else if ([10,12,13,15,16].indexOf(yClass) != -1 && z.charCodeAt(0) == 3660){
+    }else if ([8,9,10,12,13,15,16].indexOf(yClass) != -1 && z.charCodeAt(0) == 3660){
         y = [z, z = y][0];
         z = '';        
 
