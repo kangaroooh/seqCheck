@@ -68,7 +68,7 @@ function keySequenceCheck(all, lastKey) {
 
 
     // 1st case if FV1 is in front of TONE
-  if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+if (yClass == 4 && (zClass == 10 || zClass == 12)) {
 
         // to handle AV with maitaiku
 //         if ([10,12].indexOf(xClass) != -1 && [10,12].indexOf(zClass) != -1 ){
@@ -78,8 +78,8 @@ function keySequenceCheck(all, lastKey) {
             y = [z, z = y][0];    
 //         }
         
-    // 2nd case if LV1, FV1, BD, TONE, AD2 has TONE, reject
-    } else if ([3, 4, 5, 13].indexOf(yClass) != -1 && [10,12,13,14,15,16].indexOf(zClass) != -1) {
+    // 2nd case if LV1, FV1, BD, TONE, AD2 has TONE OR //17th BV, reject
+    } else if ([3, 4, 5, 13].indexOf(yClass) != -1 && [7,8,9,10,12,13,14,15,16].indexOf(zClass) != -1) {
            // 16th case 2 times swapping
            if (xClass == 10){
                y = [z, z = y][0];
@@ -96,20 +96,27 @@ function keySequenceCheck(all, lastKey) {
 
 //         }
 
-    // 3rd case TONE + AV1-3 SWAP
+    // 3rd case TONE + AV1-3 SWAP 
+    // 18th x,z swapping if there is AV in front of TONE
     } else if (yClass == 10 && [14, 15, 16].indexOf(zClass) != -1) {
-//         if ([14,15,16].indexOf(xClass) != -1 && yClass == 10){
-//             x = [z, z = x][0];
-//             z = '';    
-//         }else{
+        if ([13,14,15,16].indexOf(xClass)){
+            x = [z, z = x][0];
+            z = '';    
+        }else{
             y = [z, z = y][0];    
-//         }
+        }
         
     // 4th case DUPLICATE of ALL except ctrl,non,cons , reject
     }else if ([0, 1, 2].indexOf(yClass) == -1 && yClass == zClass) {
-        y = [z, z = y][0];
-        z = '';
-
+        
+        // 19th case only for "ราะ"
+        if(x.charCodeAt(0) == 3619 && y.charCodeAt(0) == 3634 && z.charCodeAt(0) == 3632){
+            
+        }else{
+            y = [z, z = y][0];
+            z = '';
+        }
+        
     // 5th case karant and sara-i = swap, 
     }else if (yClass == 11){
             if (zClass == 14){
@@ -172,8 +179,9 @@ function keySequenceCheck(all, lastKey) {
     // 14th case dealing with mai taikhu
     }else if (yClass == 12 && zClass == 10 ){
         y = [z, z = y][0];
-        z = '';        
-    // 15th case 
+        z = '';
+                
+    // 15th case the opposite of 14th 
     }else if (yClass == 10 && zClass == 12 ){
         y = [z, z = y][0];
         z = '';        
@@ -192,7 +200,7 @@ function klear(){
 function getClass(ch) {
 
     // check for control char and delete
-    if (( ch >= 0 && ch <= 37 ) || ch == 127) {
+    if (( ch >= 0 && ch <= 31 ) || ch == 127 ) {
 
         return 0; // return 'CTRL';
 
@@ -203,7 +211,7 @@ function getClass(ch) {
         return 1; // return 'NON';
 
         // check for all consonant Thai character
-    } else if ((ch >= 3585 && ch <= 3630)) {
+    } else if ((ch >= 3585 && ch <= 3630 ) || ( ch >= 32 && ch <= 64 ) || ( ch >= 91 && ch <= 96 ) || ( ch >= 123 && ch <= 126 )) {
 
         return 2; // return 'CONS'
     } else {
