@@ -68,9 +68,9 @@ function keySequenceCheck(all, lastKey) {
 
 
     // 1st case if FV1 is in front of TONE
-    if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+   if (yClass == 4 && (zClass == 10 || zClass == 12)) {
 
-        // to handle AV with maitaiku
+        // to handle with จระเข้
         if (xClass == zClass){
             z = '';
             
@@ -125,19 +125,26 @@ function keySequenceCheck(all, lastKey) {
     }else if (yClass == 11){
             if (zClass == 14){
                 y = [z, z = y][0];
-            // other ad,av reject
-            }else if ([10,12,13].indexOf(zClass) != -1){
-                y = [z, z = y][0];
-                z = '';
+            
+            // for other ad, av reject
 
             // 9th case for replace of BV when it's with karant
-            }else if ([7,8].indexOf(xClass) != -1 && [7,8].indexOf(zClass) != -1){
-                x = [z, z = x][0];
-                z = '';
+//             }else if ([7].indexOf(xClass) != -1 && [7,9].indexOf(zClass) != -1){
+//                 x = [z, z = x][0];
+//                 z = '';
                 
             // 10th case for replace of AV when it's with karant
-            }else if ([14,15,16].indexOf(xClass) != -1 && [14,15,16].indexOf(zClass) != -1) {
+            }else if ([14].indexOf(xClass) != -1 && [8,9,15,16].indexOf(zClass) != -1) {
                 x = [z, z = x][0];
+                y = '';
+                z = '';
+                
+            }else if (xClass == 14 && zClass == 7){
+                x = [z, z = x][0];
+                z = '';
+            
+            }else if ([10,12,13,15,16].indexOf(zClass) != -1 && zClass != 7){
+                y = [z, z = y][0];
                 z = '';
             }
            
