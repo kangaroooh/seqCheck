@@ -53,7 +53,7 @@ function keySequenceCheck(all, lastKey) {
      x = character previous to y
      */
 
-    // swap = y = [z, z = y][0];
+    // using this code for swapping swap = y = [z, z = y][0];
 
     // extract base and xyz to be processed and concat
     base = all.slice(0, all.length - 2);
@@ -61,14 +61,18 @@ function keySequenceCheck(all, lastKey) {
     y = all[all.length - 1];
     z = lastKey;
 
-    //convert xyz into ascii then classify
-    xClass = getClass(x.charCodeAt(0));
-    yClass = getClass(y.charCodeAt(0));
-    zClass = getClass(z.charCodeAt(0));
-
+    // get the ascii code for individual checking
+    xAscii = x.charCodeAt(0);
+    yAscii = y.charCodeAt(0);
+    zAscii = z.charCodeAt(0);
+    
+    // convert xyz into ascii then classify
+    xClass = getClass(xAscii);
+    yClass = getClass(yAscii);
+    zClass = getClass(zAscii);
 
     // 1st case if FV1 is in front of TONE
-  if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+ if (yClass == 4 && (zClass == 10 || zClass == 12)) {
        
         // to handle with จระเข้
         if (xClass == zClass){
@@ -92,12 +96,6 @@ function keySequenceCheck(all, lastKey) {
            }else{
                z = '';
            }
-//         if ([10,12,13,14,15,16].indexOf(xClass) != -1){
-//             x = [z, z = x][0];
-//             z = '';    
-//         }else{
-
-//         }
 
     // 3rd case TONE + AV1-3 SWAP 
     // 18th x,z swapping if there is AV in front of TONE
@@ -105,9 +103,6 @@ function keySequenceCheck(all, lastKey) {
         if ([13,14,15,16].indexOf(xClass) != -1){
             x = [z, z = x][0];
             z = '';    
-//         }else if (xClass == 2){
-//             y = [z, z = y][0];
-//             z = '';
         }
         else{
             y = [z, z = y][0];    
@@ -116,8 +111,8 @@ function keySequenceCheck(all, lastKey) {
     // 4th case DUPLICATE of ALL except ctrl,non,cons , reject
     }else if ([0, 1, 2].indexOf(yClass) == -1 && yClass == zClass) {
         
-        // 19th case for เงาะ
-        if(xClass == 2 && y.charCodeAt(0) == 3634 && z.charCodeAt(0) == 3632){
+        // 19th case for เงาะ เป๊าะ
+        if((xClass == 2 || xClass == 10 )&& yAscii == 3634 && zAscii == 3632){
             
         }else{
             y = [z, z = y][0];
@@ -158,11 +153,14 @@ function keySequenceCheck(all, lastKey) {
         z = '';
 
     // 7th case for swapping if vowel before bv
-    // 21th case for  ตตรั +ไม้โท + สระอุ
+    // 21th case for  ตตรั +ไม้โท + สระอุ // จื้ + อุ
     }else if ([10,11,12,14,15,16].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
-        if ( x.charCodeAt(0) == 3633 ){
+        w = base[base.length - 2];
+
+        if ( xAscii == 3633 || [14,15,16].indexOf(xClass) != -1){
             x = [z, z = x][0];
             z = '';
+
         }else{
             y = [z, z = y][0];
         }
@@ -172,18 +170,13 @@ function keySequenceCheck(all, lastKey) {
         y = [z, z = y][0];
         z = '';
 
-//     // 9th case for replace of BV when it's with karant
-//     }else if ([7,8].indexOf(xClass) != -1 && [10,11].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
-//         x = [z, z = x][0];
-//         z = '';
-
     // 10th case for replace of AV when it's with karant
     }else if ([14,15,16].indexOf(xClass) != -1 && yClass == 11 && [14,15,16].indexOf(zClass) != -1){
         x = [z, z = x][0];
         z = '';
 
-    // 11th case sara-um with tone
-    }else if (xClass == 10 && y.charCodeAt(0) == 3635 && zClass == 10){
+    // 11th case to swap sara-um with tone
+    }else if (xClass == 10 && yAscii == 3635 && zClass == 10){
         x = [z, z = x][0];
         z = '';   
 
@@ -193,25 +186,37 @@ function keySequenceCheck(all, lastKey) {
 //         z = '';
 
     // 13th case to reject karant out of all vowel
-    }else if ([8,9,10,12,13,15,16].indexOf(yClass) != -1 && z.charCodeAt(0) == 3660){
+    }else if ([8,9,10,12,13,15,16].indexOf(yClass) != -1 && zAscii == 3660){
         y = [z, z = y][0];
         z = '';        
 
-    // 14th case dealing with mai taikhu
+    // 14th case dealing with mai taikhu ก็ + ไม้เอก
     }else if (yClass == 12 && zClass == 10 ){
         y = [z, z = y][0];
         z = '';
                 
-    // 15th case the opposite of 14th 
+    // 15th case the opposite of 14th ก่ + ไม้เลขแปด
     }else if (yClass == 10 && zClass == 12 ){
         y = [z, z = y][0];
         z = '';        
-    // a1 case LV with FV
+
+    // a1 case LV with FV เะ ไะ
     }else if (yClass == 3 && [0,1,2].indexOf(zClass) == -1){
-        z = '';                
-    // a2 case for LV + CONS + BV1,AD1,mai hun a kad
-    }else if ((xClass == 3 && x.charCodeAt(0) != 3648) && yClass == 2 && [7,8,11].indexOf(zClass) != -1 || z.charCodeAt(0) == 3633){
-        x = '';
+        z = '';         
+               
+    // a2 case for LV + CONS + BV1,AD1,mai hun a kad เงือก & ใงือก
+    }else if (xClass == 3 && yClass == 2 && ([4,7,8,12,13,14,15,16].indexOf(zClass) != -1 || zAscii == 3633)){
+        
+        // if x is not เอ and z is in the above vowel and is not อะ, then reject the x
+        if (xAscii != 3648){
+            if (zAscii != 3632){
+                x = '';
+            }
+        }else{// if x is เอ still need to reject BV and mai han a kat
+            if (zClass == 7 || zClass == 8 || zAscii == 3633){
+                x = '';
+            }
+        }
     }
 
     return base.concat(x).concat(y).concat(z);
