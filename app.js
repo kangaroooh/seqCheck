@@ -68,10 +68,11 @@ function keySequenceCheck(all, lastKey) {
 
 
     // 1st case if FV1 is in front of TONE
-   if (yClass == 4 && (zClass == 10 || zClass == 12)) {
-
+  if (yClass == 4 && (zClass == 10 || zClass == 12)) {
+       
         // to handle with จระเข้
         if (xClass == zClass){
+            x = [z, z = x][0];
             z = '';
             
         }else{
@@ -79,15 +80,17 @@ function keySequenceCheck(all, lastKey) {
         }
         
     // 2nd case if LV1, FV1, TONE, AD2 has TONE OR //17th BV, reject
-    } else if ([3, 4, 5].indexOf(yClass) != -1 && [7,8,9,11,10,12,13,14,15,16].indexOf(zClass) != -1) {
+    } else if ( ([3, 4, 5].indexOf(yClass) != -1) && [7,8,9,11,10,12,13,14,15,16].indexOf(zClass) != -1) {
            // 16th case 2 times swapping
            if (xClass == 10){
                y = [z, z = y][0];
                x = [y, y = x][0];
                z = ''; 
-           }else{
-//                 y = [z, z = y][0];
+           }else if (xClass == 2){
+               y = [z, z = y][0];
                z = '';               
+           }else{
+               z = '';
            }
 //         if ([10,12,13,14,15,16].indexOf(xClass) != -1){
 //             x = [z, z = x][0];
@@ -113,8 +116,8 @@ function keySequenceCheck(all, lastKey) {
     // 4th case DUPLICATE of ALL except ctrl,non,cons , reject
     }else if ([0, 1, 2].indexOf(yClass) == -1 && yClass == zClass) {
         
-        // 19th case only for "ราะ"
-        if(x.charCodeAt(0) == 3619 && y.charCodeAt(0) == 3634 && z.charCodeAt(0) == 3632){
+        // 19th case for เงาะ
+        if(xClass == 2 && y.charCodeAt(0) == 3634 && z.charCodeAt(0) == 3632){
             
         }else{
             y = [z, z = y][0];
@@ -137,8 +140,7 @@ function keySequenceCheck(all, lastKey) {
                 x = [z, z = x][0];
                 y = '';
                 z = '';
-            }
-
+            
             // M$ style with sara-u from สิทธิ์  + อุ = สิทธุ์
             }else if (xClass == 14 && zClass == 7){
                 x = [z, z = x][0];
@@ -151,7 +153,7 @@ function keySequenceCheck(all, lastKey) {
             }
            
     // 6th case for DUPLICATE of AV,BV type, reject 
-    }else if ([7,8,12,13,14,15,16].indexOf(yClass) != -1 && [7,8,12,13,14,15,16].indexOf(zClass) != -1){
+    }else if ([3,4,5,6,7,8,12,13,14,15,16].indexOf(yClass) != -1 && [4,5,6,7,8,12,13,14,15,16].indexOf(zClass) != -1){
         y = [z, z = y][0];
         z = '';
 
@@ -204,6 +206,12 @@ function keySequenceCheck(all, lastKey) {
     }else if (yClass == 10 && zClass == 12 ){
         y = [z, z = y][0];
         z = '';        
+    // a1 case LV with FV
+    }else if (yClass == 3 && [0,1,2].indexOf(zClass) == -1){
+        z = '';                
+    // a2 case for LV + CONS + BV1,AD1,mai hun a kad
+    }else if ((xClass == 3 && x.charCodeAt(0) != 3648) && yClass == 2 && [7,8,11].indexOf(zClass) != -1 || z.charCodeAt(0) == 3633){
+        x = '';
     }
 
     return base.concat(x).concat(y).concat(z);
@@ -245,6 +253,10 @@ function genClassTable() {
 
     var table = {
 
+        // Mai ya mok
+        3654: 1,
+
+        
         // Leading Vowel return 'LV'
         3648: 3,
         3649: 3,
