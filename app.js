@@ -85,6 +85,7 @@ function keySequenceCheck(all, lastKey) {
         
     // 2nd case if LV1, FV1, TONE, AD2 has TONE OR //17th BV, reject
     } else if ( ([3, 4, 5].indexOf(yClass) != -1) && [7,8,9,11,10,12,13,14,15,16].indexOf(zClass) != -1) {
+
            // 16th case 2 times swapping
            if (xClass == 10){
                y = [z, z = y][0];
@@ -147,7 +148,7 @@ function keySequenceCheck(all, lastKey) {
                 z = '';
             }
            
-    // 6th case for DUPLICATE of AV,BV type, reject 
+    // 6th case for DUPLICATE of AV,BV type, reject INTABLE
     }else if ([3,4,5,6,7,8,12,13,14,15,16].indexOf(yClass) != -1 && [4,5,6,7,8,12,13,14,15,16].indexOf(zClass) != -1){
         y = [z, z = y][0];
         z = '';
@@ -155,7 +156,6 @@ function keySequenceCheck(all, lastKey) {
     // 7th case for swapping if vowel before bv
     // 21th case for  ตตรั +ไม้โท + สระอุ // จื้ + อุ
     }else if ([10,11,12,14,15,16].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
-        w = base[base.length - 2];
 
         if ( xAscii == 3633 || [14,15,16].indexOf(xClass) != -1){
             x = [z, z = x][0];
@@ -165,7 +165,7 @@ function keySequenceCheck(all, lastKey) {
             y = [z, z = y][0];
         }
         
-    // 8th case for reject above vowel with below vowel, reject
+    // 8th case for reject above vowel with below vowel, reject inTABLE
     }else if ([7,8].indexOf(yClass) != -1 && [14,15,16].indexOf(zClass) != -1){
         y = [z, z = y][0];
         z = '';
@@ -180,27 +180,22 @@ function keySequenceCheck(all, lastKey) {
         x = [z, z = x][0];
         z = '';   
 
-    // 12th case to reject all vowel out of karant
-//     }else if (y.charCodeAt(0) == 3660 && [8,9,10,12,13,15,16].indexOf(zClass) != -1){
-//         y = [z, z = y][0];
-//         z = '';
-
     // 13th case to reject karant out of all vowel
     }else if ([8,9,10,12,13,15,16].indexOf(yClass) != -1 && zAscii == 3660){
         y = [z, z = y][0];
         z = '';        
 
-    // 14th case dealing with mai taikhu ก็ + ไม้เอก
+    // 14th case dealing with mai taikhu ก็ + ไม้เอก //INTABLE
     }else if (yClass == 12 && zClass == 10 ){
         y = [z, z = y][0];
         z = '';
                 
-    // 15th case the opposite of 14th ก่ + ไม้เลขแปด
+    // 15th case the opposite of 14th ก่ + ไม้เลขแปด //INTABLE
     }else if (yClass == 10 && zClass == 12 ){
         y = [z, z = y][0];
         z = '';        
 
-    // a1 case LV with FV เะ ไะ
+    // a1 case LV with FV เะ ไะ //INTABLE
     }else if (yClass == 3 && [0,1,2].indexOf(zClass) == -1){
         z = '';         
                
