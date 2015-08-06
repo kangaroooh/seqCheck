@@ -78,30 +78,17 @@ function keySequenceCheck(all, lastKey) {
             // reorder  swap yz 
             y = [z, z = y][0];
         } else if (CPt[xClass][yClass] === 'C') {
-            // replace y=z
             y = [z, z = y][0];
-            z = '';
-        } else if (yClass === FV1 && zClass === 10) {
+            z = '';   
+        } else if (yClass === 4 && zClass === 10) {
             // swap yz
             y = [z, z = y][0];
-        } else {
+        } else if (CPt[yClass][zClass] === 'A' ||  CPt[yClass][zClass] === 'S') {
+            
+        } else{
             z = '';
-            // reject z
-        }
-        
-    } else if (CPt[yClass][zClass] === 'X') {
-        // X = do not display next character
-        z = '';
-    } else if (CPt[yClass][zClass] === 'A' || CPt[yClass][zClass] === 'S') {
-        // A or S = display next character in next cell
-    } else if (CPt[yClass][zClass] === 'C') {
-        // C = display next character in the same cell as previous one
-        y = [z, z = y][0];
-        z = '';
-    } else if (CPt[yClass][zClass] === 'R') {
-        // R = display next character in next cell, over a, say, DOTTED CIRCLE
-        z = '';
-    } else {}
+        }     
+    }
     
     
     return base.concat(x).concat(y).concat(z);
@@ -128,7 +115,7 @@ function getClass(ch) {
         return 1; // return 'NON';
 
         // check for all consonant Thai character
-    } else if ((ch >= 3585 && ch <= 3630) || (ch >= 32 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126)) {
+    } else if ((ch >= 3585 && ch <= 3619) || (ch >= 32 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
 
         return 2; // return 'CONS'
     } else {
@@ -146,6 +133,8 @@ function genClassTable() {
         // Mai ya mok
         3654: 1,
 
+        // Thai consonant
+        3621: 2,
         
         // Leading Vowel return 'LV'
         3648: 3,
@@ -162,7 +151,7 @@ function genClassTable() {
         // Following vowels type 2 return 'FV2'
         3653: 5,
 
-        // Following vowels type 3 return 'FV3'
+        // Following vowels type 3 return 'FV3' ทุกตัว ยกเว้น2ตัวเนี้ย
         3620: 6,
         3622: 6,
 
