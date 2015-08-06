@@ -6,20 +6,21 @@ var classTable = genClassTable();
 // and pass to check class function
 function ksHandler() {
 
-    dbug1 = document.getElementById("dbug1");
-    dbug2 = document.getElementById("dbug2");
-    dbug3 = document.getElementById("dbug3");
-
+    var dbug1 = document.getElementById("dbug1"),
+        dbug2 = document.getElementById("dbug2"),
+        dbug3 = document.getElementById("dbug3"),
+        input = document.getElementById("input"),
+        
     // get the fullText of Textfield id:input in index.html
-    fullText = document.getElementById("input").value;
-    fullTextLength = fullText.length;
+        fullText = input.value,
+        fullTextLength = fullText.length,
 
     // get all and the last key press
-    all = fullText.slice(0, fullTextLength - 1);
-    lastKey = fullText[fullTextLength - 1];
+        all = fullText.slice(0, fullTextLength - 1),
+        lastKey = fullText[fullTextLength - 1],
 
     // call the function then display
-    retVal = keySequenceCheck(all, lastKey);
+        retVal = keySequenceCheck(all, lastKey);
 
     input.value = retVal;
 
@@ -32,17 +33,17 @@ function keySequenceCheck(all, lastKey) {
 
     
     // the special case to check only the first to NOT having TONE and FOLLOWING Vowel infront
-    checkFirst = all.concat(lastKey).charCodeAt(0);
-    checkFirstClass = getClass(checkFirst);
+    var checkFirst = all.concat(lastKey).charCodeAt(0),
+        checkFirstClass = getClass(checkFirst);
 
-    if ((checkFirst >= 3632 && checkFirst <= 3646) || (checkFirst >= 3653 && checkFirst <= 3662)){
+    if ((checkFirst >= 3632 && checkFirst <= 3646) || (checkFirst >= 3653 && checkFirst <= 3662)) {
         return '';
 
     // if the first is leading vowel, then need to reject everything except CONS
-    }else if (checkFirstClass == 3){
-        checkSecondClass = getClass(all.concat(lastKey).charCodeAt(1));
+    } else if (checkFirstClass === 3) {
+        var checkSecondClass = getClass(all.concat(lastKey).charCodeAt(1));
         
-        if (checkSecondClass != 2 ){
+        if (checkSecondClass !== 2) {
             return lastKey;
         }
     }
@@ -56,189 +57,78 @@ function keySequenceCheck(all, lastKey) {
     // using this code for swapping swap = y = [z, z = y][0];
 
     // extract base and xyz to be processed and concat
-    base = all.slice(0, all.length - 2);
-    x = all[all.length - 2];
-    y = all[all.length - 1];
-    z = lastKey;
+    var base = all.slice(0, all.length - 2),
+        x = all[all.length - 2],
+        y = all[all.length - 1],
+        z = lastKey,
 
     // get the ascii code for individual checking
-    xAscii = x.charCodeAt(0);
-    yAscii = y.charCodeAt(0);
-    zAscii = z.charCodeAt(0);
+        xAscii = x.charCodeAt(0),
+        yAscii = y.charCodeAt(0),
+        zAscii = z.charCodeAt(0),
     
     // convert xyz into ascii then classify
-    xClass = getClass(xAscii);
-    yClass = getClass(yAscii);
-    zClass = getClass(zAscii);
-
-    // 1st case if FV1 is in front of TONE
- if (yClass == 4 && (zClass == 10 || zClass == 12)) {
-       
-        // to handle with จระเข้
-        if (xClass == zClass){
-            x = [z, z = x][0];
-            z = '';
-            
-        }else{
-            y = [z, z = y][0];    
-        }
+        xClass = getClass(xAscii),
+        yClass = getClass(yAscii),
+        zClass = getClass(zAscii);
+    
+    if (CPt[xClass][zClass] === 'C') {
         
-    // 2nd case if LV1, FV1, TONE, AD2 has TONE OR //17th BV, reject
-    } else if ( ([3, 4, 5].indexOf(yClass) != -1) && [7,8,9,11,10,12,13,14,15,16].indexOf(zClass) != -1) {
-
-           // 16th case 2 times swapping
-           if (xClass == 10){
-               y = [z, z = y][0];
-               x = [y, y = x][0];
-               z = ''; 
-           }else if (xClass == 2){
-               y = [z, z = y][0];
-               z = '';               
-           }else{
-               z = '';
-           }
-
-    // 3rd case TONE + AV1-3 SWAP 
-    // 18th x,z swapping if there is AV in front of TONE
-    } else if (yClass == 10 && [14, 15, 16].indexOf(zClass) != -1) {
-        if ([13,14,15,16].indexOf(xClass) != -1){
-            x = [z, z = x][0];
-            z = '';    
-        }
-        else{
-            y = [z, z = y][0];    
-        }
-        
-    // 4th case DUPLICATE of ALL except ctrl,non,cons , reject
-    }else if ([0, 1, 2].indexOf(yClass) == -1 && yClass == zClass) {
-        
-        // 19th case for เงาะ เป๊าะ
-        if((xClass == 2 || xClass == 10 )&& yAscii == 3634 && zAscii == 3632){
-            
-        }else{
+        if (CPt[zClass][yClass] === 'C') {
+            // reorder  swap yz 
+            y = [z, z = y][0];
+        } else if (CPt[xClass][yClass] === 'C') {
+            // replace y=z
             y = [z, z = y][0];
             z = '';
-        }
-        
-    // 5th case karant and sara-i = swap, 
-    }else if (yClass == 11){
-            if (zClass == 14){
-                y = [z, z = y][0];
-            
-            // for other ad, av reject
-
-            // 
-            }else if (xClass == 2 && [7,9].indexOf(zClass) != -1){
-                y = [z, z = y][0];
-                        
-            // 10th case for replace of AV when it's with karant
-            }else if ([7,14].indexOf(xClass) != -1 && [8,9,15,16].indexOf(zClass) != -1 ){
-                x = [z, z = x][0];
-                y = '';
-                z = '';
-            
-            // M$ style with sara-u from สิทธิ์  + อุ = สิทธุ์
-            }else if (xClass == 14 && zClass == 7){
-                x = [z, z = x][0];
-                z = '';
-            
-            // to replace with many vowel
-            }else if ([8,9,10,12,13,15,16].indexOf(zClass) != -1){
-                y = [z, z = y][0];
-                z = '';
-            }
-           
-    // 6th case for DUPLICATE of AV,BV type, reject INTABLE
-    }else if ([3,4,5,6,7,8,12,13,14,15,16].indexOf(yClass) != -1 && [4,5,6,7,8,12,13,14,15,16].indexOf(zClass) != -1){
-        y = [z, z = y][0];
-        z = '';
-
-    // 7th case for swapping if vowel before bv
-    // 21th case for  ตตรั +ไม้โท + สระอุ // จื้ + อุ
-    }else if ([10,11,12,14,15,16].indexOf(yClass) != -1 && [7,8].indexOf(zClass) != -1){
-
-        if ( xAscii == 3633 || [14,15,16].indexOf(xClass) != -1){
-            x = [z, z = x][0];
-            z = '';
-
-        }else{
+        } else if (yClass === FV1 && zClass === 10) {
+            // swap yz
             y = [z, z = y][0];
+        } else {
+            z = '';
+            // reject z
         }
         
-    // 8th case for reject above vowel with below vowel, reject inTABLE
-    }else if ([7,8].indexOf(yClass) != -1 && [14,15,16].indexOf(zClass) != -1){
+    } else if (CPt[yClass][zClass] === 'X') {
+        // X = do not display next character
+        z = '';
+    } else if (CPt[yClass][zClass] === 'A' || CPt[yClass][zClass] === 'S') {
+        // A or S = display next character in next cell
+    } else if (CPt[yClass][zClass] === 'C') {
+        // C = display next character in the same cell as previous one
         y = [z, z = y][0];
         z = '';
-
-    // 10th case for replace of AV when it's with karant
-    }else if ([14,15,16].indexOf(xClass) != -1 && yClass == 11 && [14,15,16].indexOf(zClass) != -1){
-        x = [z, z = x][0];
+    } else if (CPt[yClass][zClass] === 'R') {
+        // R = display next character in next cell, over a, say, DOTTED CIRCLE
         z = '';
-
-    // 11th case to swap sara-um with tone
-    }else if (xClass == 10 && yAscii == 3635 && zClass == 10){
-        x = [z, z = x][0];
-        z = '';   
-
-    // 13th case to reject karant out of all vowel
-    }else if ([8,9,10,12,13,15,16].indexOf(yClass) != -1 && zAscii == 3660){
-        y = [z, z = y][0];
-        z = '';        
-
-    // 14th case dealing with mai taikhu ก็ + ไม้เอก //INTABLE
-    }else if (yClass == 12 && zClass == 10 ){
-        y = [z, z = y][0];
-        z = '';
-                
-    // 15th case the opposite of 14th ก่ + ไม้เลขแปด //INTABLE
-    }else if (yClass == 10 && zClass == 12 ){
-        y = [z, z = y][0];
-        z = '';        
-
-    // a1 case LV with FV เะ ไะ //INTABLE
-    }else if (yClass == 3 && [0,1,2].indexOf(zClass) == -1){
-        z = '';         
-               
-    // a2 case for LV + CONS + BV1,AD1,mai hun a kad เงือก & ใงือก
-    }else if (xClass == 3 && yClass == 2 && ([4,7,8,12,13,14,15,16].indexOf(zClass) != -1 || zAscii == 3633)){
-        
-        // if x is not เอ and z is in the above vowel and is not อะ, then reject the x
-        if (xAscii != 3648){
-            if (zAscii != 3632){
-                x = '';
-            }
-        }else{// if x is เอ still need to reject BV and mai han a kat
-            if (zClass == 7 || zClass == 8 || zAscii == 3633){
-                x = '';
-            }
-        }
-    }
-
+    } else {}
+    
+    
     return base.concat(x).concat(y).concat(z);
 }
 
-function klear(){
-     document.getElementById("input").value = "";
-     document.getElementById("dbug1").innerHTML = "";
-     document.getElementById("dbug2").innerHTML = "";
-     document.getElementById("dbug3").innerHTML = "";
+function klear() {
+    document.getElementById("input").value = "";
+    document.getElementById("dbug1").innerHTML = "";
+    document.getElementById("dbug2").innerHTML = "";
+    document.getElementById("dbug3").innerHTML = "";
 }
 
 function getClass(ch) {
 
     // check for control char and delete
-    if (( ch >= 0 && ch <= 31 ) || ch == 127 ) {
+    if ((ch >= 0 && ch <= 31) || ch === 127) {
 
         return 0; // return 'CTRL';
 
         // check for all English alphabets, numeral, angkhakhu, fongnam,
         // khomut,maiyamok,baht sign
-    } else if (( ch >= 65 && ch <= 122 ) || ( ch >= 3663 && ch <= 3675 )) {
+    } else if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675)) {
 
         return 1; // return 'NON';
 
         // check for all consonant Thai character
-    } else if ((ch >= 3585 && ch <= 3630 ) || ( ch >= 32 && ch <= 64 ) || ( ch >= 91 && ch <= 96 ) || ( ch >= 123 && ch <= 126 )) {
+    } else if ((ch >= 3585 && ch <= 3630) || (ch >= 32 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126)) {
 
         return 2; // return 'CONS'
     } else {
