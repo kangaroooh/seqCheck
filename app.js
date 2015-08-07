@@ -66,12 +66,15 @@ function keySequenceCheck(all, lastKey) {
                     break;
                     
                 default:
-                    // not in the general case here
+                    // not in the general case here, then reject and go back to start
+                    state = 'start';
+                    lastKey = '';
                     break;
             } break;
             
         case 'CONS':
             switch (lastKeyClass) {
+                    
                 case 'BV1':
                     state = 'A1';
                     break;
@@ -104,8 +107,13 @@ function keySequenceCheck(all, lastKey) {
                     state = 'A4';
                     break;
                     
+                    ///// experiment here
+                    
                 default:
-                    // default is here
+                    if (lastKeyClass == 'CONS') {
+                        state = 'CONS'
+                    }
+                    state = 'start';
                     break;
             }break;   
         case 'A1':
@@ -119,7 +127,10 @@ function keySequenceCheck(all, lastKey) {
                     break;
                     
                 default:
-                    // default is here
+                    if (lastKeyClass == 'CONS') {
+                        state = 'CONS'
+                    }
+                    state = 'start';
                     break;
             } break;
         case 'A3':
@@ -129,7 +140,10 @@ function keySequenceCheck(all, lastKey) {
                     break;
                     
                 default:
-                    // default is here
+                    if (lastKeyClass == 'CONS') {
+                        state = 'CONS'
+                    }
+                    state = 'start';
                     break;
             }break;
         case 'A4':
@@ -143,9 +157,15 @@ function keySequenceCheck(all, lastKey) {
                     break;
                     
                 default:
-                    // default is here
+                    if (lastKeyClass == 'CONS') {
+                        state = 'CONS'
+                    }
+                    state = 'start';
                     break;
             }break;
+        default:
+            z = '';
+            break;
     }
     
     return all.concat(lastKey);
@@ -156,6 +176,7 @@ function klear() {
     document.getElementById("dbug1").innerHTML = "";
     document.getElementById("dbug2").innerHTML = "";
     document.getElementById("dbug3").innerHTML = "";
+    state = 'start';
 }
 
 function getClass(ch) {
