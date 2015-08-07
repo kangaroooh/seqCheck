@@ -227,18 +227,18 @@ function klear(){
 function getClass(ch) {
 
     // check for control char and delete
-    if (( ch >= 0 && ch <= 31 ) || ch == 127 ) {
+    if ((ch >= 0 && ch <= 31) || ch === 127) {
 
         return 0; // return 'CTRL';
 
         // check for all English alphabets, numeral, angkhakhu, fongnam,
         // khomut,maiyamok,baht sign
-    } else if (( ch >= 65 && ch <= 122 ) || ( ch >= 3663 && ch <= 3675 )) {
+    } else if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675)) {
 
         return 1; // return 'NON';
 
         // check for all consonant Thai character
-    } else if ((ch >= 3585 && ch <= 3630 ) || ( ch >= 32 && ch <= 64 ) || ( ch >= 91 && ch <= 96 ) || ( ch >= 123 && ch <= 126 )) {
+    } else if ((ch >= 3585 && ch <= 3619) || (ch >= 32 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
 
         return 2; // return 'CONS'
     } else {
@@ -256,6 +256,8 @@ function genClassTable() {
         // Mai ya mok
         3654: 1,
 
+        // Thai consonant
+        3621: 2,
         
         // Leading Vowel return 'LV'
         3648: 3,
@@ -272,7 +274,7 @@ function genClassTable() {
         // Following vowels type 2 return 'FV2'
         3653: 5,
 
-        // Following vowels type 3 return 'FV3'
+        // Following vowels type 3 return 'FV3' ทุกตัว ยกเว้น2ตัวเนี้ย
         3620: 6,
         3622: 6,
 
@@ -315,6 +317,7 @@ function genClassTable() {
 
     return table;
 }
+
 function genCP() {
     
     var tabl = new Array(17);
