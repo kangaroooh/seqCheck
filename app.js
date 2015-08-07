@@ -1,6 +1,7 @@
 // just to gen CP table and locate where to Debug
 var CPt = genCP();
 var classTable = genClassTable();
+var state = 'start';
 
 // key sequence handler, use to get text from textfield then slice
 // and pass to check class function
@@ -31,67 +32,123 @@ function ksHandler() {
 
 function keySequenceCheck(all, lastKey) {
 
-    
-    // the special case to check only the first to NOT having TONE and FOLLOWING Vowel infront
-    var checkFirst = all.concat(lastKey).charCodeAt(0),
-        checkFirstClass = getClass(checkFirst);
-
-    if ((checkFirst >= 3632 && checkFirst <= 3646) || (checkFirst >= 3653 && checkFirst <= 3662)) {
-        return '';
-
-    // if the first is leading vowel, then need to reject everything except CONS
-    } else if (checkFirstClass === 3) {
-        var checkSecondClass = getClass(all.concat(lastKey).charCodeAt(1));
-        
-        if (checkSecondClass !== 2) {
-            return lastKey;
-        }
-    }
-
+    var lastKeyClass = getClass(lastKey.charCodeAt(0));
     /*
-     z = next character
-     y = previous character
-     x = character previous to y
-     */
-
-    // using this code for swapping swap = y = [z, z = y][0];
-
-    // extract base and xyz to be processed and concat
-    var base = all.slice(0, all.length - 2),
-        x = all[all.length - 2],
-        y = all[all.length - 1],
-        z = lastKey,
-
-    // get the ascii code for individual checking
-        xAscii = x.charCodeAt(0),
-        yAscii = y.charCodeAt(0),
-        zAscii = z.charCodeAt(0),
+        Use state as a global state to keep track of where the hell you are then get into rach state by zClass
     
-    // convert xyz into ascii then classify
-        xClass = getClass(xAscii),
-        yClass = getClass(yAscii),
-        zClass = getClass(zAscii);
-    
-    if (CPt[xClass][zClass] === 'C') {
-        
-        if (CPt[zClass][yClass] === 'C') {
-            // reorder  swap yz 
-            y = [z, z = y][0];
-        } else if (CPt[xClass][yClass] === 'C') {
-            y = [z, z = y][0];
-            z = '';   
-        } else if (yClass === 4 && zClass === 10) {
-            // swap yz
-            y = [z, z = y][0];
-        } else if (CPt[yClass][zClass] === 'A' ||  CPt[yClass][zClass] === 'S') {
+    */
+    switch (state) {
+        case 'start':
+            switch (lastKeyClass) {
+                    
+                case 'NON':
+                    state = 'start';
+                    break;
+                    
+                case 'LV':
+                    state = 'start';
+                    break;
+                    
+                case 'FV1':
+                    state = 'start';
+                    break;
+                    
+                case 'FV2':
+                    state = 'start';
+                    break;
+                    
+                case 'FV3':
+                    state = 'start';
+                    break;
+                    
+                case 'CONS':
+                    state = 'CONS';
+                    break;
+                    
+                default:
+                    // not in the general case here
+                    break;
+            } break;
             
-        } else{
-            z = '';
-        }     
+        case 'CONS':
+            switch (lastKeyClass) {
+                case 'BV1':
+                    state = 'A1';
+                    break;
+                    
+                case 'AV1':
+                    state = 'A1';
+                    break;
+                    
+                case 'AD2':
+                    state = 'start';
+                    break;
+                    
+                case 'AD3':
+                    state = 'start';
+                    break;
+                    
+                case 'BD':
+                    state = 'start';
+                    break;
+                    
+                case 'BV2':
+                    state = 'A3';
+                    break;
+                    
+                case 'AV2':
+                    state = 'A3';
+                    break;
+                    
+                case 'AV3':
+                    state = 'A4';
+                    break;
+                    
+                default:
+                    // default is here
+                    break;
+            }break;   
+        case 'A1':
+            switch (lastKeyClass) {
+                case 'TONE':
+                    state = 'start'
+                    break;
+                    
+                case 'AD1':
+                    state = 'start'
+                    break;
+                    
+                default:
+                    // default is here
+                    break;
+            } break;
+        case 'A3':
+            switch (lastKeyClass) {
+                case 'TONE':
+                    state = 'start'
+                    break;
+                    
+                default:
+                    // default is here
+                    break;
+            }break;
+        case 'A4':
+            switch (lastKeyClass) {
+                case 'TONE':
+                    state = 'start'
+                    break;
+                    
+                case 'AD2':
+                    state = 'start'
+                    break;
+                    
+                default:
+                    // default is here
+                    break;
+            }break;
     }
     
-    
-    return base.concat(x).concat(y).concat(z);
+    return all.concat(lastKey);
 }
 
 function klear() {
@@ -106,18 +163,18 @@ function getClass(ch) {
     // check for control char and delete
     if ((ch >= 0 && ch <= 31) || ch === 127) {
 
-        return 0; // return 'CTRL';
+        return 'CTRL'; // return 'CTRL';
 
         // check for all English alphabets, numeral, angkhakhu, fongnam,
         // khomut,maiyamok,baht sign
     } else if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675)) {
 
-        return 1; // return 'NON';
+        return 'NON'; // return 'NON';
 
         // check for all consonant Thai character
     } else if ((ch >= 3585 && ch <= 3619) || (ch >= 32 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
 
-        return 2; // return 'CONS'
+        return 'CONS'; // return 'CONS'
     } else {
 
         // if not in the above range, then look up in classTable
@@ -131,65 +188,65 @@ function genClassTable() {
     var table = {
 
         // Mai ya mok
-        3654: 1,
+        3654: 'NON',
 
         // Thai consonant
-        3621: 2,
+        3621: 'CONS',
         
         // Leading Vowel return 'LV'
-        3648: 3,
-        3649: 3,
-        3650: 3,
-        3651: 3,
-        3652: 3,
+        3648: 'LV',
+        3649: 'LV',
+        3650: 'LV',
+        3651: 'LV',
+        3652: 'LV',
 
         // Following vowels type 1 return 'FV1'
-        3632: 4,
-        3634: 4,
-        3635: 4,
+        3632: 'FV1',
+        3634: 'FV1',
+        3635: 'FV1',
 
         // Following vowels type 2 return 'FV2'
-        3653: 5,
+        3653: 'FV2',
 
         // Following vowels type 3 return 'FV3' ทุกตัว ยกเว้น2ตัวเนี้ย
-        3620: 6,
-        3622: 6,
+        3620: 'FV3',
+        3622: 'FV3',
 
         // Below vowel type 1 return 'BV1' sara-u
-        3640: 7,
+        3640: 'BV1',
 
         // Below vowel type 2 return 'BV2' sara-uu
-        3641: 8,
+        3641: 'BV2',
 
         // BD(UNDERDOT) pinthu
-        3642: 9,
+        3642: 'BD',
 
         // TONE return 'TONE'
-        3656: 10,
-        3657: 10,
-        3658: 10,
-        3659: 10,
+        3656: 'TONE',
+        3657: 'TONE',
+        3658: 'TONE',
+        3659: 'TONE',
 
         // Above Diacritics type 1 return 'AD1' karant
-        3660: 11,
-        3661: 11,
+        3660: 'AD1',
+        3661: 'AD1',
 
         // Above Diacritics type 2 return 'AD2'
-        3655: 12,
+        3655: 'AD2',
 
         // Above Diacritics type 3 return 'AD3'
-        3662: 13,
+        3662: 'AD3',
 
         // Above Vowel type 1 return 'AV1'
-        3636: 14,
+        3636: 'AV1',
 
         // Above Vowel type 2 return 'AV2'
-        3633: 15,
-        3638: 15,
+        3633: 'AV2',
+        3638: 'AV2',
 
         // Above Vowel type 3 return 'AV3'
-        3637: 16,
-        3639: 16
+        3637: 'AV3',
+        3639: 'AV3'
     };
 
     return table;
