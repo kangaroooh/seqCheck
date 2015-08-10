@@ -68,8 +68,20 @@ function keySequenceCheck(fullText, bsCheck) {
                     state = 'start';
                     break;
 
-                case 'LV':
-                    state = 'start';
+                case 'LV1':
+                    state = 'LV1';
+                    break;
+
+                case 'LV2':
+                    state = 'LV2';
+                    break;
+
+                case 'LV3':
+                    state = 'LV3';
+                    break;
+
+                case 'LV4':
+                    state = 'LV4';
                     break;
 
                 case 'FV1':
@@ -81,7 +93,7 @@ function keySequenceCheck(fullText, bsCheck) {
                     break;
 
                 case 'FV3':
-                    state = 'start';
+                    state = 'FV3';
                     break;
 
                 case 'CONS':
@@ -94,6 +106,64 @@ function keySequenceCheck(fullText, bsCheck) {
                     lastKeyTxt = '';
                     break;
             } break;
+        case 'FV3':
+          switch (lastKeyClass) {
+              case 'FV2':
+                  state = 'start';
+                  break;
+
+              default:
+                  if (lastKeyClass == 'CONS') {
+                    state = 'CONS';
+                  } else {
+                    state = 'start';
+                  }
+                  break;
+          }break;
+
+        case 'LV1':
+          switch (lastKeyClass) {
+            case 'CONS':
+              state = 'LV1C';
+              break;
+
+            default:
+              z = '';
+              break;
+          } break;
+
+        case 'LV2':
+          switch (lastKeyClass) {
+            case 'CONS':
+              state = 'LV2C';
+              break;
+
+            default:
+              z = '';
+              break;
+          } break;
+
+        case 'LV3':
+          switch (lastKeyClass) {
+            case 'CONS':
+              state = 'LV3C';
+              break;
+
+            default:
+              z = '';
+              break;
+          } break;
+
+        case 'LV4':
+          switch (lastKeyClass) {
+            case 'CONS':
+              state = 'LV4C';
+              break;
+
+            default:
+              z = '';
+              break;
+          } break;
 
         case 'CONS':
             switch (lastKeyClass) {
@@ -136,8 +206,8 @@ function keySequenceCheck(fullText, bsCheck) {
 
                 default:
                     if (lastKeyClass == 'CONS') {
-                        state = 'CONS'
-                    }else{
+                      state = 'CONS';
+                    } else {
                       state = 'start';
                     }
                     break;
@@ -145,17 +215,17 @@ function keySequenceCheck(fullText, bsCheck) {
         case 'C1':
             switch (lastKeyClass) {
                 case 'TONE':
-                    state = 'start'
+                    state = 'start';
                     break;
 
                 case 'AD1':
-                    state = 'start'
+                    state = 'start';
                     break;
 
                 default:
                     if (lastKeyClass == 'CONS') {
-                        state = 'CONS'
-                    }else{
+                      state = 'CONS';
+                    } else {
                       state = 'start';
                     }
                     break;
@@ -169,7 +239,7 @@ function keySequenceCheck(fullText, bsCheck) {
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
-                    }else{
+                    } else {
                       state = 'start';
                     }
                     break;
@@ -189,40 +259,139 @@ function keySequenceCheck(fullText, bsCheck) {
                     break;
             }break;
         case 'C4':
-            switch (lastKeyAscii) {
-                case 3632: // sara a
+            switch (lastKeyClass) {
+                case 'FV11': // sara a
                     state = 'start';
                     break;
 
-                case 3634: // sara aa
+                case 'FV12': // sara aa
                     state = 'CFV2';
                     break;
 
-                case 3635: // sara aum
+                case 'FV13': // sara aum
                     state = 'start';
                     break;
 
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS';
-                    }else{
+                    } else {
                       state = 'start';
                     }
                     break;
             }break;
         case 'CFV2':
-            switch (lastKeyAscii) {
-              case 3632:
+            switch (lastKey) {
+              case 'FV11':
                   state = 'start';
                 break;
               default:
                   if (lastKeyClass == 'CONS') {
                       state = 'CONS';
-                  }else{
+                  } else {
                     state = 'start';
                   }
                   break;
             }break;
+
+        case 'LV1C':
+            switch(lastKeyClass){
+              case 'AV1':
+                state = 'LV1CV';
+                break;
+              case 'AV3':
+                state = 'LV1CV';
+                break;
+              case 'AD2':
+                state = 'start';
+                break;
+              case 'TONE':
+                state = 'LV1CT';
+                break;
+              default:
+                // check all
+              break;
+            }break;
+
+        case 'LV1CV':
+          switch (lastKeyClass) {
+            case 'TONE':
+                state = 'start';
+              break;
+            default:
+                // check all
+          } break;
+
+        case 'LV1CT':
+          switch (lastKeyClass) {
+            case 'FV11':
+              state = 'start';
+            break;
+
+            case 'FV12':
+              state = 'start';
+            break;
+
+            default:
+              // check all
+          } break;
+
+        case 'LV2C':
+          switch (lastKeyClass) {
+            case 'AD2':
+              state = 'start';
+            break;
+
+            case 'TONE':
+              state = 'LV2CT';
+            break;
+
+            default:
+                // check all
+          } break;
+
+        case 'LV2CT':
+          switch (lastKeyClass) {
+            case 'FV11':
+              state = 'start';
+            break;
+
+            default:
+              // check all
+          } break;
+
+        case 'LV3C':
+          switch (lastKeyClass) {
+
+            case 'TONE':
+              state = 'LV3CT';
+            break;
+
+            default:
+                // check all
+          } break;
+
+        case 'LV3CT':
+          switch (lastKeyClass) {
+            case 'FV11':
+              state = 'start';
+            break;
+
+            default:
+              // check all
+          } break;
+
+        case 'LV4C':
+          switch (lastKeyClass) {
+
+            case 'TONE':
+              state = 'start';
+            break;
+
+            default:
+                // check all
+          } break;
+
         default:
             z = '';
             break;
@@ -326,16 +495,16 @@ function genClassTable() {
         3621: 'CONS',
 
         // Leading Vowel return 'LV'
-        3648: 'LV',
-        3649: 'LV',
-        3650: 'LV',
-        3651: 'LV',
-        3652: 'LV',
+        3648: 'LV1', // เอ
+        3649: 'LV2', // แอ
+        3650: 'LV3', // โอ
+        3651: 'LV4', // ใอ
+        3652: 'LV4', // ไอ
 
         // Following vowels type 1 return 'FV1'
-        3632: 'FV1',
-        3634: 'FV1',
-        3635: 'FV1',
+        3632: 'FV11', // อะ
+        3634: 'FV12', // อา
+        3635: 'FV13', // อำ
 
         // Following vowels type 2 return 'FV2'
         3653: 'FV2',
