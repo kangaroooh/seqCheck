@@ -1,7 +1,8 @@
 // just to gen CP table and locate where to Debug
 var CPt = genCP();
 var classTable = genClassTable();
-var state = 'start';
+var state = 0;
+var backup_state = 0;
 
 // key sequence handler, use to get text from textfield then slice
 // and pass to check class function
@@ -48,6 +49,8 @@ function keySequenceCheck(fullText, bsCheck) {
     state = getCurrentState(fullText);
   }
 
+  backup_state = state;
+
   var fullTextLength = fullText.length,
 
   all = fullText.slice(0, fullTextLength - 1),
@@ -63,227 +66,219 @@ function keySequenceCheck(fullText, bsCheck) {
   call them C1 ( the joint of BV1, AV1), C2 (AD2,AD3,BD), C3 (AV3).
   */
   switch (state) {
-    case 'start':
+    case 0:
     switch (lastKeyClass) {
 
-      case 'NON':
-      state = 'start';
+      case 1:
+      state = 0;
       break;
 
-      case 'LV1':
-      state = 'LV1';
+      case 2:
+      state = 2;
       break;
 
-      case 'LV2':
-      state = 'LV2';
+      case 3:
+      state = 3;
       break;
 
-      case 'LV3':
-      state = 'LV3';
+      case 4:
+      state = 4;
       break;
 
-      case 'LV4':
-      state = 'LV4';
+      case 5:
+      state = 5;
       break;
 
-      case 'FV1':
-      state = 'start';
+      case 6:
+      state = 6;
       break;
 
-      case 'FV2':
-      state = 'start';
-      break;
-
-      case 'FV3':
-      state = 'FV3';
-      break;
-
-      case 'CONS':
-      state = 'CONS';
+      case 11:
+      state = 11;
       break;
 
       default:
       // not in the general case here, then reject and go back to start
-      state = 'start';
+      state = 0;
       lastKeyTxt = '';
       break;
     } break;
-    case 'FV3':
+    case 11:
     switch (lastKeyClass) {
-      case 'FV2':
-      state = 'start';
+      case 10:
+      state = 0;
       break;
 
       default:
       checkAll = true;
     }break;
 
-    case 'LV1':
+    case 3:
     switch (lastKeyClass) {
-      case 'CONS':
-      state = 'LV1C';
+      case 2:
+      state = 31;
       break;
 
       default:
-      z = '';
+      lastKeyTxt = '';
       break;
     } break;
 
-    case 'LV2':
+    case 4:
     switch (lastKeyClass) {
-      case 'CONS':
-      state = 'LV2C';
+      case 2:
+      state = 41;
       break;
 
       default:
-      z = '';
+      lastKeyTxt = '';
       break;
     } break;
 
-    case 'LV3':
+    case 5:
     switch (lastKeyClass) {
-      case 'CONS':
-      state = 'LV3C';
+      case 2:
+      state = 51;
       break;
 
       default:
-      z = '';
+      lastKeyTxt = '';
       break;
     } break;
 
-    case 'LV4':
+    case 6:
     switch (lastKeyClass) {
-      case 'CONS':
-      state = 'LV4C';
+      case 2:
+      state = 61;
       break;
 
       default:
-      z = '';
+      lastKeyTxt = '';
       break;
     } break;
 
-    case 'CONS':
+    case 2:
     switch (lastKeyClass) {
 
-      case 'BV1':
-      state = 'C1';
+      case 12:
+      state = 211;
       break;
 
-      case 'AV1':
-      state = 'C1';
+      case 19:
+      state = 211;
       break;
 
-      case 'AD2':
-      state = 'start';
+      case 17:
+      state = 0;
       break;
 
-      case 'AD3':
-      state = 'start';
+      case 18:
+      state = 0;
       break;
 
-      case 'BD':
-      state = 'start';
+      case 14:
+      state = 0;
       break;
 
-      case 'BV2':
-      state = 'C2';
+      case 13:
+      state = 212;
       break;
 
-      case 'AV2':
-      state = 'C2';
+      case 20:
+      state = 212;
       break;
 
-      case 'AV3':
-      state = 'C3';
+      case 21:
+      state = 213;
       break;
 
-      case 'TONE':
-      state = 'C4';
+      case 15:
+      state = 214;
       break;
 
       default:
       checkAll = true;
       break;
     }break;
-    case 'C1':
+    case 211:
     switch (lastKeyClass) {
-      case 'TONE':
-      state = 'start';
+      case 15:
+      state = 0;
       break;
 
-      case 'AD1':
-      state = 'start';
+      case 16:
+      state = 0;
       break;
 
       default:
       checkAll = true;
       break;
     } break;
-    case 'C2':
+    case 212:
     switch (lastKeyClass) {
-      case 'TONE':
-      state = 'start'
+      case 15:
+      state = 0
       break;
 
       default:
       checkAll = true;
       break;
     }break;
-    case 'C3':
+    case 213:
     switch (lastKeyClass) {
-      case 'TONE':
-      state = 'start'
+      case 15:
+      state = 0
       break;
 
       default:
       checkAll = true;
       break;
     }break;
-    case 'C4':
+    case 214:
     switch (lastKeyClass) {
-      case 'FV11': // sara a
-      state = 'start';
+      case 7: // sara a
+      state = 0;
       break;
 
-      case 'FV12': // sara aa
-      state = 'CFV2';
+      case 8: // sara aa
+      state = 2142;
       break;
 
-      case 'FV13': // sara aum
-      state = 'start';
-      break;
-
-      default:
-      checkAll = true;
-      break;
-    }break;
-    case 'CFV2':
-    switch (lastKey) {
-      case 'FV11':
-      state = 'start';
+      case 9: // sara aum
+      state = 0;
       break;
 
       default:
       checkAll = true;
       break;
     }break;
+    case 2142:
+    switch (lastKeyClass) {
+      case 7:
+      state = 0;
+      break;
 
-    case 'LV1C':
+      default:
+      checkAll = true;
+      break;
+    }break;
+
+    case 31:
     switch(lastKeyClass){
-      case 'AV1':
-      state = 'LV1CV';
+      case 19:
+      state = 33;
       break;
 
-      case 'AV3':
-      state = 'LV1CV';
+      case 21:
+      state = 33;
       break;
 
-      case 'AD2':
-      state = 'start';
+      case 17:
+      state = 0;
       break;
 
-      case 'TONE':
-      state = 'LV1CT';
+      case 15:
+      state = 32;
       break;
 
       default:
@@ -291,10 +286,10 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     }break;
 
-    case 'LV1CV':
+    case 33:
     switch (lastKeyClass) {
-      case 'TONE':
-      state = 'start';
+      case 15:
+      state = 0;
       break;
 
       default:
@@ -302,14 +297,14 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     } break;
 
-    case 'LV1CT':
+    case 32:
     switch (lastKeyClass) {
-      case 'FV11':
-      state = 'start';
+      case 7:
+      state = 0;
       break;
 
-      case 'FV12':
-      state = 'start';
+      case 8:
+      state = 0;
       break;
 
       default:
@@ -317,14 +312,14 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     } break;
 
-    case 'LV2C':
+    case 41:
     switch (lastKeyClass) {
-      case 'AD2':
-      state = 'start';
+      case 17:
+      state = 0;
       break;
 
-      case 'TONE':
-      state = 'LV2CT';
+      case 15:
+      state = 42;
       break;
 
       default:
@@ -332,10 +327,10 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     } break;
 
-    case 'LV2CT':
+    case 42:
     switch (lastKeyClass) {
-      case 'FV11':
-      state = 'start';
+      case 7:
+      state = 0;
       break;
 
       default:
@@ -343,11 +338,11 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     } break;
 
-    case 'LV3C':
+    case 51:
     switch (lastKeyClass) {
 
-      case 'TONE':
-      state = 'LV3CT';
+      case 15:
+      state = 52;
       break;
 
       default:
@@ -355,10 +350,10 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     } break;
 
-    case 'LV3CT':
+    case 52:
     switch (lastKeyClass) {
-      case 'FV11':
-      state = 'start';
+      case 7:
+      state = 0;
       break;
 
       default:
@@ -366,11 +361,11 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
     } break;
 
-    case 'LV4C':
+    case 61:
     switch (lastKeyClass) {
 
-      case 'TONE':
-      state = 'start';
+      case 15:
+      state = 0;
       break;
 
       default:
@@ -387,45 +382,37 @@ function keySequenceCheck(fullText, bsCheck) {
   if (checkAll) {
     switch (lastKeyClass) {
 
-      case 'NON':
-      state = 'start';
+      case 1:
+      state = 0;
       break;
 
-      case 'LV1':
-      state = 'LV1';
+      case 2:
+      state = 2;
       break;
 
-      case 'LV2':
-      state = 'LV2';
+      case 3:
+      state = 3;
       break;
 
-      case 'LV3':
-      state = 'LV3';
+      case 4:
+      state = 4;
       break;
 
-      case 'LV4':
-      state = 'LV4';
+      case 5:
+      state = 5;
       break;
 
-      case 'FV1':
-      state = 'start';
+      case 6:
+      state = 6;
       break;
 
-      case 'FV2':
-      state = 'start';
-      break;
-
-      case 'FV3':
-      state = 'FV3';
-      break;
-
-      case 'CONS':
-      state = 'CONS';
+      case 11:
+      state = 11;
       break;
 
       default:
       // not in the general case here, then reject and go back to start
-      state = 'start';
+      state = backup_state;
       lastKeyTxt = '';
       break;
     }
@@ -495,7 +482,7 @@ function klear() {
 }
 
 function getClass(ch) {
-
+/*
   // check for control char and delete
   if ((ch >= 0 && ch <= 31) || ch === 127) {
 
@@ -503,14 +490,15 @@ function getClass(ch) {
 
     // check for all English alphabets, numeral, angkhakhu, fongnam,
     // khomut,maiyamok,baht sign
-  } else if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675) || ch == 32) {
+  } else*/
+    if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675) || ch == 32) {
 
-    return 'NON'; // return 'NON';
+    return 1; // return 'NON';
 
     // check for all consonant Thai character
   } else if ((ch >= 3585 && ch <= 3619) || (ch >= 33 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
 
-    return 'CONS'; // return 'CONS'
+    return 2; // return 'CONS'
   } else {
 
     // if not in the above range, then look up in classTable
@@ -524,65 +512,65 @@ function genClassTable() {
   var table = {
 
     // Mai ya mok
-    3654: 'NON',
+    3654: 1,
 
     // Thai consonant
-    3621: 'CONS',
+    3621: 2,
 
     // Leading Vowel return 'LV'
-    3648: 'LV1', // เอ
-    3649: 'LV2', // แอ
-    3650: 'LV3', // โอ
-    3651: 'LV4', // ใอ
-    3652: 'LV4', // ไอ
+    3648: 3, // เอ
+    3649: 4, // แอ
+    3650: 5, // โอ
+    3651: 6, // ใอ
+    3652: 6, // ไอ
 
     // Following vowels type 1 return 'FV1'
-    3632: 'FV11', // อะ
-    3634: 'FV12', // อา
-    3635: 'FV13', // อำ
+    3632: 7, // อะ
+    3634: 8, // อา
+    3635: 9, // อำ
 
     // Following vowels type 2 return 'FV2'
-    3653: 'FV2',
+    3653: 10,
 
     // Following vowels type 3 return 'FV3' ทุกตัว ยกเว้น2ตัวเนี้ย
-    3620: 'FV3',
-    3622: 'FV3',
+    3620: 11,
+    3622: 11,
 
     // Below vowel type 1 return 'BV1' sara-u
-    3640: 'BV1',
+    3640: 12,
 
     // Below vowel type 2 return 'BV2' sara-uu
-    3641: 'BV2',
+    3641: 13,
 
     // BD(UNDERDOT) pinthu
-    3642: 'BD',
+    3642: 14,
 
     // TONE return 'TONE'
-    3656: 'TONE',
-    3657: 'TONE',
-    3658: 'TONE',
-    3659: 'TONE',
+    3656: 15,
+    3657: 15,
+    3658: 15,
+    3659: 15,
 
     // Above Diacritics type 1 return 'AD1' karant
-    3660: 'AD1',
-    3661: 'AD1',
+    3660: 16,
+    3661: 16,
 
     // Above Diacritics type 2 return 'AD2'
-    3655: 'AD2',
+    3655: 17,
 
     // Above Diacritics type 3 return 'AD3'
-    3662: 'AD3',
+    3662: 18,
 
     // Above Vowel type 1 return 'AV1'
-    3636: 'AV1',
+    3636: 19,
 
     // Above Vowel type 2 return 'AV2'
-    3633: 'AV2',
-    3638: 'AV2',
+    3633: 20,
+    3638: 20,
 
     // Above Vowel type 3 return 'AV3'
-    3637: 'AV3',
-    3639: 'AV3'
+    3637: 21,
+    3639: 21
   };
 
   return table;
