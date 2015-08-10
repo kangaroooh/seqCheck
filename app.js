@@ -32,11 +32,12 @@ function ksHandler() {
 
 function keySequenceCheck(all, lastKey) {
 
-    var lastKeyAscii = lastKey.charCodeAt(0);
-    var lastKeyClass = getClass(lastKeyAscii);
+    var lastKeyAscii = lastKey.charCodeAt(0),
+        lastKeyClass = getClass(lastKeyAscii);
     /*
         Use state as a global state to keep track of where the hell you are then get into rach state by zClass
-
+        As you can see from the FSM diagram from nectec, after CONS there can be 3 possibles state which i will
+        call them C1 ( the joint of BV1, AV1), C2 (AD2,AD3,BD), C3 (AV3).
     */
     switch (state) {
         case 'start':
@@ -77,11 +78,11 @@ function keySequenceCheck(all, lastKey) {
             switch (lastKeyClass) {
 
                 case 'BV1':
-                    state = 'A1';
+                    state = 'C1';
                     break;
 
                 case 'AV1':
-                    state = 'A1';
+                    state = 'C1';
                     break;
 
                 case 'AD2':
@@ -97,27 +98,26 @@ function keySequenceCheck(all, lastKey) {
                     break;
 
                 case 'BV2':
-                    state = 'A3';
+                    state = 'C2';
                     break;
 
                 case 'AV2':
-                    state = 'A3';
+                    state = 'C2';
                     break;
 
                 case 'AV3':
-                    state = 'A4';
+                    state = 'C3';
                     break;
-
-                    ///// experiment here
 
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
+                    }else{
+                      state = 'start';
                     }
-                    state = 'start';
                     break;
             }break;
-        case 'A1':
+        case 'C1':
             switch (lastKeyClass) {
                 case 'TONE':
                     state = 'start'
@@ -130,11 +130,12 @@ function keySequenceCheck(all, lastKey) {
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
+                    }else{
+                      state = 'start';
                     }
-                    state = 'start';
                     break;
             } break;
-        case 'A3':
+        case 'C2':
             switch (lastKeyClass) {
                 case 'TONE':
                     state = 'start'
@@ -143,11 +144,12 @@ function keySequenceCheck(all, lastKey) {
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
+                    }else{
+                      state = 'start';
                     }
-                    state = 'start';
                     break;
             }break;
-        case 'A4':
+        case 'C3':
             switch (lastKeyClass) {
                 case 'TONE':
                     state = 'start'
@@ -160,8 +162,9 @@ function keySequenceCheck(all, lastKey) {
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
+                    }else{
+                      state = 'start';
                     }
-                    state = 'start';
                     break;
             }break;
         default:
