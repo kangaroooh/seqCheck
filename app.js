@@ -30,7 +30,7 @@ function ksHandler(event) {
 
   if (lastKeyCode === 8) {
     retVal = keySequenceCheck(fullText, true);
-  } else {
+  } else if (lastKeyCode !== 16){
     retVal = keySequenceCheck(fullText, false);
   }
 
@@ -413,6 +413,18 @@ function keySequenceCheck(fullText, bsCheck) {
 
       case 6:
       state = 6;
+      break;
+
+      case 7:
+      state = 0;
+      break;
+
+      case 8:
+      state = 0;
+      break;
+
+      case 9:
+      state = 0;
       break;
 
       case 11:
