@@ -98,7 +98,6 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
 
       default:
-      // not in the general case here, then reject and go back to start
       state = 0;
       lastKeyTxt = '';
       break;
@@ -166,6 +165,10 @@ function keySequenceCheck(fullText, bsCheck) {
 
       case 19:
       state = 211;
+      break;
+
+      case 16:
+      state = 0;
       break;
 
       case 17:
@@ -411,7 +414,6 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
 
       default:
-      // not in the general case here, then reject and go back to start
       state = backup_state;
       lastKeyTxt = '';
       break;
@@ -478,7 +480,8 @@ function klear() {
   document.getElementById("dbug1").innerHTML = "";
   document.getElementById("dbug2").innerHTML = "";
   document.getElementById("dbug3").innerHTML = "";
-  state = 'start';
+  state = 0;
+  backup_state = 0;
 }
 
 function getClass(ch) {
