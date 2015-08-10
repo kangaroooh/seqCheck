@@ -91,7 +91,7 @@ function keySequenceCheck(fullText, bsCheck) {
                 default:
                     // not in the general case here, then reject and go back to start
                     state = 'start';
-                    lastKey = '';
+                    lastKeyTxt = '';
                     break;
             } break;
 
@@ -176,10 +176,6 @@ function keySequenceCheck(fullText, bsCheck) {
                     state = 'start'
                     break;
 
-                case 'AD2':
-                    state = 'start'
-                    break;
-
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
@@ -200,9 +196,8 @@ function getCurrentState(fullText) {
 
     var fullTextLength = fullText.length,
         base = fullText.slice(0, fullTextLength - 2),
-        x = fullText[fullTextLength - 2],
-        y = fullText[fullTextLength - 1],
-        z = fullText[fullTextLength];
+        y = fullText[fullTextLength - 2],
+        z = fullText[fullTextLength - 1];
 
     switch (z) {
       case 'AD1':
