@@ -1,3 +1,9 @@
+/*
+  TODO:
+  1. Shift 3611
+  2. Caps Lock 3611
+*/
+
 // just to gen CP table and locate where to Debug
 var CPt = genCP();
 var classTable = genClassTable();
