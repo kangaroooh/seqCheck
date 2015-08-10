@@ -130,6 +130,10 @@ function keySequenceCheck(fullText, bsCheck) {
                     state = 'C3';
                     break;
 
+                case 'TONE':
+                    state = 'C4';
+                    break;
+
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
@@ -183,6 +187,41 @@ function keySequenceCheck(fullText, bsCheck) {
                       state = 'start';
                     }
                     break;
+            }break;
+        case 'C4':
+            switch (lastKeyAscii) {
+                case 3632: // sara a
+                    state = 'start';
+                    break;
+
+                case 3634: // sara aa
+                    state = 'CFV2';
+                    break;
+
+                case 3635: // sara aum
+                    state = 'start';
+                    break;
+
+                default:
+                    if (lastKeyClass == 'CONS') {
+                        state = 'CONS';
+                    }else{
+                      state = 'start';
+                    }
+                    break;
+            }break;
+        case 'CFV2':
+            switch (lastKeyAscii) {
+              case 3632:
+                  state = 'start';
+                break;
+              default:
+                  if (lastKeyClass == 'CONS') {
+                      state = 'CONS';
+                  }else{
+                    state = 'start';
+                  }
+                  break;
             }break;
         default:
             z = '';
