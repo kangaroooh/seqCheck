@@ -5,7 +5,7 @@ var state = 'start';
 
 // key sequence handler, use to get text from textfield then slice
 // and pass to check class function
-function ksHandler() {
+function ksHandler(event) {
 
     var dbug1 = document.getElementById("dbug1"),
         dbug2 = document.getElementById("dbug2"),
@@ -18,24 +18,45 @@ function ksHandler() {
 
     // get all and the last key press
         all = fullText.slice(0, fullTextLength - 1),
-        lastKey = fullText[fullTextLength - 1],
+        lastKeyTxt = fullText[fullTextLength - 1],
+        lastKeyCode = event.keyCode || event.charCode;
 
-    // call the function then display
-        retVal = keySequenceCheck(all, lastKey);
+        if (lastKeyCode === 8) {
+            retVal = keySequenceCheck(fullText, true);
+        } else {
+            retVal = keySequenceCheck(fullText, false);
+        }
 
+    // display data
     input.value = retVal;
 
     dbug1.innerHTML = all;
-    dbug2.innerHTML = lastKey;
+    dbug2.innerHTML = lastKeyTxt;
     dbug3.innerHTML = retVal;
 }
 
-function keySequenceCheck(all, lastKey) {
+/*
+  keySequenceCheck
+  argument : all, lastKey
+            all is a String containing all data except the last one
 
-    var lastKeyAscii = lastKey.charCodeAt(0),
+  return : a String which is all.concat(lastKey)
+*/
+function keySequenceCheck(fullText, bsCheck) {
+
+    if (bsCheck){
+      state = getCurrentState(fullText);
+    }
+
+    var fullTextLength = fullText.length,
+
+        all = fullText.slice(0, fullTextLength - 1),
+        lastKeyTxt = fullText[fullTextLength - 1],
+
+        lastKeyAscii = lastKeyTxt.charCodeAt(0),
         lastKeyClass = getClass(lastKeyAscii);
     /*
-        Use state as a global state to keep track of where the hell you are then get into rach state by zClass
+        Use state as a global state to keep track of where the you are then get into rach state by lastKeyClass
         As you can see from the FSM diagram from nectec, after CONS there can be 3 possibles state which i will
         call them C1 ( the joint of BV1, AV1), C2 (AD2,AD3,BD), C3 (AV3).
     */
@@ -172,7 +193,59 @@ function keySequenceCheck(all, lastKey) {
             break;
     }
 
-    return all.concat(lastKey);
+    return all.concat(lastKeyTxt);
+}
+
+function getCurrentState(fullText) {
+
+    var fullTextLength = fullText.length,
+        base = fullText.slice(0, fullTextLength - 2),
+        x = fullText[fullTextLength - 2],
+        y = fullText[fullTextLength - 1],
+        z = fullText[fullTextLength];
+
+    switch (z) {
+      case 'AD1':
+        state = 'C1';
+        break;
+      case 'AD3':
+        state = 'CONS';
+        break;
+      case 'BD':
+        state = 'CONS';
+        break;
+      case 'BV2':
+        state = 'CONS';
+        break;
+
+      case 'AD2':
+        if (y === 'CONS') {
+          state = 'CONS';
+        } else if (y === 'AV3') {
+          state = 'C3'
+        } break;
+
+      case 'TONE':
+        switch (y) {
+          case 'BV1':
+            state = 'C1';
+            break;
+
+          case 'BV2':
+            state = 'C2';
+            break;
+
+          case 'AV2':
+            state = 'C2';
+            break;
+
+          case 'AV3':
+            state = 'C3';
+            break;
+        } break;
+
+    }
+    return state;
 }
 
 function klear() {
