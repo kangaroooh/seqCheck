@@ -11,7 +11,7 @@ function ksHandler() {
         dbug2 = document.getElementById("dbug2"),
         dbug3 = document.getElementById("dbug3"),
         input = document.getElementById("input"),
-        
+
     // get the fullText of Textfield id:input in index.html
         fullText = input.value,
         fullTextLength = fullText.length,
@@ -32,100 +32,101 @@ function ksHandler() {
 
 function keySequenceCheck(all, lastKey) {
 
-    var lastKeyClass = getClass(lastKey.charCodeAt(0));
+    var lastKeyAscii = lastKey.charCodeAt(0);
+    var lastKeyClass = getClass(lastKeyAscii);
     /*
         Use state as a global state to keep track of where the hell you are then get into rach state by zClass
-    
+
     */
     switch (state) {
         case 'start':
             switch (lastKeyClass) {
-                    
+
                 case 'NON':
                     state = 'start';
                     break;
-                    
+
                 case 'LV':
                     state = 'start';
                     break;
-                    
+
                 case 'FV1':
                     state = 'start';
                     break;
-                    
+
                 case 'FV2':
                     state = 'start';
                     break;
-                    
+
                 case 'FV3':
                     state = 'start';
                     break;
-                    
+
                 case 'CONS':
                     state = 'CONS';
                     break;
-                    
+
                 default:
                     // not in the general case here, then reject and go back to start
                     state = 'start';
                     lastKey = '';
                     break;
             } break;
-            
+
         case 'CONS':
             switch (lastKeyClass) {
-                    
+
                 case 'BV1':
                     state = 'A1';
                     break;
-                    
+
                 case 'AV1':
                     state = 'A1';
                     break;
-                    
+
                 case 'AD2':
                     state = 'start';
                     break;
-                    
+
                 case 'AD3':
                     state = 'start';
                     break;
-                    
+
                 case 'BD':
                     state = 'start';
                     break;
-                    
+
                 case 'BV2':
                     state = 'A3';
                     break;
-                    
+
                 case 'AV2':
                     state = 'A3';
                     break;
-                    
+
                 case 'AV3':
                     state = 'A4';
                     break;
-                    
+
                     ///// experiment here
-                    
+
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
                     }
                     state = 'start';
                     break;
-            }break;   
+            }break;
         case 'A1':
             switch (lastKeyClass) {
                 case 'TONE':
                     state = 'start'
                     break;
-                    
+
                 case 'AD1':
                     state = 'start'
                     break;
-                    
+
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
@@ -138,7 +139,7 @@ function keySequenceCheck(all, lastKey) {
                 case 'TONE':
                     state = 'start'
                     break;
-                    
+
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
@@ -151,11 +152,11 @@ function keySequenceCheck(all, lastKey) {
                 case 'TONE':
                     state = 'start'
                     break;
-                    
+
                 case 'AD2':
                     state = 'start'
                     break;
-                    
+
                 default:
                     if (lastKeyClass == 'CONS') {
                         state = 'CONS'
@@ -167,7 +168,7 @@ function keySequenceCheck(all, lastKey) {
             z = '';
             break;
     }
-    
+
     return all.concat(lastKey);
 }
 
@@ -188,12 +189,12 @@ function getClass(ch) {
 
         // check for all English alphabets, numeral, angkhakhu, fongnam,
         // khomut,maiyamok,baht sign
-    } else if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675)) {
+    } else if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675) || ch == 32) {
 
         return 'NON'; // return 'NON';
 
         // check for all consonant Thai character
-    } else if ((ch >= 3585 && ch <= 3619) || (ch >= 32 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
+    } else if ((ch >= 3585 && ch <= 3619) || (ch >= 33 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
 
         return 'CONS'; // return 'CONS'
     } else {
@@ -213,7 +214,7 @@ function genClassTable() {
 
         // Thai consonant
         3621: 'CONS',
-        
+
         // Leading Vowel return 'LV'
         3648: 'LV',
         3649: 'LV',
@@ -273,7 +274,7 @@ function genClassTable() {
     return table;
 }
 function genCP() {
-    
+
     var tabl = new Array(17);
     for (var i = 0; i < 17; i++) {
         tabl[i] = new Array(17);
@@ -320,4 +321,3 @@ function genCP() {
 
     return tabl;
 }
-
