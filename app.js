@@ -1,7 +1,7 @@
 /*
-  TODO:
-  1. Shift 3611
-  2. Caps Lock 3611
+TODO:
+1. Shift 3611
+2. Caps Lock 3611
 */
 
 // just to gen CP table and locate where to Debug
@@ -28,11 +28,13 @@ function ksHandler(event) {
   lastKeyTxt = fullText[fullTextLength - 1],
   lastKeyCode = event.keyCode || event.charCode;
 
+  var bsCheck = false;
+
   if (lastKeyCode === 8) {
-    retVal = keySequenceCheck(fullText, true);
-  } else if (lastKeyCode !== 16){
-    retVal = keySequenceCheck(fullText, false);
+    bsCheck =  true;
   }
+
+  retVal = keySequenceCheck(fullText, bsCheck);
 
   // display data
   input.value = retVal;
@@ -166,33 +168,18 @@ function keySequenceCheck(fullText, bsCheck) {
     switch (lastKeyClass) {
 
       case 12:
-      state = 211;
-      break;
-
       case 19:
       state = 211;
       break;
 
       case 16:
-      state = 0;
-      break;
-
       case 17:
-      state = 0;
-      break;
-
       case 18:
-      state = 0;
-      break;
-
       case 14:
       state = 0;
       break;
 
       case 13:
-      state = 212;
-      break;
-
       case 20:
       state = 212;
       break;
@@ -211,10 +198,8 @@ function keySequenceCheck(fullText, bsCheck) {
     }break;
     case 211:
     switch (lastKeyClass) {
-      case 15:
-      state = 0;
-      break;
 
+      case 15:
       case 16:
       state = 0;
       break;
@@ -245,14 +230,12 @@ function keySequenceCheck(fullText, bsCheck) {
     }break;
     case 214:
     switch (lastKeyClass) {
-      case 7: // sara a
-      state = 0;
-      break;
 
       case 8: // sara aa
       state = 2142;
       break;
 
+      case 7: // sara a
       case 9: // sara aum
       state = 0;
       break;
@@ -274,10 +257,8 @@ function keySequenceCheck(fullText, bsCheck) {
 
     case 31:
     switch(lastKeyClass){
-      case 19:
-      state = 33;
-      break;
 
+      case 19:
       case 21:
       state = 33;
       break;
@@ -308,10 +289,8 @@ function keySequenceCheck(fullText, bsCheck) {
 
     case 32:
     switch (lastKeyClass) {
-      case 7:
-      state = 0;
-      break;
 
+      case 7:
       case 8:
       state = 0;
       break;
@@ -391,10 +370,6 @@ function keySequenceCheck(fullText, bsCheck) {
   if (checkAll) {
     switch (lastKeyClass) {
 
-      case 1:
-      state = 0;
-      break;
-
       case 2:
       state = 2;
       break;
@@ -415,14 +390,9 @@ function keySequenceCheck(fullText, bsCheck) {
       state = 6;
       break;
 
+      case 1:
       case 7:
-      state = 0;
-      break;
-
       case 8:
-      state = 0;
-      break;
-
       case 9:
       state = 0;
       break;
@@ -445,49 +415,140 @@ function keySequenceCheck(fullText, bsCheck) {
 function getCurrentState(fullText) {
 
   var fullTextLength = fullText.length,
-  base = fullText.slice(0, fullTextLength - 2),
+  base = fullText.slice(0, fullTextLength - 4),
+
+  w = fullText[fullTextLength - 4],
+  x = fullText[fullTextLength - 3],
   y = fullText[fullTextLength - 2],
   z = fullText[fullTextLength - 1];
 
-  switch (z) {
-    case 'AD1':
-    state = 'C1';
+  var wClass = getClass(w.charCodeAt(0));
+  var xClass = getClass(x.charCodeAt(0));
+  var yClass = getClass(y.charCodeAt(0));
+  var zClass = getClass(z.charCodeAt(0));
+
+
+  switch (zClass) {
+
+    //only for dotted case
+    case 11:
+    state = 11;
     break;
-    case 'AD3':
-    state = 'CONS';
+    case 3:
+    state = 3;
     break;
-    case 'BD':
-    state = 'CONS';
+    case 4:
+    state = 4;
     break;
-    case 'BV2':
-    state = 'CONS';
+    case 5:
+    state = 5;
+    break;
+    case 6:
+    state  = 6;
     break;
 
-    case 'AD2':
-    if (y === 'CONS') {
-      state = 'CONS';
-    } else if (y === 'AV3') {
-      state = 'C3'
-    } break;
+    case 1:
+    case 7:
+    case 9:
+    case 14:
+    case 16:
+    case 17:
+    case 18:
+    case 111: //FV2
+    state = 0;
+    break;
 
-    case 'TONE':
-    switch (y) {
-      case 'BV1':
-      state = 'C1';
-      break;
 
-      case 'BV2':
-      state = 'C2';
-      break;
+    // BV1
+    case 12:
+    state = 211;
+    break;
 
-      case 'AV2':
-      state = 'C2';
-      break;
+    case 20:
+    case 13:
+    state = 212;
+    break;
 
-      case 'AV3':
-      state = 'C3';
+
+    // cons case
+    case 2:
+    switch (yClass) {
+      case 3:
+      state = 3;
       break;
-    } break;
+      case 4:
+      state = 4;
+      break;
+      case 5:
+      state = 5;
+      break;
+      case 6:
+      state = 6;
+      break;
+      default:
+      state = 2;
+      break;
+    }break;
+
+    // AV1 case
+    case 19:
+    switch (xClass) {
+      case 3:
+      state = 33;
+      break;
+      default:
+      state = 211;
+    }break;
+
+    // AV3 case
+    case 21:
+    switch (xClass) {
+      case 3:
+      state = 33;
+      break;
+      default:
+      state = 213;
+    }break;
+
+    // TONE case
+    case 15:
+    if (wClass == 3) {
+      state = 0;
+      break;
+    }
+    if (yClass == 2) {
+      if (xClass != 3 && xClass != 4 && xClass != 5 && xClass != 6){
+        state = 214;
+        break;
+      }
+    }
+    switch (xClass) {
+      case 3:
+      state = 32;
+      break;
+      case 4:
+      state = 42;
+      break;
+      case 5:
+      state = 52;
+      break;
+      case 6:
+      state = 0;
+      break;
+      default:
+      state = 0;
+    }
+    break;
+
+    // deals with sara -aa
+    case 8:
+    if (wClass == 3) {
+      state = 0;
+    } else {
+      state = 2142;
+    }
+    break;
+
 
   }
   return state;
@@ -503,28 +564,28 @@ function klear() {
 }
 
 function getClass(ch) {
-/*
+  /*
   // check for control char and delete
   if ((ch >= 0 && ch <= 31) || ch === 127) {
 
-    return 'CTRL'; // return 'CTRL';
+  return 'CTRL'; // return 'CTRL';
 
-    // check for all English alphabets, numeral, angkhakhu, fongnam,
-    // khomut,maiyamok,baht sign
-  } else*/
-    if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675) || ch == 32) {
+  // check for all English alphabets, numeral, angkhakhu, fongnam,
+  // khomut,maiyamok,baht sign
+} else*/
+if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675) || ch == 32) {
 
-    return 1; // return 'NON';
+  return 1; // return 'NON';
 
-    // check for all consonant Thai character
-  } else if ((ch >= 3585 && ch <= 3619) || (ch >= 33 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
+  // check for all consonant Thai character
+} else if ((ch >= 3585 && ch <= 3619) || (ch >= 33 && ch <= 64) || (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126) || (ch >= 3623 && ch <= 3630)) {
 
-    return 2; // return 'CONS'
-  } else {
+  return 2; // return 'CONS'
+} else {
 
-    // if not in the above range, then look up in classTable
-    return classTable[ch];
-  }
+  // if not in the above range, then look up in classTable
+  return classTable[ch];
+}
 
 }
 
