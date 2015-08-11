@@ -1,11 +1,4 @@
-/*
-TODO:
-1. Shift 3611
-2. Caps Lock 3611
-*/
-
 // just to gen CP table and locate where to Debug
-var CPt = genCP();
 var classTable = genClassTable();
 var state = 0;
 var backup_state = 0;
@@ -17,10 +10,15 @@ function ksHandler(event) {
     var dbug1 = document.getElementById("dbug1"),
         dbug2 = document.getElementById("dbug2"),
         dbug3 = document.getElementById("dbug3"),
-        input = document.getElementById("input"),
+        input = document.getElementById("input");
 
-        // get the fullText of Textfield id:input in index.html
-        fullText = input.value,
+    // just for checking shift(16) and caps lock(20) to not proceed
+    if (event.keyCode == 16 || event.keyCode == 20) {
+        return input.value;
+    }
+
+    // get the fullText of Textfield id:input in index.html
+    var fullText = input.value,
         fullTextLength = fullText.length,
 
         // get all and the last key press
@@ -28,13 +26,13 @@ function ksHandler(event) {
         lastKeyTxt = fullText[fullTextLength - 1],
         lastKeyCode = event.keyCode || event.charCode;
 
-    var bsCheck = false;
-
-    if (lastKeyCode === 8) {
-        bsCheck = true;
+    // if it is a backspace then just update the state
+    if (event.keyCode === 8) {
+        state = getCurrentState(fullText);
+    } else {
+        retVal = keySequenceCheck(fullText, bsCheck);
     }
-    //test
-    retVal = keySequenceCheck(fullText, bsCheck);
+
 
     // display data
     input.value = retVal;
@@ -45,20 +43,27 @@ function ksHandler(event) {
 }
 
 /*
-keySequenceCheck
-argument : all, lastKey
-all is a String containing all data except the last one
+    keySequenceCheck(fullText)
+    argument : fullText (value from textbox)
+    return : a String which is already processed
 
-return : a String which is all.concat(lastKey)
+
+    Use state as a global state to keep track of where the you are then get into each state by lastKeyClass
+    As you can see from the FSM diagram
+
+    The idea is that it will redirect you to a particular state, then determine whether the lastKey should be
+    accepted or not.
+
+    Please debug for more understanding.
+
+
 */
-function keySequenceCheck(fullText, bsCheck) {
 
-    if (bsCheck) {
-        state = getCurrentState(fullText);
-    }
+function keySequenceCheck(fullText) {
 
     backup_state = state;
 
+    // this chunk is just seperating the lastKey from fullText then classify it
     var fullTextLength = fullText.length,
 
         all = fullText.slice(0, fullTextLength - 1),
@@ -68,43 +73,32 @@ function keySequenceCheck(fullText, bsCheck) {
         lastKeyClass = getClass(lastKeyAscii),
 
         checkAll = false;
-    /*
-    Use state as a global state to keep track of where the you are then get into rach state by lastKeyClass
-    As you can see from the FSM diagram from nectec, after CONS there can be 3 possibles state which i will
-    call them C1 ( the joint of BV1, AV1), C2 (AD2,AD3,BD), C3 (AV3).
-    */
-    switch (state) {
-    case 0:
-        switch (lastKeyClass) {
 
+
+    switch (state) {
+    case 0: // start
+        switch (lastKeyClass) {
         case 1:
             state = 0;
             break;
-
         case 2:
             state = 2;
             break;
-
         case 3:
             state = 3;
             break;
-
         case 4:
             state = 4;
             break;
-
         case 5:
             state = 5;
             break;
-
         case 6:
             state = 6;
             break;
-
         case 11:
             state = 11;
             break;
-
         default:
             state = 0;
             lastKeyTxt = '';
@@ -116,7 +110,6 @@ function keySequenceCheck(fullText, bsCheck) {
         case 10:
             state = 0;
             break;
-
         default:
             checkAll = true;
         }
@@ -127,37 +120,31 @@ function keySequenceCheck(fullText, bsCheck) {
         case 2:
             state = 31;
             break;
-
         default:
             lastKeyTxt = '';
             break;
         }
         break;
-
     case 4:
         switch (lastKeyClass) {
         case 2:
             state = 41;
             break;
-
         default:
             lastKeyTxt = '';
             break;
         }
         break;
-
     case 5:
         switch (lastKeyClass) {
         case 2:
             state = 51;
             break;
-
         default:
             lastKeyTxt = '';
             break;
         }
         break;
-
     case 6:
         switch (lastKeyClass) {
         case 2:
@@ -169,44 +156,35 @@ function keySequenceCheck(fullText, bsCheck) {
             break;
         }
         break;
-
     case 2:
         switch (lastKeyClass) {
-
         case 12:
         case 19:
             state = 211;
             break;
-
         case 16:
         case 17:
         case 18:
         case 14:
             state = 0;
             break;
-
         case 13:
         case 20:
             state = 212;
             break;
-
         case 21:
             state = 213;
             break;
-
         case 15:
             state = 214;
             break;
-
         case 8: // sara aa
             state = 2142;
             break;
-
         case 7: // sara a
         case 9: // sara aum
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
@@ -214,12 +192,10 @@ function keySequenceCheck(fullText, bsCheck) {
         break;
     case 211:
         switch (lastKeyClass) {
-
         case 15:
         case 16:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
@@ -230,7 +206,6 @@ function keySequenceCheck(fullText, bsCheck) {
         case 15:
             state = 0
             break;
-
         default:
             checkAll = true;
             break;
@@ -241,7 +216,6 @@ function keySequenceCheck(fullText, bsCheck) {
         case 15:
             state = 0
             break;
-
         default:
             checkAll = true;
             break;
@@ -249,16 +223,13 @@ function keySequenceCheck(fullText, bsCheck) {
         break;
     case 214:
         switch (lastKeyClass) {
-
         case 8: // sara aa
             state = 2142;
             break;
-
         case 7: // sara a
         case 9: // sara aum
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
@@ -269,7 +240,6 @@ function keySequenceCheck(fullText, bsCheck) {
         case 7:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
@@ -278,170 +248,134 @@ function keySequenceCheck(fullText, bsCheck) {
 
     case 31:
         switch (lastKeyClass) {
-
         case 19:
         case 21:
             state = 33;
             break;
-
         case 17:
             state = 0;
             break;
-
         case 15:
             state = 32;
             break;
-
         case 7:
             state = 0;
             break;
-
         case 8:
             state = 32;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 33:
         switch (lastKeyClass) {
         case 15:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 32:
         switch (lastKeyClass) {
-
         case 7:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 41:
         switch (lastKeyClass) {
         case 17:
             state = 0;
             break;
-
         case 15:
             state = 42;
             break;
-
         case 7:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 42:
         switch (lastKeyClass) {
         case 7:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 51:
         switch (lastKeyClass) {
-
         case 15:
             state = 52;
             break;
-
         case 7:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 52:
         switch (lastKeyClass) {
         case 7:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     case 61:
         switch (lastKeyClass) {
-
         case 15:
             state = 0;
             break;
-
         default:
             checkAll = true;
             break;
         }
         break;
-
     default:
         z = '';
         break;
     }
-
     // one last check to check dotted
     if (checkAll) {
         switch (lastKeyClass) {
-
         case 2:
             state = 2;
             break;
-
         case 3:
             state = 3;
             break;
-
         case 4:
             state = 4;
             break;
-
         case 5:
             state = 5;
             break;
-
         case 6:
             state = 6;
             break;
-
         case 1:
             state = 0;
             break;
-
         case 11:
             state = 11;
             break;
-
         default:
             state = backup_state;
             lastKeyTxt = '';
@@ -449,10 +383,22 @@ function keySequenceCheck(fullText, bsCheck) {
         }
         checkAll = false;
     }
-
     return all.concat(lastKeyTxt);
 }
 
+/*
+    getCurrentState(fullText)
+
+    This function will determine the state in the FSM. it is useful when working with backspace
+    z is the last character in the string
+    y is the character before z
+    x,w follow the same principle of y
+
+    The idea is to read the fullText string from end to start to find
+    1. unique case (ex. z is in BV1, so it must be at the state 211 only)
+    2. correlation case (ex. z is tone, x is LV1. it's obvious that it must be at 32)
+    return state
+*/
 function getCurrentState(fullText) {
 
     var fullTextLength = fullText.length,
@@ -607,6 +553,15 @@ function getCurrentState(fullText) {
     return state;
 }
 
+/*
+    klear() function
+    it's almost useless, just to clear the input textarea, debug value and state
+    but it's great for lazy people though
+
+    this function will be called by the reset button in html
+
+    return : none
+*/
 function klear() {
     document.getElementById("input").value = "";
     document.getElementById("dbug1").innerHTML = "";
@@ -616,6 +571,15 @@ function klear() {
     backup_state = 0;
 }
 
+/*
+    getClass(ch) function
+    argument : character in ascii format
+    return : class of the argument character
+
+    This function is used to classify the class of specific THAI character. It's a BIG THAI over there.
+    There existed 'CTRL' class once. I just leave the commented code here, in case anyone would like
+    to further develop it
+*/
 function getClass(ch) {
     /*
   // check for control char and delete
@@ -641,6 +605,14 @@ function getClass(ch) {
     }
 
 }
+
+/*
+    genClassTable()
+    return : dict[ascii_code] = class, its ascii code as a key and its class as a value
+
+    just to generate class lookup table for the sake of laziness
+*/
+
 
 function genClassTable() {
 
@@ -711,6 +683,12 @@ function genClassTable() {
     return table;
 }
 
+/*
+    genCP()
+
+    This function is implemented to generate CP table to be used with Nectec's method. I won't use it anyway,
+    but I will just leave it here for my fellas
+
 function genCP() {
 
     var tabl = new Array(17);
@@ -759,3 +737,5 @@ function genCP() {
 
     return tabl;
 }
+
+*/
