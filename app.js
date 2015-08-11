@@ -192,6 +192,15 @@ function keySequenceCheck(fullText, bsCheck) {
       state = 214;
       break;
 
+      case 8: // sara aa
+      state = 2142;
+      break;
+
+      case 7: // sara a
+      case 9: // sara aum
+      state = 0;
+      break;
+
       default:
       checkAll = true;
       break;
@@ -271,6 +280,14 @@ function keySequenceCheck(fullText, bsCheck) {
       state = 32;
       break;
 
+      case 7:
+      state = 0;
+      break;
+
+      case 8:
+      state = 32;
+      break;
+
       default:
       checkAll = true;
       break;
@@ -291,7 +308,6 @@ function keySequenceCheck(fullText, bsCheck) {
     switch (lastKeyClass) {
 
       case 7:
-      case 8:
       state = 0;
       break;
 
@@ -308,6 +324,10 @@ function keySequenceCheck(fullText, bsCheck) {
 
       case 15:
       state = 42;
+      break;
+
+      case 7:
+      state = 0;
       break;
 
       default:
@@ -331,6 +351,10 @@ function keySequenceCheck(fullText, bsCheck) {
 
       case 15:
       state = 52;
+      break;
+
+      case 7:
+      state = 0;
       break;
 
       default:
@@ -391,9 +415,6 @@ function keySequenceCheck(fullText, bsCheck) {
       break;
 
       case 1:
-      case 7:
-      case 8:
-      case 9:
       state = 0;
       break;
 
@@ -422,10 +443,18 @@ function getCurrentState(fullText) {
   y = fullText[fullTextLength - 2],
   z = fullText[fullTextLength - 1];
 
-  var wClass = getClass(w.charCodeAt(0));
-  var xClass = getClass(x.charCodeAt(0));
-  var yClass = getClass(y.charCodeAt(0));
-  var zClass = getClass(z.charCodeAt(0));
+  if (w != null){
+    var wClass = getClass(w.charCodeAt(0));
+  }
+  if (x != null){
+    var xClass = getClass(x.charCodeAt(0));  }
+  if (y != null){
+    var yClass = getClass(y.charCodeAt(0));
+  }
+  if (z != null){
+    var zClass = getClass(z.charCodeAt(0));
+  }
+
 
 
   switch (zClass) {
