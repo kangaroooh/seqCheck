@@ -34,7 +34,7 @@ function ksHandler(event) {
     if (event.keyCode === 8) {
         state = getCurrentState(fullText);
     } else {
-        fullText = keySequenceCheck(fullText);
+        fullText = keySequenceCheck(all, lastKeyTxt);
     }
 
 
@@ -63,17 +63,17 @@ function ksHandler(event) {
 
 */
 
-function keySequenceCheck(fullText) {
+function keySequenceCheck(all, lastKeyTxt) {
 
     backup_state = state;
 
     // this chunk is just seperating the lastKey from fullText then classify it
-    var fullTextLength = fullText.length,
-        base = fullText.slice(0, fullTextLength - 3),
+    var allLength = all.length,
+        base = all.slice(0, allLength - 2),
 
-        x = fullText[fullTextLength - 3] || '',
-        y = fullText[fullTextLength - 2] || '',
-        z = fullText[fullTextLength - 1] || '';
+        x = all[allLength - 2] || '',
+        y = all[allLength - 1] || '',
+        z = lastKeyTxt;
 
     if (x != null) {
         var xClass = getClass(x.charCodeAt(0));
@@ -181,7 +181,7 @@ function keySequenceCheck(fullText) {
         case 17:
         case 18:
         case 14:
-            state = 0;
+            state = 215;
             break;
             // BV2-AV2
         case 13:
@@ -215,16 +215,24 @@ function keySequenceCheck(fullText) {
             state = 0;
             break;
             // in case of replace
-            // C2, C3
+            // C2
         case 13:
         case 20:
             y = '';
             state = 212;
             break;
-            // AV3
+            // C3
         case 21:
             y = '';
             state = 213;
+            break;
+            //C5
+        case 16:
+        case 17:
+        case 18:
+        case 14:
+            y = '';
+            state = 215;
             break;
         default:
             checkAll = true;
@@ -247,6 +255,14 @@ function keySequenceCheck(fullText) {
         case 21:
             y = '';
             state = 213;
+            //C5
+        case 16:
+        case 17:
+        case 18:
+        case 14:
+            y = '';
+            state = 215;
+            break;
         default:
             checkAll = true;
             break;
@@ -261,12 +277,22 @@ function keySequenceCheck(fullText) {
             // in case C1,C2 appear
         case 12:
         case 19:
+            z = '';
             state = 211;
             break;
             // BV2-AV2
         case 13:
         case 20:
+            z = '';
             state = 212;
+            break;
+            //C5
+        case 16:
+        case 17:
+        case 18:
+        case 14:
+            y = '';
+            state = 215;
             break;
         default:
             checkAll = true;
@@ -283,22 +309,37 @@ function keySequenceCheck(fullText) {
         case 9: // sara aum
             state = 0;
             break;
-        case 15:
-            y = '';
-            state = 214;
+
+        default:
+            checkAll = true;
             break;
+        }
+        break;
+    case 215:
+        // in case C1,C2,C3 appear
+        switch (zClass) {
         case 12:
+        case 19:
+            y = '';
+            state = 211;
+            break;
+            // BV2-AV2
         case 13:
-        case 14:
-            if (b4zClass)
-                y = [z, z = y][0];
-            state = 214;
+        case 20:
+            y = '';
+            state = 212;
+            break;
+        case 21:
+            y = '';
+            state = 213;
+
             break;
         default:
             checkAll = true;
             break;
         }
         break;
+
     case 2142:
         switch (zClass) {
         case 7:
