@@ -30,16 +30,16 @@ function ksHandler(event) {
     if (event.keyCode === 8) {
         state = getCurrentState(fullText);
     } else {
-        retVal = keySequenceCheck(fullText, bsCheck);
+        fullText = keySequenceCheck(fullText);
     }
 
 
     // display data
-    input.value = retVal;
+    input.value = fullText;
 
     dbug1.innerHTML = all;
     dbug2.innerHTML = lastKeyTxt;
-    dbug3.innerHTML = retVal;
+    dbug3.innerHTML = fullText;
 }
 
 /*
