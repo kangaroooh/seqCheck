@@ -1,3 +1,7 @@
+/*
+TODO:
+    There is still a bug for non C state
+*/
 // just to gen CP table and locate where to Debug
 var classTable = genClassTable();
 var state = 0;
@@ -65,19 +69,27 @@ function keySequenceCheck(fullText) {
 
     // this chunk is just seperating the lastKey from fullText then classify it
     var fullTextLength = fullText.length,
+        base = fullText.slice(0, fullTextLength - 3),
 
-        all = fullText.slice(0, fullTextLength - 1),
-        lastKeyTxt = fullText[fullTextLength - 1],
+        x = fullText[fullTextLength - 3] || '',
+        y = fullText[fullTextLength - 2] || '',
+        z = fullText[fullTextLength - 1] || '';
 
-        lastKeyAscii = lastKeyTxt.charCodeAt(0),
-        lastKeyClass = getClass(lastKeyAscii),
+    if (x != null) {
+        var xClass = getClass(x.charCodeAt(0));
+    }
+    if (y != null) {
+        var yClass = getClass(y.charCodeAt(0));
+    }
+    if (z != null) {
+        var zClass = getClass(z.charCodeAt(0));
+    }
 
-        checkAll = false;
-
+    var checkAll = false;
 
     switch (state) {
     case 0: // start
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 1:
             state = 0;
             break;
@@ -101,12 +113,12 @@ function keySequenceCheck(fullText) {
             break;
         default:
             state = 0;
-            lastKeyTxt = '';
+            z = '';
             break;
         }
         break;
     case 11:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 10:
             state = 0;
             break;
@@ -116,62 +128,67 @@ function keySequenceCheck(fullText) {
         break;
 
     case 3:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 2:
             state = 31;
             break;
         default:
-            lastKeyTxt = '';
+            z = '';
             break;
         }
         break;
     case 4:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 2:
             state = 41;
             break;
         default:
-            lastKeyTxt = '';
+            z = '';
             break;
         }
         break;
     case 5:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 2:
             state = 51;
             break;
         default:
-            lastKeyTxt = '';
+            z = '';
             break;
         }
         break;
     case 6:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 2:
             state = 61;
             break;
 
         default:
-            lastKeyTxt = '';
+            z = '';
             break;
         }
         break;
+        // the cons case
     case 2:
-        switch (lastKeyClass) {
+        switch (zClass) {
+            // BV1, AV1
         case 12:
         case 19:
             state = 211;
             break;
+            // AD1-3, BD
         case 16:
         case 17:
         case 18:
         case 14:
             state = 0;
             break;
+            // BV2-AV2
         case 13:
         case 20:
             state = 212;
             break;
+            // AV3
         case 21:
             state = 213;
             break;
@@ -190,39 +207,75 @@ function keySequenceCheck(fullText) {
             break;
         }
         break;
+        // C1 is here
     case 211:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 15:
         case 16:
             state = 0;
             break;
+            // in case of replace
+            // C2, C3
+        case 13:
+        case 20:
+            y = '';
+            state = 212;
+            break;
+            // AV3
+        case 21:
+            y = '';
+            state = 213;
+            break;
         default:
             checkAll = true;
             break;
         }
         break;
+        // C2 is here
     case 212:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 15:
             state = 0
             break;
+            // in case C1 appear
+        case 12:
+        case 19:
+            y = '';
+            state = 211;
+            break;
+            // in case C3 appear
+        case 21:
+            y = '';
+            state = 213;
         default:
             checkAll = true;
             break;
         }
         break;
+        // C3 is here
     case 213:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 15:
             state = 0
+            break;
+            // in case C1,C2 appear
+        case 12:
+        case 19:
+            state = 211;
+            break;
+            // BV2-AV2
+        case 13:
+        case 20:
+            state = 212;
             break;
         default:
             checkAll = true;
             break;
         }
         break;
+        // C4 is here
     case 214:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 8: // sara aa
             state = 2142;
             break;
@@ -230,13 +283,24 @@ function keySequenceCheck(fullText) {
         case 9: // sara aum
             state = 0;
             break;
+        case 15:
+            y = '';
+            state = 214;
+            break;
+        case 12:
+        case 13:
+        case 14:
+            if (b4zClass)
+                y = [z, z = y][0];
+            state = 214;
+            break;
         default:
             checkAll = true;
             break;
         }
         break;
     case 2142:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 7:
             state = 0;
             break;
@@ -247,7 +311,7 @@ function keySequenceCheck(fullText) {
         break;
 
     case 31:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 19:
         case 21:
             state = 33;
@@ -270,7 +334,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 33:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 15:
             state = 0;
             break;
@@ -280,7 +344,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 32:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 7:
             state = 0;
             break;
@@ -290,7 +354,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 41:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 17:
             state = 0;
             break;
@@ -306,7 +370,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 42:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 7:
             state = 0;
             break;
@@ -316,7 +380,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 51:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 15:
             state = 52;
             break;
@@ -329,7 +393,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 52:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 7:
             state = 0;
             break;
@@ -339,7 +403,7 @@ function keySequenceCheck(fullText) {
         }
         break;
     case 61:
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 15:
             state = 0;
             break;
@@ -354,7 +418,7 @@ function keySequenceCheck(fullText) {
     }
     // one last check to check dotted
     if (checkAll) {
-        switch (lastKeyClass) {
+        switch (zClass) {
         case 2:
             state = 2;
             break;
@@ -378,12 +442,12 @@ function keySequenceCheck(fullText) {
             break;
         default:
             state = backup_state;
-            lastKeyTxt = '';
+            z = '';
             break;
         }
         checkAll = false;
     }
-    return all.concat(lastKeyTxt);
+    return base.concat(x).concat(y).concat(z);
 }
 
 /*
