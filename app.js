@@ -387,6 +387,7 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 32:
         switch (zClass) {
         case 7:
+        case 8:
             state = 0;
             break;
         default:
