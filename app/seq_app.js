@@ -212,7 +212,7 @@ function keySequenceCheck(all, lastKeyTxt) {
         switch (zClass) {
         case 15:
         case 16:
-            state = 0;
+            state = 2111;
             break;
             // in case of replace
             //C1
@@ -249,7 +249,7 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 212:
         switch (zClass) {
         case 15:
-            state = 0
+            state = 2111;
             break;
             // in case C1 appear
         case 12:
@@ -267,11 +267,15 @@ function keySequenceCheck(all, lastKeyTxt) {
             y = '';
             state = 213;
             //C5
-        case 16:
-        case 17:
-        case 18:
+
         case 14:
+        case 17:
             y = '';
+            state = 215;
+            break;
+        case 16:
+        case 18:
+            z = '';
             state = 215;
             break;
         default:
@@ -283,7 +287,7 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 213:
         switch (zClass) {
         case 15:
-            state = 0
+            state = 2111;
             break;
             // in case C1,C2,3,5 appear
         case 12:
@@ -302,11 +306,14 @@ function keySequenceCheck(all, lastKeyTxt) {
             state = 213;
             break;
             //C5
-        case 16:
-        case 17:
-        case 18:
         case 14:
+        case 17:
             y = '';
+            state = 215;
+            break;
+        case 16:
+        case 18:
+            z = '';
             state = 215;
             break;
         default:
@@ -324,7 +331,20 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 9: // sara aum
             state = 0;
             break;
-
+        case 16:
+            y = '';
+            state = 215;
+            break;
+        case 17:
+        case 18:
+        case 14:
+            y = '';
+            state = 215;
+            break;
+        case 15:
+            y = '';
+            state = 214;
+            break;
         default:
             checkAll = true;
             break;
@@ -349,13 +369,24 @@ function keySequenceCheck(all, lastKeyTxt) {
             state = 213;
             break;
         case 16:
-        case 17:
-        case 18:
+        case 15:
+            if (yClass == 17 || yClass == 14) {
+                z = '';
+                state = 215;
+            } else if (yClass == 16) {
+                y = '';
+                state = 215;
+            }
+            break;
         case 14:
+        case 17:
             y = '';
             state = 215;
             break;
-
+        case 18:
+            z = '';
+            state = 215;
+            break;
         default:
             checkAll = true;
             break;
@@ -372,7 +403,30 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         }
         break;
+    case 2111:
+        switch (zClass) {
 
+        case 14:
+        case 17:
+            y = '';
+            state = 215;
+            break;
+
+        case 16:
+        case 18:
+            y = '';
+            state = 215;
+            break;
+
+        case 15:
+            y = '';
+            state = 2111;
+            break;
+        default:
+            checkAll = true;
+            break;
+        }
+        break;
     case 31:
         switch (zClass) {
         case 19:
