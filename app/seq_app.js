@@ -233,7 +233,7 @@ function keySequenceCheck(all, lastKeyTxt) {
             state = 213;
             break;
             //C5
-        case 16:
+
         case 17:
         case 18:
         case 14:
@@ -266,6 +266,7 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 21:
             y = '';
             state = 213;
+            break;
             //C5
 
         case 14:
@@ -463,7 +464,8 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 32:
         switch (zClass) {
         case 7:
-            state = 0
+            state = 0;
+            break;
         case 8:
             state = 321;
             break;
