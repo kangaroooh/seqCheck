@@ -1,0 +1,94 @@
+seto = [
+    {
+        "word": "กา์",
+        "correct": "กา"
+    },
+    {
+        "word": "ภา",
+        "correct": "ภา"
+    },
+    {
+        "word": "ฤา",
+        "correct": "ฤ"
+    },
+    {
+        "word": "ฦๅ",
+        "correct": "ฦๅ"
+    },
+    {
+        "word": "ฤิ",
+        "correct": "ฤ"
+    },
+    {
+        "word": "เ้",
+        "correct": "เ"
+    },
+    {
+        "word": "เุ",
+        "correct": "เ"
+    },
+    {
+        "word": "เอ็า",
+        "correct": "เอ็"
+    },
+    {
+        "word": "เอ้าะ",
+        "correct": "เอ้าะ"
+    },
+    {
+        "word": "เอี็",
+        "correct": "เอี"
+    },
+    {
+        "word": "แอ้า",
+        "correct": "แอ้"
+    },
+    {
+        "word": "แอ็ะ",
+        "correct": "แอ็"
+    },
+    {
+        "word": "โอ็",
+        "correct": "โอ"
+    },
+    {
+        "word": "โุ",
+        "correct": "โ"
+    },
+    {
+        "word": "ไี",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไอ็",
+        "correct": "ไอ"
+    },
+    {
+        "word": "ไอา",
+        "correct": "ไอ"
+    },
+    {
+        "word": "กุ็",
+        "correct": "ก็"
+    },
+    {
+        "word": "กิ็",
+        "correct": "ก็"
+    },
+    {
+        "word": "กุะ",
+        "correct": "กุ"
+    },
+    {
+        "word": "ก็า",
+        "correct": "ก็"
+    },
+    {
+        "word": "กั็",
+        "correct": "ก็"
+    },
+    {
+        "word": "เพา์ว",
+        "correct": "เพาว"
+    }
+  ];

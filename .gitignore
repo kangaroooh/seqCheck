@@ -2,6 +2,8 @@
 Thumbs.db
 ehthumbs.db
 
+#nodejs modules
+node_modules/*
 .idea/
 
 # Folder config file
