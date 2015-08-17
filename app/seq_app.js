@@ -596,8 +596,12 @@ function keySequenceCheck(all, lastKeyTxt) {
 */
 function getCurrentState(fullText) {
 
-    var fullTextLength = fullText.length,
-        base = fullText.slice(0, fullTextLength - 4),
+    var fullTextLength = fullText.length;
+
+    if (fullTextLength == 0) {
+        return 0;
+    }
+    base = fullText.slice(0, fullTextLength - 4),
 
         w = fullText[fullTextLength - 4],
         x = fullText[fullTextLength - 3],

@@ -1,3 +1,50 @@
+describe('Rob 1', function () {
+
+    var L = rob.length;
+    var input = document.getElementById("input");
+
+    for (var index = 0; index < L; index++) {
+        var txt = '';
+        input.value = '';
+
+        var w = rob[index].word;
+        var c = rob[index].correct;
+
+        var wL = w.length;
+
+        // for each character in word
+        for (var each = 0; each < wL; each++) {
+            var e = new KeyboardEvent("keyup", {
+                bubbles: true,
+                cancelable: true,
+                char: w[each],
+                key: w[each],
+                shiftKey: true,
+                keyCode: w[each].charCodeAt(0)
+            });
+            txt += w[each];
+            input.value = txt;
+            input.dispatchEvent(e);
+            //            sleep(10);
+            txt = input.value;
+            console.log('inputVal = ' + input.value);
+        }
+
+        console.log('outside ' + input.value);
+
+        function checkval(w, c, inp) {
+            it(w + ' should be ' + c, function () {
+                console.log('c = ' + c);
+                console.log('input.value = ' + inp);
+                expect(inp).toEqual(c);
+
+            });
+        }
+        checkval(w, c, input.value);
+        klear();
+    }
+});
+
 describe('Tip 1', function () {
 
     var L = set1.length;
