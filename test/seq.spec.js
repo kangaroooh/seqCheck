@@ -27,15 +27,15 @@ describe('Rob 1', function () {
             input.dispatchEvent(e);
             //            sleep(10);
             txt = input.value;
-            console.log('inputVal = ' + input.value);
+            //            console.log('inputVal = ' + input.value);
         }
 
-        console.log('outside ' + input.value);
+        //        console.log('outside ' + input.value);
 
         function checkval(w, c, inp) {
             it(w + ' should be ' + c, function () {
-                console.log('c = ' + c);
-                console.log('input.value = ' + inp);
+                //                console.log('c = ' +c);
+                //                console.log('input.value = ' + inp);
                 expect(inp).toEqual(c);
 
             });
@@ -74,15 +74,15 @@ describe('Tip 1', function () {
             input.dispatchEvent(e);
             //            sleep(10);
             txt = input.value;
-            console.log('inputVal = ' + input.value);
+            //            console.log('inputVal = ' + input.value);
         }
 
-        console.log('outside ' + input.value);
+        //        console.log('outside ' + input.value);
 
         function checkval(w, c, inp) {
             it(w + ' should be ' + c, function () {
-                console.log('c = ' + c);
-                console.log('input.value = ' + inp);
+                //                console.log('c = ' + c);
+                //                console.log('input.value = ' + inp);
                 expect(inp).toEqual(c);
 
             });
@@ -121,15 +121,15 @@ describe('Tip 2', function () {
             input.dispatchEvent(e);
             //            sleep(10);
             txt = input.value;
-            console.log('inputVal = ' + input.value);
+            //            console.log('inputVal = ' + input.value);
         }
 
-        console.log('outside ' + input.value);
+        //        console.log('outside ' + input.value);
 
         function checkval(w, c, inp) {
             it(w + ' should be ' + c, function () {
-                console.log('c = ' + c);
-                console.log('input.value = ' + inp);
+                //                console.log('c = ' + c);
+                //                console.log('input.value = ' + inp);
                 expect(inp).toEqual(c);
 
             });
@@ -168,15 +168,15 @@ describe('Tip 3', function () {
             input.dispatchEvent(e);
             //            sleep(10);
             txt = input.value;
-            console.log('inputVal = ' + input.value);
+            //            console.log('inputVal = ' + input.value);
         }
 
-        console.log('outside ' + input.value);
+        //        console.log('outside ' + input.value);
 
         function checkval(w, c, inp) {
             it(w + ' should be ' + c, function () {
-                console.log('c = ' + c);
-                console.log('input.value = ' + inp);
+                //                console.log('c = ' + c);
+                //                console.log('input.value = ' + inp);
                 expect(inp).toEqual(c);
 
             });
@@ -185,6 +185,48 @@ describe('Tip 3', function () {
         klear();
     }
 });
+
+fdescribe('TESTCASE#1', function () {
+    var input_word = "วัานนี้ตื่นเ้ช้าีมาู ออกจาักบ้าุุุุุุนตัุ้้งแต่6โมงครึ่ง รถโ๊็คตรตีิด ะนี่มาถึงeูtda่ยีังไม่ไ้ด้กินข้าูวเโบย",
+        correct_word = "วันนี้ตื่นเช้ามา ออกจากบ้านตั้งแต่6โมงครึ่ง รถโคตรติด นี่มาถึงetdaยังไม่ได้กินข้าวเบย";
+
+    fit(input_word + 'should be work' + correct_word, function () {
+
+        var length_of_input_word = input_word.length,
+            HTML_input = document.getElementById("input"),
+            // just a text builder
+            text_builder = '';
+
+        // clear the input of the HTML form
+        HTML_input.value = '';
+
+        // to compose each character to KeyboardEvent
+        for (var each_character = 0; each_character < length_of_input_word; each_character += 1) {
+            var keyboard_event = new KeyboardEvent("keyup", {
+                bubbles: true,
+                cancelable: true,
+                char: input_word[each_character],
+                key: input_word[each_character],
+                shiftKey: true,
+                keyCode: input_word[each_character].charCodeAt(0)
+            });
+
+            // build the text by adding each character into builder&form, then fire the event
+            text_builder += input_word[each_character];
+            HTML_input.value = text_builder;
+            HTML_input.dispatchEvent(keyboard_event);
+            text_builder = HTML_input.value;
+        }
+
+        // to check if the output in the HTMl form equals to what we expect
+        expect(HTML_input.value).toEqual(correct_word);
+
+        // clear the HTML_input value and state collected
+        klear();
+    });
+});
+
+
 
 function sleep(milliseconds) {
     var start = new Date().getTime();

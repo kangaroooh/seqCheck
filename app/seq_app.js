@@ -649,7 +649,7 @@ function getCurrentState(fullText) {
     case 16:
     case 17:
     case 18:
-    case 111: //FV2
+    case 111:
         state = 0;
         break;
 
