@@ -44,6 +44,8 @@ function ksHandler(event) {
     dbug1.innerHTML = all;
     dbug2.innerHTML = lastKeyTxt;
     dbug3.innerHTML = fullText;
+
+    console.log(state);
 }
 
 /*
@@ -132,6 +134,22 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 2:
             state = 31;
             break;
+        case 3:
+            y = '';
+            state = 3;
+            break;
+        case 4:
+            y = '';
+            state = 4;
+            break;
+        case 5:
+            y = '';
+            state = 5;
+            break;
+        case 6:
+            y = '';
+            state = 6;
+            break;
         default:
             z = '';
             break;
@@ -141,6 +159,22 @@ function keySequenceCheck(all, lastKeyTxt) {
         switch (zClass) {
         case 2:
             state = 41;
+            break;
+        case 3:
+            y = '';
+            state = 3;
+            break;
+        case 4:
+            y = '';
+            state = 4;
+            break;
+        case 5:
+            y = '';
+            state = 5;
+            break;
+        case 6:
+            y = '';
+            state = 6;
             break;
         default:
             z = '';
@@ -152,6 +186,22 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 2:
             state = 51;
             break;
+        case 3:
+            y = '';
+            state = 3;
+            break;
+        case 4:
+            y = '';
+            state = 4;
+            break;
+        case 5:
+            y = '';
+            state = 5;
+            break;
+        case 6:
+            y = '';
+            state = 6;
+            break;
         default:
             z = '';
             break;
@@ -162,7 +212,22 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 2:
             state = 61;
             break;
-
+        case 3:
+            y = '';
+            state = 3;
+            break;
+        case 4:
+            y = '';
+            state = 4;
+            break;
+        case 5:
+            y = '';
+            state = 5;
+            break;
+        case 6:
+            y = '';
+            state = 6;
+            break;
         default:
             z = '';
             break;
@@ -200,7 +265,7 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         case 7: // sara a
         case 9: // sara aum
-            state = 0;
+            state = 2143;
             break;
         default:
             checkAll = true;
@@ -330,7 +395,7 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         case 7: // sara a
         case 9: // sara aum
-            state = 0;
+            state = 2144;
             break;
         case 16:
             y = '';
@@ -393,11 +458,52 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         }
         break;
-
     case 2142:
         switch (zClass) {
         case 7:
             state = 0;
+            break;
+        case 8:
+        case 9:
+            if (xClass == 15) { // with tone
+                y = '';
+                state = 2144;
+            } else {
+                y = '';
+                state = 2143;
+            }
+            break;
+        default:
+            checkAll = true;
+            break;
+        }
+        break;
+    case 2143:
+        switch (zClass) {
+        case 7: //aa/aum
+        case 9:
+            y = '';
+            state = 2143;
+            break;
+        case 8:
+            y = '';
+            state = 2142;
+            break;
+        default:
+            checkAll = true;
+            break;
+        }
+        break;
+    case 2144:
+        switch (zClass) {
+        case 7: //aa/aum
+        case 9:
+            y = '';
+            state = 2143;
+            break;
+        case 8:
+            y = '';
+            state = 2142;
             break;
         default:
             checkAll = true;
@@ -435,7 +541,7 @@ function keySequenceCheck(all, lastKeyTxt) {
             state = 33;
             break;
         case 17:
-            state = 0;
+            state = 35;
             break;
         case 15:
             state = 32;
@@ -453,8 +559,28 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 33:
         switch (zClass) {
+        case 19:
+        case 21:
+            y = '';
+            state = 33;
+            break;
+        case 17:
+            y = '';
+            state = 35;
+            break;
         case 15:
-            state = 0;
+            state = 331;
+            break;
+        default:
+            checkAll = true;
+            break;
+        }
+        break;
+    case 331:
+        switch (zClass) {
+        case 15:
+            y = '';
+            state = 331;
             break;
         default:
             checkAll = true;
@@ -463,6 +589,15 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 32:
         switch (zClass) {
+        case 19:
+        case 21:
+            y = '';
+            state = 33;
+            break;
+        case 17:
+            y = '';
+            state = 35;
+            break;
         case 7:
             state = 0;
             break;
@@ -473,6 +608,20 @@ function keySequenceCheck(all, lastKeyTxt) {
             checkAll = true;
             break;
         }
+        break;
+    case 35:
+        switch (zClass) {
+        case 19:
+        case 21:
+            y = '';
+            state = 33;
+            break;
+        case 15:
+            y = '';
+            state = 32;
+            break;
+        }
+
         break;
     case 321:
         switch (zClass) {
@@ -487,7 +636,7 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 41:
         switch (zClass) {
         case 17:
-            state = 0;
+            state = 45;
             break;
         case 15:
             state = 42;
@@ -502,12 +651,28 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 42:
         switch (zClass) {
+        case 17:
+            y = '';
+            state = 45;
+            break;
         case 7:
             state = 0;
             break;
         default:
             checkAll = true;
             break;
+        }
+        break;
+    case 45:
+        switch (zClass) {
+        case 15:
+            y = '';
+            state = 42;
+            break;
+        default:
+            checkAll = true;
+            break;
+
         }
         break;
     case 51:

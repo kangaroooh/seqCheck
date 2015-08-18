@@ -1,6 +1,7 @@
 describe('TESTCASE#1', function () {
-    var input_word = "วัานนี้ตื่นเ้ช้าีมาู ออกจาักบ้าุุุุุุนตัุ้้งแต่6โมงครึ่ง รถโ๊็คตรตีิด ะนี่มาถึงeูtda่ยีังไม่ไ้ด้กินข้าูวเโบย",
-        correct_word = "วันนี้ตื่นเช้ามา ออกจากบ้านตั้งแต่6โมงครึ่ง รถโคตรติด นี่มาถึงetdaยังไม่ได้กินข้าวเบย";
+
+    var input_word = "ธนพง",
+        correct_word = "ธนพง";
 
     it(input_word + 'should be work' + correct_word, function () {
 
@@ -37,7 +38,6 @@ describe('TESTCASE#1', function () {
         klear();
     });
 });
-
 
 describe('Rob 1', function () {
 
