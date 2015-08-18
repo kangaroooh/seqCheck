@@ -1,7 +1,3 @@
-/*
-TODO:
-    There is still a bug for non C state
-*/
 // just to gen CP table and locate where to Debug
 var classTable = genClassTable();
 var state = 0;
@@ -463,7 +459,6 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 7:
             state = 0;
             break;
-        case 8:
         case 9:
             if (xClass == 15) { // with tone
                 y = '';
@@ -818,7 +813,6 @@ function getCurrentState(fullText) {
         state = 0;
         break;
 
-
         // BV1
     case 12:
         state = 211;
@@ -828,7 +822,6 @@ function getCurrentState(fullText) {
     case 13:
         state = 212;
         break;
-
 
         // cons case
     case 2:
@@ -954,7 +947,7 @@ function getClass(ch) {
   // check for all English alphabets, numeral, angkhakhu, fongnam,
   // khomut,maiyamok,baht sign
 } else*/
-    if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675) || ch == 32) {
+    if ((ch >= 65 && ch <= 122) || (ch >= 3663 && ch <= 3675)) {
 
         return 1; // return 'NON';
 
@@ -976,14 +969,16 @@ function getClass(ch) {
 
     just to generate class lookup table for the sake of laziness
 */
-
-
 function genClassTable() {
 
     var table = {
 
-        // Mai ya mok
-        3654: 1,
+
+        32: 1,
+        3654: 1, // Mai ya mok
+        3647: 1, // baht sign
+        3631: 1, // "pai yal noi"
+
 
         // Thai consonant
         3621: 2,
@@ -1046,60 +1041,3 @@ function genClassTable() {
 
     return table;
 }
-
-/*
-    genCP()
-
-    This function is implemented to generate CP table to be used with Nectec's method. I won't use it anyway,
-    but I will just leave it here for my fellas
-
-function genCP() {
-
-    var tabl = new Array(17);
-    for (var i = 0; i < 17; i++) {
-        tabl[i] = new Array(17);
-    }
-
-    // load value to array
-    s0 = ['X', 'A', 'A', 'A', 'A', 'A', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s1 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s2 = ['X', 'A', 'A', 'A', 'A', 'S', 'A', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'];
-    s3 = ['X', 'S', 'A', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s4 = ['X', 'A', 'A', 'A', 'A', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s5 = ['X', 'A', 'A', 'A', 'A', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s6 = ['X', 'A', 'A', 'A', 'S', 'A', 'S', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s7 = ['X', 'A', 'A', 'A', 'A', 'S', 'A', 'R', 'R', 'R', 'C', 'C', 'R', 'R', 'R', 'R', 'R'];
-    s8 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'C', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s9 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s10 = ['X', 'A', 'A', 'A', 'A', 'A', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s11 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s12 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s13 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s14 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'C', 'C', 'R', 'R', 'R', 'R', 'R'];
-    s15 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'C', 'R', 'R', 'R', 'R', 'R', 'R'];
-    s16 = ['X', 'A', 'A', 'A', 'S', 'S', 'A', 'R', 'R', 'R', 'C', 'R', 'C', 'R', 'R', 'R', 'R'];
-
-    for (var i = 0; i < 17; i++) {
-        tabl[0][i] = s0[i];
-        tabl[1][i] = s1[i];
-        tabl[2][i] = s2[i];
-        tabl[3][i] = s3[i];
-        tabl[4][i] = s4[i];
-        tabl[5][i] = s5[i];
-        tabl[6][i] = s6[i];
-        tabl[7][i] = s7[i];
-        tabl[8][i] = s8[i];
-        tabl[9][i] = s9[i];
-        tabl[10][i] = s10[i];
-        tabl[11][i] = s11[i];
-        tabl[12][i] = s12[i];
-        tabl[13][i] = s13[i];
-        tabl[14][i] = s14[i];
-        tabl[15][i] = s15[i];
-        tabl[16][i] = s16[i];
-    }
-
-    return tabl;
-}
-
-*/
