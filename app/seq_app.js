@@ -384,8 +384,14 @@ function keySequenceCheck(all, lastKeyTxt) {
         }
         break;
         // C4 is here
-    case 214:
+    case 214: //
         switch (zClass) {
+        case 13:
+        case 12: // sara u
+            y = [z, z = y][0];
+            state = 2111;
+            break;
+
         case 8: // sara aa
             state = 2142;
             break;
@@ -773,17 +779,24 @@ function getCurrentState(fullText) {
 
     if (w != null) {
         var wClass = getClass(w.charCodeAt(0));
+
+        console.log("wclass = " + wClass);
     }
     if (x != null) {
         var xClass = getClass(x.charCodeAt(0));
+
+        console.log("xclass = " + xClass);
     }
     if (y != null) {
         var yClass = getClass(y.charCodeAt(0));
+
+        console.log("yclass = " + yClass)
     }
     if (z != null) {
         var zClass = getClass(z.charCodeAt(0));
-    }
 
+        console.log("zclass = " + zClass);
+    }
 
 
     switch (zClass) {
@@ -871,15 +884,20 @@ function getCurrentState(fullText) {
 
         // TONE case
     case 15:
-        if (wClass == 3) {
-            state = 0;
-            break;
-        }
         if (yClass == 2) {
             if (xClass != 3 && xClass != 4 && xClass != 5 && xClass != 6) {
                 state = 214;
                 break;
             }
+        } else if (yClass == 19 || yClass == 21) {
+            if (wClass == 3) {
+                state = 331;
+                break;
+            }
+        }
+        if (wClass == 3) {
+            state = 0;
+            break;
         }
         switch (xClass) {
         case 3:
@@ -901,8 +919,13 @@ function getCurrentState(fullText) {
 
         // deals with sara -aa
     case 8:
-        if (wClass == 3) {
-            state = 0;
+        if (wClass == 3 || xClass == 3) {
+            if (zClass == 8) {
+                state = 321;
+            } else {
+                state = 32;
+            }
+
         } else {
             state = 2142;
         }
