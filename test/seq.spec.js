@@ -1,9 +1,49 @@
+describe('Lexitron#1', function () {
+
+    var L = lexitron.length;
+    var input = document.getElementById("input");
+
+    for (var index = 0; index < L; index++) {
+        var txt = '';
+        input.value = '';
+
+        var w = lexitron[index];
+        var c = lexitron[index];
+
+        var wL = w.length;
+
+        // for each character in word
+        for (var each = 0; each < wL; each++) {
+            var e = new KeyboardEvent("keyup", {
+                bubbles: true,
+                cancelable: true,
+                char: w[each],
+                key: w[each],
+                shiftKey: true,
+                keyCode: w[each].charCodeAt(0)
+            });
+            txt += w[each];
+            input.value = txt;
+            input.dispatchEvent(e);
+            txt = input.value;
+        }
+
+        function checkval(w, c, inp) {
+            it(w + ' should be = ' + c, function () {
+                expect(inp).toEqual(c);
+            });
+        }
+        checkval(w, c, input.value);
+        klear();
+    }
+});
+
 describe('TESTCASE#1', function () {
 
     var input_word = "ธนพง",
         correct_word = "ธนพง";
 
-    it(input_word + 'should be work' + correct_word, function () {
+    it(input_word + ' should = ' + correct_word, function () {
 
         var length_of_input_word = input_word.length,
             HTML_input = document.getElementById("input"),
@@ -74,7 +114,7 @@ describe('Rob 1', function () {
         //        console.log('outside ' + input.value);
 
         function checkval(w, c, inp) {
-            it(w + ' should be ' + c, function () {
+            it(w + ' should be = ' + c, function () {
                 //                console.log('c = ' +c);
                 //                console.log('input.value = ' + inp);
                 expect(inp).toEqual(c);

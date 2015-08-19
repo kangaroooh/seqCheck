@@ -615,6 +615,9 @@ function keySequenceCheck(all, lastKeyTxt) {
             y = '';
             state = 32;
             break;
+        default:
+            checkAll = true;
+            break;
         }
 
         break;
@@ -827,16 +830,16 @@ function getCurrentState(fullText) {
     case 2:
         switch (yClass) {
         case 3:
-            state = 3;
+            state = 31;
             break;
         case 4:
-            state = 4;
+            state = 41;
             break;
         case 5:
-            state = 5;
+            state = 51;
             break;
         case 6:
-            state = 6;
+            state = 61;
             break;
         default:
             state = 2;
