@@ -1,91 +1,91 @@
 
   set2 = [
     {
-      "word": "'อ็่'",
-      "correct": "'อ็'"
+      "word": "อ็่",
+      "correct": "อ็"
     },
     {
-      "word": "'อ็้'",
-      "correct": "'อ็'"
+      "word": "อ็้",
+      "correct": "อ็"
     },
     {
-      "word": "'อ็๋'",
-      "correct": "'อ็'"
+      "word": "อ็๋",
+      "correct": "อ็"
     },
     {
-      "word": "'อ็๊'",
-      "correct": "'อ็'"
+      "word": "อ็๊",
+      "correct": "อ็"
     },
     {
-      "word": "'อ็์'",
-      "correct": "'อ็'"
+      "word": "อ็์",
+      "correct": "อ็"
     },
     {
-      "word": "'อ็ํ'",
-      "correct": "'อ็'"
+      "word": "อ็ํ",
+      "correct": "อ็"
     },
     {
-      "word": "'อฺ่'",
-      "correct": "'อฺ'"
+      "word": "อฺ่",
+      "correct": "อฺ"
     },
     {
-      "word": "'อฺ้'",
-      "correct": "'อฺ'"
+      "word": "อฺ้",
+      "correct": "อฺ"
     },
     {
-      "word": "'อฺ๋'",
-      "correct": "'อฺ'"
+      "word": "อฺ๋",
+      "correct": "อฺ"
     },
     {
-      "word": "'อฺ๊'",
-      "correct": "'อฺ'"
+      "word": "อฺ๊",
+      "correct": "อฺ"
     },
     {
-      "word": "'อฺ์'",
-      "correct": "'อฺ'"
+      "word": "อฺ์",
+      "correct": "อฺ"
     },
     {
-      "word": "'อฺํ'",
-      "correct": "'อฺ'"
+      "word": "อฺํ",
+      "correct": "อฺ"
     },
     {
-      "word": "'อู์'",
-      "correct": "'อู'"
+      "word": "อู์",
+      "correct": "อู"
     },
     {
-      "word": "'อูํ'",
-      "correct": "'อู'"
+      "word": "อูํ",
+      "correct": "อู"
     },
     {
-      "word": "'อั์'",
-      "correct": "'อั'"
+      "word": "อั์",
+      "correct": "อั"
     },
     {
-      "word": "'อัํ'",
-      "correct": "'อั'"
+      "word": "อัํ",
+      "correct": "อั"
     },
     {
-      "word": "'อึ์'",
-      "correct": "'อึ'"
+      "word": "อึ์",
+      "correct": "อึ"
     },
     {
-      "word": "'อึํ'",
-      "correct": "'อึ'"
+      "word": "อึํ",
+      "correct": "อึ"
     },
     {
-      "word": "'อี์'",
-      "correct": "'อี'"
+      "word": "อี์",
+      "correct": "อี"
     },
     {
-      "word": "'อีํ'",
-      "correct": "'อี'"
+      "word": "อีํ",
+      "correct": "อี"
     },
     {
-      "word": "'อื์'",
-      "correct": "'อื'"
+      "word": "อื์",
+      "correct": "อื"
     },
     {
-      "word": "'อืํ'",
-      "correct": "'อื'"
+      "word": "อืํ",
+      "correct": "อื"
     }
   ]

@@ -1,3 +1,146 @@
+describe('Tip 4', function () {
+
+    var L = set4.length;
+    var input = document.getElementById("input");
+
+    for (var index = 0; index < L; index++) {
+        var txt = '';
+        input.value = '';
+
+        var w = set4[index].word;
+        var c = set4[index].correct;
+
+        var wL = w.length;
+
+        // for each character in word
+        for (var each = 0; each < wL; each++) {
+            var e = new KeyboardEvent("keyup", {
+                bubbles: true,
+                cancelable: true,
+                char: w[each],
+                key: w[each],
+                shiftKey: true,
+                keyCode: w[each].charCodeAt(0)
+            });
+            txt += w[each];
+            input.value = txt;
+            input.dispatchEvent(e);
+            //            sleep(10);
+            txt = input.value;
+            //            console.log('inputVal = ' + input.value);
+        }
+
+        //        console.log('outside ' + input.value);
+
+        function checkval(w, c, inp) {
+            it(w + ' should be ' + c, function () {
+                //                console.log('c = ' + c);
+                //                console.log('input.value = ' + inp);
+                expect(inp).toEqual(c);
+
+            });
+        }
+        checkval(w, c, input.value);
+        klear();
+    }
+});
+
+describe('Tip 5', function () {
+
+    var L = set5.length;
+    var input = document.getElementById("input");
+
+    for (var index = 0; index < L; index++) {
+        var txt = '';
+        input.value = '';
+
+        var w = set5[index].word;
+        var c = set5[index].correct;
+
+        var wL = w.length;
+
+        // for each character in word
+        for (var each = 0; each < wL; each++) {
+            var e = new KeyboardEvent("keyup", {
+                bubbles: true,
+                cancelable: true,
+                char: w[each],
+                key: w[each],
+                shiftKey: true,
+                keyCode: w[each].charCodeAt(0)
+            });
+            txt += w[each];
+            input.value = txt;
+            input.dispatchEvent(e);
+            //            sleep(10);
+            txt = input.value;
+            //            console.log('inputVal = ' + input.value);
+        }
+
+        //        console.log('outside ' + input.value);
+
+        function checkval(w, c, inp) {
+            it(w + ' should be ' + c, function () {
+                //                console.log('c = ' + c);
+                //                console.log('input.value = ' + inp);
+                expect(inp).toEqual(c);
+
+            });
+        }
+        checkval(w, c, input.value);
+        klear();
+    }
+});
+
+describe('Tip 6', function () {
+
+    var L = set6.length;
+    var input = document.getElementById("input");
+
+    for (var index = 0; index < L; index++) {
+        var txt = '';
+        input.value = '';
+
+        var w = set6[index].word;
+        var c = set6[index].correct;
+
+        var wL = w.length;
+
+        // for each character in word
+        for (var each = 0; each < wL; each++) {
+            var e = new KeyboardEvent("keyup", {
+                bubbles: true,
+                cancelable: true,
+                char: w[each],
+                key: w[each],
+                shiftKey: true,
+                keyCode: w[each].charCodeAt(0)
+            });
+            txt += w[each];
+            input.value = txt;
+            input.dispatchEvent(e);
+            //            sleep(10);
+            txt = input.value;
+            //            console.log('inputVal = ' + input.value);
+        }
+
+        //        console.log('outside ' + input.value);
+
+        function checkval(w, c, inp) {
+            it(w + ' should be ' + c, function () {
+                //                console.log('c = ' + c);
+                //                console.log('input.value = ' + inp);
+                expect(inp).toEqual(c);
+
+            });
+        }
+        checkval(w, c, input.value);
+        klear();
+    }
+});
+
+
+
 describe('Lexitron#1', function () {
 
     var L = lexitron.length;
@@ -247,17 +390,12 @@ describe('Tip 3', function () {
             txt += w[each];
             input.value = txt;
             input.dispatchEvent(e);
-            //            sleep(10);
             txt = input.value;
-            //            console.log('inputVal = ' + input.value);
         }
 
-        //        console.log('outside ' + input.value);
 
         function checkval(w, c, inp) {
-            it(w + ' should be ' + c, function () {
-                //                console.log('c = ' + c);
-                //                console.log('input.value = ' + inp);
+            it(w + " should be " + c, function () {
                 expect(inp).toEqual(c);
 
             });
@@ -266,6 +404,8 @@ describe('Tip 3', function () {
         klear();
     }
 });
+
+
 
 function sleep(milliseconds) {
     var start = new Date().getTime();

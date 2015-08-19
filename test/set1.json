@@ -1,294 +1,294 @@
 set1 = [
     {
-        "word": "'อุ'",
-        "correct": "'อุ'"
+        "word": "อุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อิ'",
-        "correct": "'อิ'"
+        "word": "อิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อ็'",
-        "correct": "'อ็'"
+        "word": "อ็",
+        "correct": "อ็"
     },
     {
-        "word": "'อฺ'",
-        "correct": "'อฺ'"
+        "word": "อฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อู'",
-        "correct": "'อู'"
+        "word": "อู",
+        "correct": "อู"
     },
     {
-        "word": "'อั'",
-        "correct": "'อั'"
+        "word": "อั",
+        "correct": "อั"
     },
     {
-        "word": "'อึ'",
-        "correct": "'อึ'"
+        "word": "อึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อี'",
-        "correct": "'อี'"
+        "word": "อี",
+        "correct": "อี"
     },
     {
-        "word": "'อื'",
-        "correct": "'อื'"
+        "word": "อื",
+        "correct": "อื"
     },
     {
-        "word": "'อุิ'",
-        "correct": "'อิ'"
+        "word": "อุิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อุ็'",
-        "correct": "'อ็'"
+        "word": "อุ็",
+        "correct": "อ็"
     },
     {
-        "word": "'อฺุ'",
-        "correct": "'อฺ'"
+        "word": "อฺุ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อุู'",
-        "correct": "'อู'"
+        "word": "อุู",
+        "correct": "อู"
     },
     {
-        "word": "'อุั'",
-        "correct": "'อั'"
+        "word": "อุั",
+        "correct": "อั"
     },
     {
-        "word": "'อุึ'",
-        "correct": "'อึ'"
+        "word": "อุึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อุี'",
-        "correct": "'อี'"
+        "word": "อุี",
+        "correct": "อี"
     },
     {
-        "word": "'อุื'",
-        "correct": "'อื'"
+        "word": "อุื",
+        "correct": "อื"
     },
     {
-        "word": "'อิุ'",
-        "correct": "'อุ'"
+        "word": "อิุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อิ็'",
-        "correct": "'อ็'"
+        "word": "อิ็",
+        "correct": "อ็"
     },
     {
-        "word": "'อิฺ'",
-        "correct": "'อฺ'"
+        "word": "อิฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อิู'",
-        "correct": "'อู'"
+        "word": "อิู",
+        "correct": "อู"
     },
     {
-        "word": "'อิั'",
-        "correct": "'อั'"
+        "word": "อิั",
+        "correct": "อั"
     },
     {
-        "word": "'อิึ'",
-        "correct": "'อึ'"
+        "word": "อิึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อิี'",
-        "correct": "'อี'"
+        "word": "อิี",
+        "correct": "อี"
     },
     {
-        "word": "'อิื'",
-        "correct": "'อื'"
+        "word": "อิื",
+        "correct": "อื"
     },
     {
-        "word": "'อ็ุ'",
-        "correct": "'อุ'"
+        "word": "อ็ุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อ็ิ'",
-        "correct": "'อิ'"
+        "word": "อ็ิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อ็ฺ'",
-        "correct": "'อฺ'"
+        "word": "อ็ฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อ็ู'",
-        "correct": "'อู'"
+        "word": "อ็ู",
+        "correct": "อู"
     },
     {
-        "word": "'อ็ั'",
-        "correct": "'อั'"
+        "word": "อ็ั",
+        "correct": "อั"
     },
     {
-        "word": "'อ็ึ'",
-        "correct": "'อึ'"
+        "word": "อ็ึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อ็ี'",
-        "correct": "'อี'"
+        "word": "อ็ี",
+        "correct": "อี"
     },
     {
-        "word": "'อ็ื'",
-        "correct": "'อื'"
+        "word": "อ็ื",
+        "correct": "อื"
     },
     {
-        "word": "'อฺุ'",
-        "correct": "'อุ'"
+        "word": "อฺุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อฺิ'",
-        "correct": "'อิ'"
+        "word": "อฺิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อฺ็'",
-        "correct": "'อ็'"
+        "word": "อฺ็",
+        "correct": "อ็"
     },
     {
-        "word": "'อฺู'",
-        "correct": "'อู'"
+        "word": "อฺู",
+        "correct": "อู"
     },
     {
-        "word": "'อฺั'",
-        "correct": "'อั'"
+        "word": "อฺั",
+        "correct": "อั"
     },
     {
-        "word": "'อฺึ'",
-        "correct": "'อึ'"
+        "word": "อฺึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อฺี'",
-        "correct": "'อี'"
+        "word": "อฺี",
+        "correct": "อี"
     },
     {
-        "word": "'อฺื'",
-        "correct": "'อื'"
+        "word": "อฺื",
+        "correct": "อื"
     },
     {
-        "word": "'อัุ'",
-        "correct": "'อุ'"
+        "word": "อัุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อัิ'",
-        "correct": "'อิ'"
+        "word": "อัิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อั็'",
-        "correct": "'อ็'"
+        "word": "อั็",
+        "correct": "อ็"
     },
     {
-        "word": "'อัฺ'",
-        "correct": "'อฺ'"
+        "word": "อัฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อัู'",
-        "correct": "'อู'"
+        "word": "อัู",
+        "correct": "อู"
     },
     {
-        "word": "'อัึ'",
-        "correct": "'อึ'"
+        "word": "อัึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อัี'",
-        "correct": "'อี'"
+        "word": "อัี",
+        "correct": "อี"
     },
     {
-        "word": "'อัื'",
-        "correct": "'อื'"
+        "word": "อัื",
+        "correct": "อื"
     },
     {
-        "word": "'อึุ'",
-        "correct": "'อุ'"
+        "word": "อึุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อึิ'",
-        "correct": "'อิ'"
+        "word": "อึิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อึ็'",
-        "correct": "'อ็'"
+        "word": "อึ็",
+        "correct": "อ็"
     },
     {
-        "word": "'อึฺ'",
-        "correct": "'อฺ'"
+        "word": "อึฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อึู'",
-        "correct": "'อู'"
+        "word": "อึู",
+        "correct": "อู"
     },
     {
-        "word": "'อึั'",
-        "correct": "'อั'"
+        "word": "อึั",
+        "correct": "อั"
     },
     {
-        "word": "'อึี'",
-        "correct": "'อี'"
+        "word": "อึี",
+        "correct": "อี"
     },
     {
-        "word": "'อึื'",
-        "correct": "'อื'"
+        "word": "อึื",
+        "correct": "อื"
     },
     {
-        "word": "'อีุ'",
-        "correct": "'อุ'"
+        "word": "อีุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อีิ'",
-        "correct": "'อิ'"
+        "word": "อีิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อี็'",
-        "correct": "'อ็'"
+        "word": "อี็",
+        "correct": "อ็"
     },
     {
-        "word": "'อีฺ'",
-        "correct": "'อฺ'"
+        "word": "อีฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อีู'",
-        "correct": "'อู'"
+        "word": "อีู",
+        "correct": "อู"
     },
     {
-        "word": "'อีั'",
-        "correct": "'อั'"
+        "word": "อีั",
+        "correct": "อั"
     },
     {
-        "word": "'อีึ'",
-        "correct": "'อึ'"
+        "word": "อีึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อีื'",
-        "correct": "'อื'"
+        "word": "อีื",
+        "correct": "อื"
     },
     {
-        "word": "'อืุ'",
-        "correct": "'อุ'"
+        "word": "อืุ",
+        "correct": "อุ"
     },
     {
-        "word": "'อืิ'",
-        "correct": "'อิ'"
+        "word": "อืิ",
+        "correct": "อิ"
     },
     {
-        "word": "'อื็'",
-        "correct": "'อ็'"
+        "word": "อื็",
+        "correct": "อ็"
     },
     {
-        "word": "'อืฺ'",
-        "correct": "'อฺ'"
+        "word": "อืฺ",
+        "correct": "อฺ"
     },
     {
-        "word": "'อืู'",
-        "correct": "'อู'"
+        "word": "อืู",
+        "correct": "อู"
     },
     {
-        "word": "'อืั'",
-        "correct": "'อั'"
+        "word": "อืั",
+        "correct": "อั"
     },
     {
-        "word": "'อืึ'",
-        "correct": "'อึ'"
+        "word": "อืึ",
+        "correct": "อึ"
     },
     {
-        "word": "'อืี'",
-        "correct": "'อี'"
+        "word": "อืี",
+        "correct": "อี"
     }
   ]

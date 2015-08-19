@@ -239,6 +239,8 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
             // AD1-3, BD
         case 16:
+            state = 216;
+            break;
         case 17:
         case 18:
         case 14:
@@ -460,6 +462,34 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         }
         break;
+    case 216:
+        switch (zClass) {
+        case 12:
+        case 19:
+            y = [z, z = y][0];
+            state = 2111;
+            break;
+
+        case 15:
+            y = '';
+            state = 15;
+            break;
+        case 14:
+        case 17:
+            y = '';
+            state = 215;
+            break;
+
+        case 16:
+        case 18:
+            y = '';
+            state = 215;
+            break;
+        default:
+            checkAll = true;
+            break;
+        }
+        break;
     case 2142:
         switch (zClass) {
         case 7:
@@ -473,6 +503,17 @@ function keySequenceCheck(all, lastKeyTxt) {
                 y = '';
                 state = 2143;
             }
+            break;
+        case 15:
+            if (xClass == 15) { // with tone
+                z = [x, x = z][0];
+                z = '';
+                state = 2142;
+            } else {
+                z = [y, y = z][0];
+                state = 2142;
+            }
+
             break;
         default:
             checkAll = true;
@@ -490,12 +531,16 @@ function keySequenceCheck(all, lastKeyTxt) {
             y = '';
             state = 2142;
             break;
+        case 15:
+            z = [y, y = z][0];
+            state = 2144;
+            break;
         default:
             checkAll = true;
             break;
         }
         break;
-    case 2144:
+    case 2144: // with tone
         switch (zClass) {
         case 7: //aa/aum
         case 9:
@@ -505,6 +550,11 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 8:
             y = '';
             state = 2142;
+            break;
+        case 15:
+            z = [x, x = z][0];
+            z = '';
+            state = 2144;
             break;
         default:
             checkAll = true;
@@ -823,7 +873,6 @@ function getCurrentState(fullText) {
     case 9:
     case 14:
     case 16:
-    case 17:
     case 18:
     case 111:
         state = 0;
@@ -930,8 +979,11 @@ function getCurrentState(fullText) {
             state = 2142;
         }
         break;
-
-
+    case 17:
+        if (xClass == 3) {
+            state = 35;
+        }
+        break;
     }
     return state;
 }
