@@ -545,10 +545,10 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 2144: // with tone
         switch (zClass) {
-        case 7: //aa/aum
+        case 7: //aa, aum
         case 9:
             y = '';
-            state = 2143;
+            state = 2144;
             break;
         case 8:
             y = '';
