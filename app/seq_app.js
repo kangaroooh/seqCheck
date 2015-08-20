@@ -120,6 +120,9 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 10:
             state = 0;
             break;
+        case 8:
+            state = 0;
+            break;
         default:
             checkAll = true;
         }
@@ -712,6 +715,10 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 42:
         switch (zClass) {
+        case 15:
+            y = '';
+            state = 42;
+            break;
         case 17:
             y = '';
             state = 45;
@@ -751,6 +758,10 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 52:
         switch (zClass) {
+        case 15:
+            y = '';
+            state = 52;
+            break;
         case 7:
             state = 0;
             break;
@@ -762,11 +773,21 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 61:
         switch (zClass) {
         case 15:
-            state = 0;
+            state = 62;
             break;
         default:
             checkAll = true;
             break;
+        }
+        break;
+    case 62:
+        switch (zClass) {
+        case 15:
+            y = '';
+            state = 62;
+            break;
+        default:
+            checkAll = true;
         }
         break;
     default:
@@ -876,11 +897,6 @@ function getCurrentState(fullText) {
         break;
 
     case 1:
-    case 7:
-    case 9:
-    case 14:
-    case 16:
-    case 18:
     case 111:
         state = 0;
         break;
@@ -950,11 +966,11 @@ function getCurrentState(fullText) {
                 state = 331;
                 break;
             }
-        }
-        if (wClass == 3) {
-            state = 0;
+        } else if ([12, 19, 13, 20, 21].indexOf(yClass) != -1) {
+            state = 2111;
             break;
         }
+
         switch (xClass) {
         case 3:
             state = 32;
@@ -966,13 +982,24 @@ function getCurrentState(fullText) {
             state = 52;
             break;
         case 6:
-            state = 0;
+            state = 62;
             break;
         default:
             state = 0;
         }
         break;
-
+    case 9:
+    case 7: // deals with sara -a, aum 
+        if ([3, 4, 5, 6].indexOf(xClass) == -1 && [3, 4, 5, 6].indexOf(wClass) == -1) {
+            if (yClass == 15) {
+                state = 2144;
+            } else {
+                state = 2143;
+            }
+        } else {
+            state = 0;
+        }
+        break;
         // deals with sara -aa
     case 8:
         if (wClass == 3 || xClass == 3) {
@@ -986,10 +1013,25 @@ function getCurrentState(fullText) {
             state = 2142;
         }
         break;
+    case 16: // deals with karant
+        if (yClass == 12 || yClass == 19) {
+            state = 2111;
+        } else {
+            state = 216;
+        }
+        break;
     case 17:
         if (xClass == 3) {
             state = 35;
+        } else if (xClass == 4) {
+            state = 45;
+        } else {
+            state = 215
         }
+        break;
+    case 14:
+    case 18:
+        state = 215;
         break;
     }
     return state;

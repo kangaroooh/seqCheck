@@ -139,8 +139,6 @@ describe('Tip 6', function () {
     }
 });
 
-
-
 describe('Lexitron#1', function () {
 
     var L = lexitron.length;
