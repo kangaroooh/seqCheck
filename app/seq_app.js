@@ -563,7 +563,14 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     case 2111:
         switch (zClass) {
-
+        case 12:
+        case 13:
+            if (yClass == 15 && (xClass == 12 || xClass == 13)) {
+                z = [x, x = z][0];
+                z = '';
+                state = 2111;
+            }
+            break;
         case 14:
         case 17:
             y = '';
