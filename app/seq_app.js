@@ -994,16 +994,25 @@ function getCurrentState(fullText) {
             state = 0;
         }
         break;
-    case 9:
-    case 7: // deals with sara -a, aum 
+
+    case 7: // deals with sara -a
         if ([3, 4, 5, 6].indexOf(xClass) == -1 && [3, 4, 5, 6].indexOf(wClass) == -1 && vClass != 3) {
-            if (yClass == 15) {
+            if (yClass == 8) {
+                state = 0;
+            } else if (yClass == 15) {
                 state = 2144;
             } else {
                 state = 2143;
             }
         } else {
             state = 0;
+        }
+        break;
+    case 9: // sara -aum
+        if (yClass == 15) {
+            state = 2144;
+        } else {
+            state = 2143;
         }
         break;
         // deals with sara -aa
