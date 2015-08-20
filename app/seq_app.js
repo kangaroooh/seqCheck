@@ -848,13 +848,19 @@ function getCurrentState(fullText) {
     if (fullTextLength == 0) {
         return 0;
     }
-    base = fullText.slice(0, fullTextLength - 4),
+    base = fullText.slice(0, fullTextLength - 5),
 
+        v = fullText[fullTextLength - 5],
         w = fullText[fullTextLength - 4],
         x = fullText[fullTextLength - 3],
         y = fullText[fullTextLength - 2],
         z = fullText[fullTextLength - 1];
 
+    if (v != null) {
+        var vClass = getClass(v.charCodeAt(0));
+
+        console.log("wclass = " + vClass);
+    }
     if (w != null) {
         var wClass = getClass(w.charCodeAt(0));
 
@@ -990,7 +996,7 @@ function getCurrentState(fullText) {
         break;
     case 9:
     case 7: // deals with sara -a, aum 
-        if ([3, 4, 5, 6].indexOf(xClass) == -1 && [3, 4, 5, 6].indexOf(wClass) == -1) {
+        if ([3, 4, 5, 6].indexOf(xClass) == -1 && [3, 4, 5, 6].indexOf(wClass) == -1 && vClass != 3) {
             if (yClass == 15) {
                 state = 2144;
             } else {
