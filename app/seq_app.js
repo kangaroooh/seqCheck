@@ -1,3 +1,7 @@
+// TODO handle กุ้ + ็ must reject BV
+// NOTE remember how to explain FSM and traceback
+// FUTURE reformat code for readability
+
 // just to gen CP table and locate where to Debug
 var classTable = genClassTable();
 var state = 0;
