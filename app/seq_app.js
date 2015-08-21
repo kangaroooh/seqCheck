@@ -509,7 +509,7 @@ function keySequenceCheck(all, lastKeyTxt) {
     case 2142:
         switch (zClass) {
         case 7:
-            state = 0;
+            state = 2146;
             break;
         case 9:
             if (xClass == 15) { // with tone
@@ -571,6 +571,26 @@ function keySequenceCheck(all, lastKeyTxt) {
             z = [x, x = z][0];
             z = '';
             state = 2144;
+            break;
+        default:
+            checkAll = true;
+            break;
+        }
+        break;
+    case 2146: // อาะ
+        switch (zClass) {
+        case 15:
+            if (wClass == 15) { // if tone present
+                z = [w, w = z][0];
+                z = '';
+                state = 2146;
+                break;
+            } else {
+                z = [y, y = z][0];
+                x = [y, y = x][0];
+                state = 2146;
+                break;
+            }
             break;
         default:
             checkAll = true;
@@ -1164,17 +1184,47 @@ function getCurrentState(fullText) {
         break;
 
     case 7: // deals with sara -a
-        if ([3, 4, 5, 6].indexOf(xClass) == -1 && [3, 4, 5, 6].indexOf(wClass) == -1 && vClass != 3) {
-            if (yClass == 8) {
-                state = 0;
-            } else if (yClass == 15) {
+        switch (yClass) {
+        case 15: // TONE
+            switch (wClass) {
+            case 5:
+                state = 53;
+                break;
+            case 4:
+                state = 43;
+                break;
+            case 3:
+                state = 36;
+                break;
+            default:
                 state = 2144;
-            } else {
+            }
+            break;
+        case 2: // CONS
+            switch (xClass) {
+            case 5:
+                state = 53;
+                break;
+            case 4:
+                state = 43;
+                break;
+            case 3:
+                state = 36;
+                break;
+            default:
                 state = 2143;
             }
-        } else {
-            state = 0;
+            break;
+        case 8: // sara aa
+            if (vClass == 3 || wClass == 3) {
+                state = 37;
+            } else {
+                state = 2146;
+            }
+
+            break;
         }
+
         break;
     case 9: // sara -aum
         if (yClass == 15) {
