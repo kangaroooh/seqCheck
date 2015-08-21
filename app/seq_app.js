@@ -422,6 +422,12 @@ function keySequenceCheck(all, lastKeyTxt) {
             y = '';
             state = 214;
             break;
+        case 19:
+        case 20:
+        case 21:
+            y = [z, z = y][0];
+            state = 2111;
+            break;
         default:
             checkAll = true;
             break;
@@ -572,7 +578,7 @@ function keySequenceCheck(all, lastKeyTxt) {
         switch (zClass) {
         case 12:
         case 13:
-            if (yClass == 15 && (xClass == 12 || xClass == 13)) {
+            if (yClass == 15 && ([12, 13, 19, 20, 21].indexOf(xClass) != -1)) {
                 z = [x, x = z][0];
                 z = '';
                 state = 2111;
