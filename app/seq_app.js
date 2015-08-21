@@ -579,17 +579,19 @@ function keySequenceCheck(all, lastKeyTxt) {
             }
             break;
         case 14:
-        case 17:
             y = '';
             state = 215;
             break;
-
+        case 17:
+            x = '';
+            y = '';
+            state = 215;
+            break;
         case 16:
         case 18:
             y = '';
             state = 215;
             break;
-
         case 15:
             y = '';
             state = 2111;
