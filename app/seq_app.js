@@ -1,5 +1,6 @@
 // NOTE remember how to explain FSM and traceback
 // FUTURE reformat code for readability
+// TODO check state of ห้า+ี หี้
 
 // just to gen CP table and locate where to Debug
 var classTable = genClassTable();
@@ -1113,7 +1114,7 @@ function keySequenceCheck(all, lastKeyTxt) {
             state = 42;
             break;
         case 7:
-            state = 0;
+            state = 43;
             break;
         default:
             checkAll = true;
