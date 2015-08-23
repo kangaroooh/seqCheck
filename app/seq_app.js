@@ -1090,9 +1090,9 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 19:
         case 21:
             if (xClass == 15) { // if there exists TONE
-                x = '';
+                z = [x, x = z][0];
                 y = '';
-                state = 33;
+                state = 331;
                 break;
             } else {
                 y = '';
