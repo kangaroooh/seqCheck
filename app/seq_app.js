@@ -1,6 +1,5 @@
 // NOTE remember how to explain FSM and traceback
 // FUTURE reformat code for readability
-// TODO DO THE TRACEBACK, 53 43 36
 
 // just to gen CP table and locate where to Debug
 var classTable = genClassTable();
@@ -576,8 +575,8 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         case 19:
             if (xClass == 15) { // if there exists TONE
-                x = '';
                 y = '';
+                z = [x, x = z][0];
                 state = 211;
                 break;
             } else {
@@ -588,8 +587,8 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         case 20:
             if (xClass == 15) { // if there exists TONE
-                x = '';
                 y = '';
+                z = [x, x = z][0];
                 state = 212;
                 break;
             } else {
@@ -600,8 +599,8 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         case 21:
             if (xClass == 15) { // if there exists TONE
-                x = '';
                 y = '';
+                z = [x, x = z][0];
                 state = 213;
                 break;
             } else {
