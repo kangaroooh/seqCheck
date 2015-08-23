@@ -120,7 +120,6 @@ function keySequenceCheck(all, lastKeyTxt) {
         default:
             state = 0;
             z = '';
-            break;
         }
         break;
     case 11:
@@ -158,7 +157,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             z = '';
-            break;
         }
         break;
     case 4:
@@ -184,7 +182,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             z = '';
-            break;
         }
         break;
     case 5:
@@ -210,7 +207,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             z = '';
-            break;
         }
         break;
     case 6:
@@ -236,7 +232,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             z = '';
-            break;
         }
         break;
         // the cons case
@@ -277,7 +272,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
         // C1 is here
@@ -315,7 +309,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
         // C2 is here
@@ -392,7 +385,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
         // C4 is here
@@ -433,7 +425,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 215:
@@ -475,7 +466,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 216:
@@ -503,7 +493,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 2111:
@@ -536,7 +525,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 2142:
@@ -633,7 +621,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 2143:
@@ -721,7 +708,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 2144: // with tone
@@ -811,7 +797,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 2146: // อาะ
@@ -829,7 +814,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 31:
@@ -852,7 +836,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 33:
@@ -871,7 +854,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 32:
@@ -893,7 +875,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 35:
@@ -909,7 +890,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 36:
@@ -953,7 +933,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 37:
@@ -973,7 +952,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 321:
@@ -1020,7 +998,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 331:
@@ -1036,7 +1013,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 41:
@@ -1052,7 +1028,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 42:
@@ -1070,7 +1045,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 43:
@@ -1100,7 +1074,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 45:
@@ -1111,7 +1084,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 51:
@@ -1124,7 +1096,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 52:
@@ -1138,7 +1109,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 53:
@@ -1157,7 +1127,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 61:
@@ -1167,7 +1136,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             checkAll = true;
-            break;
         }
         break;
     case 62:
@@ -1182,8 +1150,8 @@ function keySequenceCheck(all, lastKeyTxt) {
         break;
     default:
         z = '';
-        break;
     }
+
     // one last check to check dotted
     if (checkAll) {
         switch (zClass) {
@@ -1211,7 +1179,6 @@ function keySequenceCheck(all, lastKeyTxt) {
         default:
             state = backup_state;
             z = '';
-            break;
         }
         checkAll = false;
     }
