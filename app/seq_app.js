@@ -122,18 +122,6 @@ function keySequenceCheck(all, lastKeyTxt) {
             z = '';
         }
         break;
-    case 11:
-        switch (zClass) {
-        case 10:
-            state = 0;
-            break;
-        case 8:
-            state = 0;
-            break;
-        default:
-            checkAll = true;
-        }
-        break;
     case 3:
         switch (zClass) {
         case 2:
@@ -232,6 +220,18 @@ function keySequenceCheck(all, lastKeyTxt) {
             break;
         default:
             z = '';
+        }
+        break;
+    case 11:
+        switch (zClass) {
+        case 10:
+            state = 0;
+            break;
+        case 8:
+            state = 0;
+            break;
+        default:
+            checkAll = true;
         }
         break;
         // the cons case
@@ -449,11 +449,10 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 15:
             if (yClass == 17 || yClass == 14) {
                 z = '';
-                state = 215;
             } else if (yClass == 16) {
                 y = '';
-                state = 215;
             }
+            state = 215;
             break;
         case 14:
         case 17:
@@ -545,11 +544,10 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) { // with tone
                 z = [x, x = z][0];
                 z = '';
-                state = 2142;
             } else {
                 z = [y, y = z][0];
-                state = 2142;
             }
+            state = 2142;
             break;
         case 14:
         case 18:
@@ -557,51 +555,46 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 215;
             } else {
                 y = '';
-                state = 215;
             }
+            state = 215;
             break;
         case 19:
             if (xClass == 15) { // if there exists TONE
                 y = '';
                 z = [x, x = z][0];
-                state = 211;
             } else {
                 y = '';
-                state = 211;
             }
+            state = 211;
             break;
         case 20:
             if (xClass == 15) { // if there exists TONE
                 y = '';
                 z = [x, x = z][0];
-                state = 212;
             } else {
                 y = '';
-                state = 212;
             }
+            state = 212;
             break;
         case 21:
             if (xClass == 15) { // if there exists TONE
                 y = '';
                 z = [x, x = z][0];
-                state = 213;
             } else {
                 y = '';
-                state = 213;
             }
+            state = 213;
             break;
         case 16:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 216;
             } else {
                 y = '';
-                state = 216;
             }
+            state = 216;
             break;
         case 12: // u and uuuu
         case 13:
@@ -644,51 +637,46 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 215;
             } else {
                 y = '';
-                state = 215;
             }
+            state = 215;
             break;
         case 19:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 211;
             } else {
                 y = '';
-                state = 211;
             }
+            state = 211;
             break;
         case 20:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 212;
             } else {
                 y = '';
-                state = 212;
             }
+            state = 212;
             break;
         case 21:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 213;
             } else {
                 y = '';
-                state = 213;
             }
+            state = 213;
             break;
         case 16:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 216;
             } else {
                 y = '';
-                state = 216;
             }
+            state = 216;
             break;
         case 12: // u and uuuu
         case 13:
@@ -733,51 +721,46 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 215;
             } else {
                 y = '';
-                state = 215;
             }
+            state = 215;
             break;
         case 19:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 211;
             } else {
                 y = '';
-                state = 211;
             }
+            state = 211;
             break;
         case 20:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 212;
             } else {
                 y = '';
-                state = 212;
             }
+            state = 212;
             break;
         case 21:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 213;
             } else {
                 y = '';
-                state = 213;
             }
+            state = 213;
             break;
         case 16:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 216;
             } else {
                 y = '';
-                state = 216;
             }
+            state = 216;
             break;
         case 12: // u and uuuu
         case 13:
@@ -805,12 +788,11 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (wClass == 15) { // if tone present
                 z = [w, w = z][0];
                 z = '';
-                state = 2146;
             } else {
                 z = [y, y = z][0];
                 x = [y, y = x][0];
-                state = 2146;
             }
+            state = 2146;
             break;
         default:
             checkAll = true;
@@ -898,25 +880,19 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) {
                 z = [x, x = z][0];
                 z = '';
-                state = 321;
-                break;
             } else {
                 z = [y, y = z][0];
-                state = 321;
-                break;
             }
+            state = 321;
             break;
         case 17:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 35;
-                break;
             } else {
                 y = '';
-                state = 35;
-                break;
             }
+            state = 35;
             break;
         case 19:
         case 21:
@@ -924,11 +900,9 @@ function keySequenceCheck(all, lastKeyTxt) {
                 z = [x, x = z][0];
                 y = '';
                 state = 331;
-                break;
             } else {
                 y = '';
                 state = 33;
-                break;
             }
             break;
         default:
@@ -941,14 +915,11 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (wClass == 15) { // if tone present
                 z = [w, w = z][0];
                 z = '';
-                state = 37;
-                break;
             } else {
                 z = [y, y = z][0];
                 x = [y, y = x][0];
-                state = 37;
-                break;
             }
+            state = 37;
             break;
         default:
             checkAll = true;
@@ -963,25 +934,19 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) {
                 z = [x, x = z][0];
                 z = '';
-                state = 321;
-                break;
             } else {
                 z = [y, y = z][0];
-                state = 321;
-                break;
             }
+            state = 321;
             break;
         case 17:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 35;
-                break;
             } else {
                 y = '';
-                state = 35;
-                break;
             }
+            state = 35;
             break;
         case 19:
         case 21:
@@ -989,11 +954,9 @@ function keySequenceCheck(all, lastKeyTxt) {
                 z = [x, x = z][0];
                 y = '';
                 state = 331;
-                break;
             } else {
                 y = '';
                 state = 33;
-                break;
             }
             break;
         default:
@@ -1053,24 +1016,19 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) { // if there exists TONE
                 z = [x, x = z][0];
                 z = '';
-                state = 43;
-                break;
             } else {
                 z = [y, y = z][0];
-                state = 43;
-                break;
             }
+            state = 43;
+            break;
         case 17:
             if (xClass == 15) { // if there exists TONE
                 x = '';
                 y = '';
-                state = 45;
-                break;
             } else {
                 y = '';
-                state = 45;
-                break;
             }
+            state = 45;
             break;
         default:
             checkAll = true;
@@ -1117,13 +1075,10 @@ function keySequenceCheck(all, lastKeyTxt) {
             if (xClass == 15) {
                 z = [x, x = z][0];
                 z = '';
-                state = 53;
-                break;
             } else {
                 z = [y, y = z][0];
-                state = 53;
-                break;
             }
+            state = 53;
             break;
         default:
             checkAll = true;
