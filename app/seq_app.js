@@ -78,7 +78,7 @@ function keySequenceCheck(all, lastKeyTxt) {
         w = all[allLength - 3] || '',
         v = all[allLength - 4] || '',
         base = base.slice(0, base.length - 1);
-        base = base.slice(0, base.length - 1);
+    base = base.slice(0, base.length - 1);
     if (w != null) {
         var wClass = getClass(w.charCodeAt(0));
     }
@@ -1084,6 +1084,40 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 7:
             state = 43;
             break;
+
+        case 14:
+        case 17:
+        case 18:
+            x = '';
+            state = 215;
+            break;
+        case 16:
+            x = '';
+            state = 216;
+            break;
+        case 9:
+            x = '';
+            state = 2143;
+            break;
+        case 8:
+            x = '';
+            state = 2142;
+            break;
+        case 19:
+        case 12:
+            x = '';
+            state = 211;
+            break;
+        case 20:
+        case 13:
+            x = '';
+            state = 212;
+            break;
+
+        case 21:
+            x = '';
+            state = 213;
+            break;
         default:
             checkAll = true;
         }
@@ -1101,6 +1135,45 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 7:
             state = 43;
             break;
+
+        case 14:
+        case 17:
+        case 18:
+            w = '';
+            y = '';
+            state = 215;
+            break;
+        case 16:
+            w = '';
+            y = '';
+            state = 216;
+            break;
+        case 9:
+            w = '';
+            state = 2143;
+            break;
+        case 8:
+            w = '';
+            state = 2142;
+            break;
+        case 19:
+        case 12:
+            z = [y, y = z][0];
+            w = '';
+            state = 211;
+            break;
+        case 20:
+        case 13:
+            z = [y, y = z][0];
+            w = '';
+            state = 212;
+            break;
+        case 21:
+            z = [y, y = z][0];
+            w = '';
+            state = 213;
+            break;
+
         default:
             checkAll = true;
         }
@@ -1125,6 +1198,92 @@ function keySequenceCheck(all, lastKeyTxt) {
             }
             state = 45;
             break;
+        case 14: // correct state
+        case 18:
+            if (xClass == 15) {
+                v = '';
+                y = '';
+                x = '';
+            } else {
+                w = '';
+                y = '';
+            }
+            state = 215;
+            break;
+        case 16: // correct state
+            if (xClass == 15) {
+                v = '';
+                y = '';
+                x = '';
+            } else {
+                w = '';
+                y = '';
+            }
+            state = 216;
+            break;
+        case 7:
+            z = '';
+            state = 43;
+            break;
+        case 9:
+            if (xClass == 15) {
+                v = '';
+                y = '';
+                state = 2144
+            } else {
+                y = '';
+                w = '';
+                state = 2143;
+            }
+            break;
+        case 8:
+            if (xClass == 15) {
+                v = '';
+                y = '';
+            } else {
+                y = '';
+                w = '';
+            }
+            state = 2142;
+            break;
+        case 19:
+        case 12:
+            if (xClass == 15) {
+                v = '';
+                y = '';
+                z = [x, x = z][0];
+                state = 2111;
+            } else {
+                y = '';
+                w = '';
+                state = 212;
+            }
+            break;
+        case 20:
+        case 13:
+            if (xClass == 15) {
+                v = '';
+                y = '';
+                z = [x, x = z][0];
+                state = 2111;
+            } else {
+                y = '';
+                w = '';
+                state = 213;
+            }
+            break;
+        case 21:
+            if (xClass == 15) {
+                v = '';
+                y = '';
+                z = [x, x = z][0];
+                state = 2111;
+            } else {
+                y = '';
+                w = '';
+                state = 213;
+            }
+            break;
         default:
             checkAll = true;
         }
@@ -1135,6 +1294,52 @@ function keySequenceCheck(all, lastKeyTxt) {
             y = '';
             state = 42;
             break;
+        case 7:
+            y = '';
+            state = 45;
+            break;
+        case 18:
+        case 14:
+            w = '';
+            y = '';
+            state = 215;
+            break;
+        case 16:
+            w = '';
+            y = '';
+            state = 216;
+            break;
+
+        case 8:
+            w = '';
+            y = '';
+            state = 2142;
+            break;
+
+        case 9:
+            w = '';
+            y = '';
+            state = 2143;
+            break;
+
+        case 19:
+        case 12:
+            w = '';
+            y = '';
+            state = 211;
+            break;
+        case 20:
+        case 13:
+            w = '';
+            y = '';
+            state = 212;
+            break;
+        case 21:
+            w = '';
+            y = '';
+            state = 213;
+            break;
+
         default:
             checkAll = true;
         }
@@ -1259,7 +1464,7 @@ function keySequenceCheck(all, lastKeyTxt) {
             }
             state = 215;
             break;
-        case 16:// correct state
+        case 16: // correct state
             if (xClass == 15) {
                 v = '';
                 y = '';
@@ -1271,6 +1476,9 @@ function keySequenceCheck(all, lastKeyTxt) {
             state = 216;
             break;
         case 7:
+            z = '';
+            state = 53;
+            break;
         case 9:
             if (xClass == 15) {
                 v = '';
@@ -1290,7 +1498,7 @@ function keySequenceCheck(all, lastKeyTxt) {
                 y = '';
                 w = '';
             }
-                state = 2142;
+            state = 2142;
             break;
         case 19:
         case 12:

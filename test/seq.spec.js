@@ -410,7 +410,7 @@ describe('Tip 5', function () {
         klear();
     }
 });
-/*
+
 describe('Tip 6', function () {
 
     var L = set6.length;
@@ -457,7 +457,7 @@ describe('Tip 6', function () {
         klear();
     }
 });
-
+/*
 describe('Tip 7', function () {
 
     var L = set7.length;
