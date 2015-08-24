@@ -1,1214 +1,1562 @@
   set6 = [
     {
-      "word": "กะ",
-      "correct": "กะ"
+      "word": "แก",
+      "correct": "แก"
     },
     {
-      "word": "กะะ",
-      "correct": "กะ"
+      "word": "แกะ",
+      "correct": "แกะ"
     },
     {
-      "word": "กะา",
+      "word": "แก็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๑",
+      "correct": "แก๑"
+    },
+    {
+      "word": "แกะ๑",
+      "correct": "แกะ๑"
+    },
+    {
+      "word": "แก็๑",
+      "correct": "แก็๑"
+    },
+    {
+      "word": "แกก",
+      "correct": "แกก"
+    },
+    {
+      "word": "แกะก",
+      "correct": "แกะก"
+    },
+    {
+      "word": "แก็ก",
+      "correct": "แก็ก"
+    },
+    {
+      "word": "แกฤ",
+      "correct": "แกฤ"
+    },
+    {
+      "word": "แกะฤ",
+      "correct": "แกะฤ"
+    },
+    {
+      "word": "แก็ฤ",
+      "correct": "แก็ฤ"
+    },
+    {
+      "word": "แกฦ",
+      "correct": "แกฦ"
+    },
+    {
+      "word": "แกะฦ",
+      "correct": "แกะฦ"
+    },
+    {
+      "word": "แก็ฦ",
+      "correct": "แก็ฦ"
+    },
+    {
+      "word": "แกเ",
+      "correct": "แกเ"
+    },
+    {
+      "word": "แกะเ",
+      "correct": "แกะเ"
+    },
+    {
+      "word": "แก็เ",
+      "correct": "แก็เ"
+    },
+    {
+      "word": "แกแ",
+      "correct": "แกแ"
+    },
+    {
+      "word": "แกะแ",
+      "correct": "แกะแ"
+    },
+    {
+      "word": "แก็แ",
+      "correct": "แก็แ"
+    },
+    {
+      "word": "แกโ",
+      "correct": "แกโ"
+    },
+    {
+      "word": "แกะโ",
+      "correct": "แกะโ"
+    },
+    {
+      "word": "แก็โ",
+      "correct": "แก็โ"
+    },
+    {
+      "word": "แกใ",
+      "correct": "แกใ"
+    },
+    {
+      "word": "แกะใ",
+      "correct": "แกะใ"
+    },
+    {
+      "word": "แก็ใ",
+      "correct": "แก็ใ"
+    },
+    {
+      "word": "แกไ",
+      "correct": "แกไ"
+    },
+    {
+      "word": "แกะไ",
+      "correct": "แกะไ"
+    },
+    {
+      "word": "แก็ไ",
+      "correct": "แก็ไ"
+    },
+    {
+      "word": "แกะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แกะะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก็ะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกะ็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก็็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกๅ",
+      "correct": "แก"
+    },
+    {
+      "word": "แกะๅ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก็ๅ",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แกะฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก็ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แกะ์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก็์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แกํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แกะํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก็ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แกะ๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก็๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แกา",
       "correct": "กา"
     },
     {
-      "word": "กะำ",
-      "correct": "กำ"
-    },
-    {
-      "word": "กะๅ",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะๅ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะๅ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะๅ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะๅ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะุ",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะุ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะุ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะุ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะุ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะู",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะู",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะู",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะู",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะู",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะฺ",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะฺ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะฺ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะฺ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะฺ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะิ",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะิ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะิ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะิ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะิ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะั",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะั",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะั",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะั",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะั",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะึ",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะึ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะึ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะึ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะึ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะี",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะี",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะี",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะี",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะี",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะื",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะื",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะื",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะื",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะื",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะ์",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะ์",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะ์",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะ์",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะ์",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะํ",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะํ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะํ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะํ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะํ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะ็",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะ็",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะ็",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะ็",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะ็",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะ๎",
-      "correct": "กะ"
-    },
-    {
-      "word": "ก่ะ๎",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก้ะ๎",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก๊ะ๎",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๋ะ๎",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "ก่ะ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "กะ่",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก่ะะ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "กะ่ะ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก่ะา",
-      "correct": "ก่า"
-    },
-    {
-      "word": "กะ่า",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก่ะำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "กะ่ำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ะ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "กะ้",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก้ะะ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "กะ้ะ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก้ะา",
-      "correct": "ก้า"
-    },
-    {
-      "word": "กะ้า",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก้ะำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "กะ้ำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ะ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "กะ๊",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๊ะะ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "กะ๊ะ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๊ะา",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "กะ๊า",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๊ะำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "กะ๊ำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ะ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะ๋",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "ก๋ะะ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กะ๋ะ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "ก๋ะา",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กะ๋า",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "ก๋ะำ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กะ๋ำ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กา",
+      "word": "แกะา",
       "correct": "กา"
     },
     {
-      "word": "กาะ",
-      "correct": "กาะ"
-    },
-    {
-      "word": "กาา",
+      "word": "แก็า",
       "correct": "กา"
     },
     {
-      "word": "กาำ",
+      "word": "แกำ",
       "correct": "กำ"
     },
     {
-      "word": "กาๅ",
+      "word": "แกะำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "แก็ำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "แกุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "แกะุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "แก็ุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "แกู",
+      "correct": "กู"
+    },
+    {
+      "word": "แกะู",
+      "correct": "กู"
+    },
+    {
+      "word": "แก็ู",
+      "correct": "กู"
+    },
+    {
+      "word": "แกิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "แกะิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "แก็ิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "แกั",
+      "correct": "กั"
+    },
+    {
+      "word": "แกะั",
+      "correct": "กั"
+    },
+    {
+      "word": "แก็ั",
+      "correct": "กั"
+    },
+    {
+      "word": "แกึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "แกะึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "แก็ึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "แกี",
+      "correct": "กี"
+    },
+    {
+      "word": "แกะี",
+      "correct": "กี"
+    },
+    {
+      "word": "แก็ี",
+      "correct": "กี"
+    },
+    {
+      "word": "แกื",
+      "correct": "กื"
+    },
+    {
+      "word": "แกะื",
+      "correct": "กื"
+    },
+    {
+      "word": "แก็ื",
+      "correct": "กื"
+    },
+    {
+      "word": "แก่",
+      "correct": "แก่"
+    },
+    {
+      "word": "แก่ะ",
+      "correct": "แก่ะ"
+    },
+    {
+      "word": "แก่็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก่๑",
+      "correct": "แก่๑"
+    },
+    {
+      "word": "แก่ะ๑",
+      "correct": "แก่ะ๑"
+    },
+    {
+      "word": "แก่็๑",
+      "correct": "แก็๑"
+    },
+    {
+      "word": "แก่ก",
+      "correct": "แก่ก"
+    },
+    {
+      "word": "แก่ะก",
+      "correct": "แก่ะก"
+    },
+    {
+      "word": "แก่็ก",
+      "correct": "แก็ก"
+    },
+    {
+      "word": "แก่ฤ",
+      "correct": "แก่ฤ"
+    },
+    {
+      "word": "แก่ะฤ",
+      "correct": "แก่ะฤ"
+    },
+    {
+      "word": "แก่็ฤ",
+      "correct": "แก็ฤ"
+    },
+    {
+      "word": "แก่ฦ",
+      "correct": "แก่ฦ"
+    },
+    {
+      "word": "แก่ะฦ",
+      "correct": "แก่ะฦ"
+    },
+    {
+      "word": "แก่็ฦ",
+      "correct": "แก็ฦ"
+    },
+    {
+      "word": "แก่เ",
+      "correct": "แก่เ"
+    },
+    {
+      "word": "แก่ะเ",
+      "correct": "แก่ะเ"
+    },
+    {
+      "word": "แก่็เ",
+      "correct": "แก็เ"
+    },
+    {
+      "word": "แก่แ",
+      "correct": "แก่แ"
+    },
+    {
+      "word": "แก่ะแ",
+      "correct": "แก่ะแ"
+    },
+    {
+      "word": "แก่็แ",
+      "correct": "แก็แ"
+    },
+    {
+      "word": "แก่โ",
+      "correct": "แก่โ"
+    },
+    {
+      "word": "แก่ะโ",
+      "correct": "แก่ะโ"
+    },
+    {
+      "word": "แก่็โ",
+      "correct": "แก็โ"
+    },
+    {
+      "word": "แก่ใ",
+      "correct": "แก่ใ"
+    },
+    {
+      "word": "แก่ะใ",
+      "correct": "แก่ะใ"
+    },
+    {
+      "word": "แก่็ใ",
+      "correct": "แก็ใ"
+    },
+    {
+      "word": "แก่ไ",
+      "correct": "แก่ไ"
+    },
+    {
+      "word": "แก่ะไ",
+      "correct": "แก่ะไ"
+    },
+    {
+      "word": "แก่็ไ",
+      "correct": "แก็ไ"
+    },
+    {
+      "word": "แก่ะ",
+      "correct": "แก่ะ"
+    },
+    {
+      "word": "แก่ะะ",
+      "correct": "แก่ะ"
+    },
+    {
+      "word": "แก่็ะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก่็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก่ะ็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก่็็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก่ๅ",
+      "correct": "แก่"
+    },
+    {
+      "word": "แก่ะๅ",
+      "correct": "แก่ะ"
+    },
+    {
+      "word": "แก่็ๅ",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกฺ่",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก่ะฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก่็ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก่์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก่ะ์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก่็์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก่ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก่ะํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก่็ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก่๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก่ะ๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก่็๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก่า",
+      "correct": "ก่า"
+    },
+    {
+      "word": "แก่ะา",
+      "correct": "ก่า"
+    },
+    {
+      "word": "แก่็า",
       "correct": "กา"
     },
     {
-      "word": "ก่าๅ",
-      "correct": "ก่า"
+      "word": "แก่ำ",
+      "correct": "ก่ำ"
     },
     {
-      "word": "ก้าๅ",
+      "word": "แก่ะำ",
+      "correct": "ก่ำ"
+    },
+    {
+      "word": "แก่็ำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "แกุ่",
+      "correct": "กุ่"
+    },
+    {
+      "word": "แก่ะุ",
+      "correct": "กุ่"
+    },
+    {
+      "word": "แก่็ุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "แกู่",
+      "correct": "กู่"
+    },
+    {
+      "word": "แก่ะู",
+      "correct": "กู่"
+    },
+    {
+      "word": "แก่็ู",
+      "correct": "กู"
+    },
+    {
+      "word": "แก่ิ",
+      "correct": "กิ่"
+    },
+    {
+      "word": "แก่ะิ",
+      "correct": "กิ่"
+    },
+    {
+      "word": "แก่็ิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "แก่ั",
+      "correct": "กั่"
+    },
+    {
+      "word": "แก่ะั",
+      "correct": "กั่"
+    },
+    {
+      "word": "แก่็ั",
+      "correct": "กั"
+    },
+    {
+      "word": "แก่ึ",
+      "correct": "กึ่"
+    },
+    {
+      "word": "แก่ะึ",
+      "correct": "กึ่"
+    },
+    {
+      "word": "แก่็ึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "แก่ี",
+      "correct": "กี่"
+    },
+    {
+      "word": "แก่ะี",
+      "correct": "กี่"
+    },
+    {
+      "word": "แก่็ี",
+      "correct": "กี"
+    },
+    {
+      "word": "แก่ื",
+      "correct": "กื่"
+    },
+    {
+      "word": "แก่ะื",
+      "correct": "กื่"
+    },
+    {
+      "word": "แก่็ื",
+      "correct": "กื"
+    },
+    {
+      "word": "แก้",
+      "correct": "แก้"
+    },
+    {
+      "word": "แก้ะ",
+      "correct": "แก้ะ"
+    },
+    {
+      "word": "แก้็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก้๑",
+      "correct": "แก้๑"
+    },
+    {
+      "word": "แก้ะ๑",
+      "correct": "แก้ะ๑"
+    },
+    {
+      "word": "แก้็๑",
+      "correct": "แก็๑"
+    },
+    {
+      "word": "แก้ก",
+      "correct": "แก้ก"
+    },
+    {
+      "word": "แก้ะก",
+      "correct": "แก้ะก"
+    },
+    {
+      "word": "แก้็ก",
+      "correct": "แก็ก"
+    },
+    {
+      "word": "แก้ฤ",
+      "correct": "แก้ฤ"
+    },
+    {
+      "word": "แก้ะฤ",
+      "correct": "แก้ะฤ"
+    },
+    {
+      "word": "แก้็ฤ",
+      "correct": "แก็ฤ"
+    },
+    {
+      "word": "แก้ฦ",
+      "correct": "แก้ฦ"
+    },
+    {
+      "word": "แก้ะฦ",
+      "correct": "แก้ะฦ"
+    },
+    {
+      "word": "แก้็ฦ",
+      "correct": "แก็ฦ"
+    },
+    {
+      "word": "แก้เ",
+      "correct": "แก้เ"
+    },
+    {
+      "word": "แก้ะเ",
+      "correct": "แก้ะเ"
+    },
+    {
+      "word": "แก้็เ",
+      "correct": "แก็เ"
+    },
+    {
+      "word": "แก้แ",
+      "correct": "แก้แ"
+    },
+    {
+      "word": "แก้ะแ",
+      "correct": "แก้ะแ"
+    },
+    {
+      "word": "แก้็แ",
+      "correct": "แก็แ"
+    },
+    {
+      "word": "แก้โ",
+      "correct": "แก้โ"
+    },
+    {
+      "word": "แก้ะโ",
+      "correct": "แก้ะโ"
+    },
+    {
+      "word": "แก้็โ",
+      "correct": "แก็โ"
+    },
+    {
+      "word": "แก้ใ",
+      "correct": "แก้ใ"
+    },
+    {
+      "word": "แก้ะใ",
+      "correct": "แก้ะใ"
+    },
+    {
+      "word": "แก้็ใ",
+      "correct": "แก็ใ"
+    },
+    {
+      "word": "แก้ไ",
+      "correct": "แก้ไ"
+    },
+    {
+      "word": "แก้ะไ",
+      "correct": "แก้ะไ"
+    },
+    {
+      "word": "แก้็ไ",
+      "correct": "แก็ไ"
+    },
+    {
+      "word": "แก้ะ",
+      "correct": "แก้ะ"
+    },
+    {
+      "word": "แก้ะะ",
+      "correct": "แก้ะ"
+    },
+    {
+      "word": "แก้็ะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก้็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก้ะ็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก้็็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก้ๅ",
+      "correct": "แก้"
+    },
+    {
+      "word": "แก้ะๅ",
+      "correct": "แก้ะ"
+    },
+    {
+      "word": "แก้็ๅ",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกฺ้",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก้ะฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก้็ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก้์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก้ะ์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก้็์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก้ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก้ะํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก้็ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก้๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก้ะ๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก้็๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก้า",
       "correct": "ก้า"
     },
     {
-      "word": "ก๊าๅ",
-      "correct": "ก๊า"
+      "word": "แก้ะา",
+      "correct": "ก้า"
     },
     {
-      "word": "ก๋าๅ",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาุ",
+      "word": "แก้็า",
       "correct": "กา"
     },
     {
-      "word": "ก่าุ",
-      "correct": "ก่า"
+      "word": "แก้ำ",
+      "correct": "ก้ำ"
     },
     {
-      "word": "ก้าุ",
-      "correct": "ก้า"
+      "word": "แก้ะำ",
+      "correct": "ก้ำ"
     },
     {
-      "word": "ก๊าุ",
+      "word": "แก้็ำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "แกุ้",
+      "correct": "กุ้"
+    },
+    {
+      "word": "แก้ะุ",
+      "correct": "กุ้"
+    },
+    {
+      "word": "แก้็ุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "แกู้",
+      "correct": "กู้"
+    },
+    {
+      "word": "แก้ะู",
+      "correct": "กู้"
+    },
+    {
+      "word": "แก้็ู",
+      "correct": "กู"
+    },
+    {
+      "word": "แก้ิ",
+      "correct": "กิ้"
+    },
+    {
+      "word": "แก้ะิ",
+      "correct": "กิ้"
+    },
+    {
+      "word": "แก้็ิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "แก้ั",
+      "correct": "กั้"
+    },
+    {
+      "word": "แก้ะั",
+      "correct": "กั้"
+    },
+    {
+      "word": "แก้็ั",
+      "correct": "กั"
+    },
+    {
+      "word": "แก้ึ",
+      "correct": "กึ้"
+    },
+    {
+      "word": "แก้ะึ",
+      "correct": "กึ้"
+    },
+    {
+      "word": "แก้็ึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "แก้ี",
+      "correct": "กี้"
+    },
+    {
+      "word": "แก้ะี",
+      "correct": "กี้"
+    },
+    {
+      "word": "แก้็ี",
+      "correct": "กี"
+    },
+    {
+      "word": "แก้ื",
+      "correct": "กื้"
+    },
+    {
+      "word": "แก้ะื",
+      "correct": "กื้"
+    },
+    {
+      "word": "แก้็ื",
+      "correct": "กื"
+    },
+    {
+      "word": "แก๊",
+      "correct": "แก๊"
+    },
+    {
+      "word": "แก๊ะ",
+      "correct": "แก๊ะ"
+    },
+    {
+      "word": "แก๊็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๊๑",
+      "correct": "แก๊๑"
+    },
+    {
+      "word": "แก๊ะ๑",
+      "correct": "แก๊ะ๑"
+    },
+    {
+      "word": "แก๊็๑",
+      "correct": "แก็๑"
+    },
+    {
+      "word": "แก๊ก",
+      "correct": "แก๊ก"
+    },
+    {
+      "word": "แก๊ะก",
+      "correct": "แก๊ะก"
+    },
+    {
+      "word": "แก๊็ก",
+      "correct": "แก็ก"
+    },
+    {
+      "word": "แก๊ฤ",
+      "correct": "แก๊ฤ"
+    },
+    {
+      "word": "แก๊ะฤ",
+      "correct": "แก๊ะฤ"
+    },
+    {
+      "word": "แก๊็ฤ",
+      "correct": "แก็ฤ"
+    },
+    {
+      "word": "แก๊ฦ",
+      "correct": "แก๊ฦ"
+    },
+    {
+      "word": "แก๊ะฦ",
+      "correct": "แก๊ะฦ"
+    },
+    {
+      "word": "แก๊็ฦ",
+      "correct": "แก็ฦ"
+    },
+    {
+      "word": "แก๊เ",
+      "correct": "แก๊เ"
+    },
+    {
+      "word": "แก๊ะเ",
+      "correct": "แก๊ะเ"
+    },
+    {
+      "word": "แก๊็เ",
+      "correct": "แก็เ"
+    },
+    {
+      "word": "แก๊แ",
+      "correct": "แก๊แ"
+    },
+    {
+      "word": "แก๊ะแ",
+      "correct": "แก๊ะแ"
+    },
+    {
+      "word": "แก๊็แ",
+      "correct": "แก็แ"
+    },
+    {
+      "word": "แก๊โ",
+      "correct": "แก๊โ"
+    },
+    {
+      "word": "แก๊ะโ",
+      "correct": "แก๊ะโ"
+    },
+    {
+      "word": "แก๊็โ",
+      "correct": "แก็โ"
+    },
+    {
+      "word": "แก๊ใ",
+      "correct": "แก๊ใ"
+    },
+    {
+      "word": "แก๊ะใ",
+      "correct": "แก๊ะใ"
+    },
+    {
+      "word": "แก๊็ใ",
+      "correct": "แก็ใ"
+    },
+    {
+      "word": "แก๊ไ",
+      "correct": "แก๊ไ"
+    },
+    {
+      "word": "แก๊ะไ",
+      "correct": "แก๊ะไ"
+    },
+    {
+      "word": "แก๊็ไ",
+      "correct": "แก็ไ"
+    },
+    {
+      "word": "แก๊ะ",
+      "correct": "แก๊ะ"
+    },
+    {
+      "word": "แก๊ะะ",
+      "correct": "แก๊ะ"
+    },
+    {
+      "word": "แก๊็ะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก๊็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๊ะ็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๊็็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๊ๅ",
+      "correct": "แก๊"
+    },
+    {
+      "word": "แก๊ะๅ",
+      "correct": "แก๊ะ"
+    },
+    {
+      "word": "แก๊็ๅ",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกฺ๊",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก๊ะฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก๊็ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก๊์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก๊ะ์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก๊็์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก๊ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๊ะํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๊็ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๊๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก๊ะ๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก๊็๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก๊า",
       "correct": "ก๊า"
     },
     {
-      "word": "ก๋าุ",
-      "correct": "ก๋า"
+      "word": "แก๊ะา",
+      "correct": "ก๊า"
     },
     {
-      "word": "กาู",
+      "word": "แก๊็า",
       "correct": "กา"
     },
     {
-      "word": "ก่าู",
-      "correct": "ก่า"
+      "word": "แก๊ำ",
+      "correct": "ก๊ำ"
     },
     {
-      "word": "ก้าู",
-      "correct": "ก้า"
+      "word": "แก๊ะำ",
+      "correct": "ก๊ำ"
     },
     {
-      "word": "ก๊าู",
-      "correct": "ก๊า"
+      "word": "แก๊็ำ",
+      "correct": "กำ"
     },
     {
-      "word": "ก๋าู",
+      "word": "แกุ๊",
+      "correct": "กุ๊"
+    },
+    {
+      "word": "แก๊ะุ",
+      "correct": "กุ๊"
+    },
+    {
+      "word": "แก๊็ุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "แกู๊",
+      "correct": "กู๊"
+    },
+    {
+      "word": "แก๊ะู",
+      "correct": "กู๊"
+    },
+    {
+      "word": "แก๊็ู",
+      "correct": "กู"
+    },
+    {
+      "word": "แก๊ิ",
+      "correct": "กิ๊"
+    },
+    {
+      "word": "แก๊ะิ",
+      "correct": "กิ๊"
+    },
+    {
+      "word": "แก๊็ิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "แก๊ั",
+      "correct": "กั๊"
+    },
+    {
+      "word": "แก๊ะั",
+      "correct": "กั๊"
+    },
+    {
+      "word": "แก๊็ั",
+      "correct": "กั"
+    },
+    {
+      "word": "แก๊ึ",
+      "correct": "กึ๊"
+    },
+    {
+      "word": "แก๊ะึ",
+      "correct": "กึ๊"
+    },
+    {
+      "word": "แก๊็ึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "แก๊ี",
+      "correct": "กี๊"
+    },
+    {
+      "word": "แก๊ะี",
+      "correct": "กี๊"
+    },
+    {
+      "word": "แก๊็ี",
+      "correct": "กี"
+    },
+    {
+      "word": "แก๊ื",
+      "correct": "กื๊"
+    },
+    {
+      "word": "แก๊ะื",
+      "correct": "กื๊"
+    },
+    {
+      "word": "แก๊็ื",
+      "correct": "กื"
+    },
+    {
+      "word": "แก๋",
+      "correct": "แก๋"
+    },
+    {
+      "word": "แก๋ะ",
+      "correct": "แก๋ะ"
+    },
+    {
+      "word": "แก๋็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๋๑",
+      "correct": "แก๋๑"
+    },
+    {
+      "word": "แก๋ะ๑",
+      "correct": "แก๋ะ๑"
+    },
+    {
+      "word": "แก๋็๑",
+      "correct": "แก็๑"
+    },
+    {
+      "word": "แก๋ก",
+      "correct": "แก๋ก"
+    },
+    {
+      "word": "แก๋ะก",
+      "correct": "แก๋ะก"
+    },
+    {
+      "word": "แก๋็ก",
+      "correct": "แก็ก"
+    },
+    {
+      "word": "แก๋ฤ",
+      "correct": "แก๋ฤ"
+    },
+    {
+      "word": "แก๋ะฤ",
+      "correct": "แก๋ะฤ"
+    },
+    {
+      "word": "แก๋็ฤ",
+      "correct": "แก็ฤ"
+    },
+    {
+      "word": "แก๋ฦ",
+      "correct": "แก๋ฦ"
+    },
+    {
+      "word": "แก๋ะฦ",
+      "correct": "แก๋ะฦ"
+    },
+    {
+      "word": "แก๋็ฦ",
+      "correct": "แก็ฦ"
+    },
+    {
+      "word": "แก๋เ",
+      "correct": "แก๋เ"
+    },
+    {
+      "word": "แก๋ะเ",
+      "correct": "แก๋ะเ"
+    },
+    {
+      "word": "แก๋็เ",
+      "correct": "แก็เ"
+    },
+    {
+      "word": "แก๋แ",
+      "correct": "แก๋แ"
+    },
+    {
+      "word": "แก๋ะแ",
+      "correct": "แก๋ะแ"
+    },
+    {
+      "word": "แก๋็แ",
+      "correct": "แก็แ"
+    },
+    {
+      "word": "แก๋โ",
+      "correct": "แก๋โ"
+    },
+    {
+      "word": "แก๋ะโ",
+      "correct": "แก๋ะโ"
+    },
+    {
+      "word": "แก๋็โ",
+      "correct": "แก็โ"
+    },
+    {
+      "word": "แก๋ใ",
+      "correct": "แก๋ใ"
+    },
+    {
+      "word": "แก๋ะใ",
+      "correct": "แก๋ะใ"
+    },
+    {
+      "word": "แก๋็ใ",
+      "correct": "แก็ใ"
+    },
+    {
+      "word": "แก๋ไ",
+      "correct": "แก๋ไ"
+    },
+    {
+      "word": "แก๋ะไ",
+      "correct": "แก๋ะไ"
+    },
+    {
+      "word": "แก๋็ไ",
+      "correct": "แก็ไ"
+    },
+    {
+      "word": "แก๋ะ",
+      "correct": "แก๋ะ"
+    },
+    {
+      "word": "แก๋ะะ",
+      "correct": "แก๋ะ"
+    },
+    {
+      "word": "แก๋็ะ",
+      "correct": "แกะ"
+    },
+    {
+      "word": "แก๋็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๋ะ็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๋็็",
+      "correct": "แก็"
+    },
+    {
+      "word": "แก๋ๅ",
+      "correct": "แก๋"
+    },
+    {
+      "word": "แก๋ะๅ",
+      "correct": "แก๋ะ"
+    },
+    {
+      "word": "แก๋็ๅ",
+      "correct": "แก็"
+    },
+    {
+      "word": "แกฺ๋",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก๋ะฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก๋็ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "แก๋์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก๋ะ์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก๋็์",
+      "correct": "ก์"
+    },
+    {
+      "word": "แก๋ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๋ะํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๋็ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "แก๋๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก๋ะ๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก๋็๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "แก๋า",
       "correct": "ก๋า"
     },
     {
-      "word": "กาฺ",
+      "word": "แก๋ะา",
+      "correct": "ก๋า"
+    },
+    {
+      "word": "แก๋็า",
       "correct": "กา"
     },
     {
-      "word": "ก่าฺ",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าฺ",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าฺ",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าฺ",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาิ",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่าิ",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าิ",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าิ",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าิ",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาั",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่าั",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าั",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าั",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าั",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาึ",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่าึ",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าึ",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าึ",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าึ",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาี",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่าี",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าี",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าี",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าี",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาื",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่าื",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าื",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าื",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าื",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กา์",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่า์",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้า์",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊า์",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋า์",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กาํ",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่าํ",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้าํ",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊าํ",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋าํ",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กา็",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่า็",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้า็",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊า็",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋า็",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กา๎",
-      "correct": "กา"
-    },
-    {
-      "word": "ก่า๎",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก้า๎",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก๊า๎",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๋า๎",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "ก่า",
-      "correct": "ก่า"
-    },
-    {
-      "word": "กา่",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก่าะ",
-      "correct": "ก่าะ"
-    },
-    {
-      "word": "ก่าะ",
-      "correct": "ก่าะ"
-    },
-    {
-      "word": "ก่าา",
-      "correct": "ก่า"
-    },
-    {
-      "word": "กา่า",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก่าำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "กา่ำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้า",
-      "correct": "ก้า"
-    },
-    {
-      "word": "กา้",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก้าะ",
-      "correct": "ก้าะ"
-    },
-    {
-      "word": "ก้าะ",
-      "correct": "ก้าะ"
-    },
-    {
-      "word": "ก้าา",
-      "correct": "ก้า"
-    },
-    {
-      "word": "กา้า",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก้าำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "กา้ำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊า",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "กา๊",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๊าะ",
-      "correct": "ก๊าะ"
-    },
-    {
-      "word": "ก๊าะ",
-      "correct": "ก๊าะ"
-    },
-    {
-      "word": "ก๊าา",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "กา๊า",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๊าำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "กา๊ำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋า",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กา๋",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "ก๋าะ",
-      "correct": "ก๋าะ"
-    },
-    {
-      "word": "ก๋าะ",
-      "correct": "ก๋าะ"
-    },
-    {
-      "word": "ก๋าา",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กา๋า",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "ก๋าำ",
+      "word": "แก๋ำ",
       "correct": "ก๋ำ"
     },
     {
-      "word": "กา๋ำ",
+      "word": "แก๋ะำ",
       "correct": "ก๋ำ"
     },
     {
-      "word": "กำ",
+      "word": "แก๋็ำ",
       "correct": "กำ"
     },
     {
-      "word": "กำะ",
-      "correct": "กะ"
+      "word": "แกุ๋",
+      "correct": "กุ๋"
     },
     {
-      "word": "กำา",
-      "correct": "กา"
+      "word": "แก๋ะุ",
+      "correct": "กุ๋"
     },
     {
-      "word": "กำำ",
-      "correct": "กำ"
+      "word": "แก๋็ุ",
+      "correct": "กุ"
     },
     {
-      "word": "กำๅ",
-      "correct": "กำ"
+      "word": "แกู๋",
+      "correct": "กู๋"
     },
     {
-      "word": "ก่ำๅ",
-      "correct": "ก่ำ"
+      "word": "แก๋ะู",
+      "correct": "กู๋"
     },
     {
-      "word": "ก้ำๅ",
-      "correct": "ก้ำ"
+      "word": "แก๋็ู",
+      "correct": "กู"
     },
     {
-      "word": "ก๊ำๅ",
-      "correct": "ก๊ำ"
+      "word": "แก๋ิ",
+      "correct": "กิ๋"
     },
     {
-      "word": "ก๋ำๅ",
-      "correct": "ก๋ำ"
+      "word": "แก๋ะิ",
+      "correct": "กิ๋"
     },
     {
-      "word": "กำุ",
-      "correct": "กำ"
+      "word": "แก๋็ิ",
+      "correct": "กิ"
     },
     {
-      "word": "ก่ำุ",
-      "correct": "ก่ำ"
+      "word": "แก๋ั",
+      "correct": "กั๋"
     },
     {
-      "word": "ก้ำุ",
-      "correct": "ก้ำ"
+      "word": "แก๋ะั",
+      "correct": "กั๋"
     },
     {
-      "word": "ก๊ำุ",
-      "correct": "ก๊ำ"
+      "word": "แก๋็ั",
+      "correct": "กั"
     },
     {
-      "word": "ก๋ำุ",
-      "correct": "ก๋ำ"
+      "word": "แก๋ึ",
+      "correct": "กึ๋"
     },
     {
-      "word": "กำู",
-      "correct": "กำ"
+      "word": "แก๋ะึ",
+      "correct": "กึ๋"
     },
     {
-      "word": "ก่ำู",
-      "correct": "ก่ำ"
+      "word": "แก๋็ึ",
+      "correct": "กึ"
     },
     {
-      "word": "ก้ำู",
-      "correct": "ก้ำ"
+      "word": "แก๋ี",
+      "correct": "กี๋"
     },
     {
-      "word": "ก๊ำู",
-      "correct": "ก๊ำ"
+      "word": "แก๋ะี",
+      "correct": "กี๋"
     },
     {
-      "word": "ก๋ำู",
-      "correct": "ก๋ำ"
+      "word": "แก๋็ี",
+      "correct": "กี"
     },
     {
-      "word": "กำฺ",
-      "correct": "กำ"
+      "word": "แก๋ื",
+      "correct": "กื๋"
     },
     {
-      "word": "ก่ำฺ",
-      "correct": "ก่ำ"
+      "word": "แก๋ะื",
+      "correct": "กื๋"
     },
     {
-      "word": "ก้ำฺ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำฺ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำฺ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำิ",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำิ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำิ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำิ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำิ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำั",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำั",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำั",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำั",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำั",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำึ",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำึ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำึ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำึ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำึ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำี",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำี",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำี",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำี",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำี",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำื",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำื",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำื",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำื",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำื",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำ์",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำ์",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำ์",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำ์",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำ์",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำํ",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำํ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำํ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำํ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำํ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำ็",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำ็",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำ็",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำ็",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำ็",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำ๎",
-      "correct": "กำ"
-    },
-    {
-      "word": "ก่ำ๎",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำ๎",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำ๎",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำ๎",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "ก่ำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "กำ่",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก่ำะ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "กำ่ะ",
-      "correct": "ก่ะ"
-    },
-    {
-      "word": "ก่ำา",
-      "correct": "ก่า"
-    },
-    {
-      "word": "กำ่า",
-      "correct": "ก่า"
-    },
-    {
-      "word": "ก่ำำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "กำ่ำ",
-      "correct": "ก่ำ"
-    },
-    {
-      "word": "ก้ำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "กำ้",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก้ำะ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "กำ้ะ",
-      "correct": "ก้ะ"
-    },
-    {
-      "word": "ก้ำา",
-      "correct": "ก้า"
-    },
-    {
-      "word": "กำ้า",
-      "correct": "ก้า"
-    },
-    {
-      "word": "ก้ำำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "กำ้ำ",
-      "correct": "ก้ำ"
-    },
-    {
-      "word": "ก๊ำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "กำ๊",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๊ำะ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "กำ๊ะ",
-      "correct": "ก๊ะ"
-    },
-    {
-      "word": "ก๊ำา",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "กำ๊า",
-      "correct": "ก๊า"
-    },
-    {
-      "word": "ก๊ำำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "กำ๊ำ",
-      "correct": "ก๊ำ"
-    },
-    {
-      "word": "ก๋ำ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำ๋",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "ก๋ำะ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "กำ๋ะ",
-      "correct": "ก๋ะ"
-    },
-    {
-      "word": "ก๋ำา",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "กำ๋า",
-      "correct": "ก๋า"
-    },
-    {
-      "word": "ก๋ำำ",
-      "correct": "ก๋ำ"
-    },
-    {
-      "word": "กำ๋ำ",
-      "correct": "ก๋ำ"
+      "word": "แก๋็ื",
+      "correct": "กื"
     }
   ]

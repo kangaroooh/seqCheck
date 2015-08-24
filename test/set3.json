@@ -1,371 +1,622 @@
-
-  set3 = [
+set3 = [
     {
-      "word": "อุ่",
-      "correct": "อุ่"
+      "word": "กฺ",
+      "correct": "กฺ"
     },
     {
-      "word": "อุ้",
-      "correct": "อุ้"
+      "word": "กฺ๑",
+      "correct": "กฺ๑"
     },
     {
-      "word": "อุ๊",
-      "correct": "อุ๊"
+      "word": "กฺก",
+      "correct": "กฺก"
     },
     {
-      "word": "อุ๋",
-      "correct": "อุ๋"
+      "word": "กฺฤ",
+      "correct": "กฺฤ"
     },
     {
-      "word": "อิ่",
-      "correct": "อิ่"
+      "word": "กฺฦ",
+      "correct": "กฺฦ"
     },
     {
-      "word": "อิ้",
-      "correct": "อิ้"
+      "word": "กฺเ",
+      "correct": "กฺเ"
     },
     {
-      "word": "อิ๊",
-      "correct": "อิ๊"
+      "word": "กฺแ",
+      "correct": "กฺแ"
     },
     {
-      "word": "อิ๋",
-      "correct": "อิ๋"
+      "word": "กฺโ",
+      "correct": "กฺโ"
     },
     {
-      "word": "อู่",
-      "correct": "อู่"
+      "word": "กฺใ",
+      "correct": "กฺใ"
     },
     {
-      "word": "อู้",
-      "correct": "อู้"
+      "word": "กฺไ",
+      "correct": "กฺไ"
     },
     {
-      "word": "อู๊",
-      "correct": "อู๊"
+      "word": "กฺๅ",
+      "correct": "กฺ"
     },
     {
-      "word": "อู๋",
-      "correct": "อู๋"
+      "word": "กฺะ",
+      "correct": "กะ"
     },
     {
-      "word": "อั่",
-      "correct": "อั่"
+      "word": "กฺา",
+      "correct": "กา"
     },
     {
-      "word": "อั้",
-      "correct": "อั้"
+      "word": "กฺำ",
+      "correct": "กำ"
     },
     {
-      "word": "อั๊",
-      "correct": "อั๊"
+      "word": "กฺุ",
+      "correct": "กุ"
     },
     {
-      "word": "อั๋",
-      "correct": "อั๋"
+      "word": "กฺู",
+      "correct": "กู"
     },
     {
-      "word": "อึ่",
-      "correct": "อึ่"
+      "word": "กฺิ",
+      "correct": "กิ"
     },
     {
-      "word": "อึ้",
-      "correct": "อึ้"
+      "word": "กฺั",
+      "correct": "กั"
     },
     {
-      "word": "อึ๊",
-      "correct": "อึ๊"
+      "word": "กฺึ",
+      "correct": "กึ"
     },
     {
-      "word": "อึ๋",
-      "correct": "อึ๋"
+      "word": "กฺี",
+      "correct": "กี"
     },
     {
-      "word": "อี่",
-      "correct": "อี่"
+      "word": "กฺื",
+      "correct": "กื"
     },
     {
-      "word": "อี้",
-      "correct": "อี้"
+      "word": "กฺฺ",
+      "correct": "กฺ"
     },
     {
-      "word": "อี๊",
-      "correct": "อี๊"
+      "word": "กฺ์",
+      "correct": "ก์"
     },
     {
-      "word": "อี๋",
-      "correct": "อี๋"
+      "word": "กฺํ",
+      "correct": "กํ"
     },
     {
-      "word": "อื่",
-      "correct": "อื่"
+      "word": "กฺ็",
+      "correct": "ก็"
     },
     {
-      "word": "อื้",
-      "correct": "อื้"
+      "word": "กฺ๎",
+      "correct": "ก๎"
     },
     {
-      "word": "อื๊",
-      "correct": "อื๊"
+      "word": "กฺ",
+      "correct": "ก"
     },
     {
-      "word": "อื๋",
-      "correct": "อื๋"
+      "word": "กฺ่",
+      "correct": "ก่"
     },
     {
-      "word": "อุ์",
-      "correct": "อุ์"
+      "word": "กฺ้",
+      "correct": "ก้"
     },
     {
-      "word": "อุํ",
-      "correct": "อุํ"
+      "word": "กฺ๊",
+      "correct": "ก๊"
     },
     {
-      "word": "อิ์",
-      "correct": "อิ์"
+      "word": "กฺ๋",
+      "correct": "ก๋"
     },
     {
-      "word": "อิํ",
-      "correct": "อิํ"
+      "word": "ก์",
+      "correct": "ก์"
     },
     {
-      "word": "อุ่่",
-      "correct": "อุ่"
+      "word": "ก์๑",
+      "correct": "ก์๑"
     },
     {
-      "word": "อุ่้",
-      "correct": "อุ้"
+      "word": "ก์ก",
+      "correct": "ก์ก"
     },
     {
-      "word": "อุ่๊",
-      "correct": "อุ๊"
+      "word": "ก์ฤ",
+      "correct": "ก์ฤ"
     },
     {
-      "word": "อุ่๋",
-      "correct": "อุ๋"
+      "word": "ก์ฦ",
+      "correct": "ก์ฦ"
     },
     {
-      "word": "อุ้่",
-      "correct": "อุ่"
+      "word": "ก์เ",
+      "correct": "ก์เ"
     },
     {
-      "word": "อุ้้",
-      "correct": "อุ้"
+      "word": "ก์แ",
+      "correct": "ก์แ"
     },
     {
-      "word": "อุ้๊",
-      "correct": "อุ๊"
+      "word": "ก์โ",
+      "correct": "ก์โ"
     },
     {
-      "word": "อุ้๋",
-      "correct": "อุ๋"
+      "word": "ก์ใ",
+      "correct": "ก์ใ"
     },
     {
-      "word": "อุ๊่",
-      "correct": "อุ่"
+      "word": "ก์ไ",
+      "correct": "ก์ไ"
     },
     {
-      "word": "อุ๊้",
-      "correct": "อุ้"
+      "word": "ก์ๅ",
+      "correct": "ก์"
     },
     {
-      "word": "อุ๊๊",
-      "correct": "อุ๊"
+      "word": "ก์ะ",
+      "correct": "กะ"
     },
     {
-      "word": "อุ๊๋",
-      "correct": "อุ๋"
+      "word": "ก์า",
+      "correct": "กา"
     },
     {
-      "word": "อุ๋่",
-      "correct": "อุ่"
+      "word": "ก์ำ",
+      "correct": "กำ"
     },
     {
-      "word": "อุ๋้",
-      "correct": "อุ้"
+      "word": "ก์ุ",
+      "correct": "กุ"
     },
     {
-      "word": "อุ๋๊",
-      "correct": "อุ๊"
+      "word": "ก์ู",
+      "correct": "กู"
     },
     {
-      "word": "อุ๋๋",
-      "correct": "อุ๋"
+      "word": "ก์ิ",
+      "correct": "กิ"
     },
     {
-      "word": "อุ่์",
-      "correct": "อุ์"
+      "word": "ก์ั",
+      "correct": "กั"
     },
     {
-      "word": "อุ้์",
-      "correct": "อุ์"
+      "word": "ก์ึ",
+      "correct": "กึ"
     },
     {
-      "word": "อุ๊์",
-      "correct": "อุ์"
+      "word": "ก์ี",
+      "correct": "กี"
     },
     {
-      "word": "อุ๋์",
-      "correct": "อุ์"
+      "word": "ก์ื",
+      "correct": "กื"
     },
     {
-      "word": "อิ่์",
-      "correct": "อิ์"
+      "word": "ก์ฺ",
+      "correct": "กฺ"
     },
     {
-      "word": "อิ้์",
-      "correct": "อิ์"
+      "word": "ก์์",
+      "correct": "ก์"
     },
     {
-      "word": "อิ๊์",
-      "correct": "อิ์"
+      "word": "ก์ํ",
+      "correct": "กํ"
     },
     {
-      "word": "อิ๋์",
-      "correct": "อิ์"
+      "word": "ก์็",
+      "correct": "ก็"
     },
     {
-      "word": "อ่่",
-      "correct": "อ่"
+      "word": "ก์๎",
+      "correct": "ก๎"
     },
     {
-      "word": "อ่้",
-      "correct": "อ้"
+      "word": "ก์",
+      "correct": "ก"
     },
     {
-      "word": "อ่๊",
-      "correct": "อ๊"
+      "word": "ก์่",
+      "correct": "ก่"
     },
     {
-      "word": "อ่๋",
-      "correct": "อ๋"
+      "word": "ก์้",
+      "correct": "ก้"
     },
     {
-      "word": "อ่์",
-      "correct": "อ์"
+      "word": "ก์๊",
+      "correct": "ก๊"
     },
     {
-      "word": "อ่ํ",
-      "correct": "อํ"
+      "word": "ก์๋",
+      "correct": "ก๋"
     },
     {
-      "word": "อ้่",
-      "correct": "อ่"
+      "word": "กํ",
+      "correct": "กํ"
     },
     {
-      "word": "อ้้",
-      "correct": "อ้"
+      "word": "กํ๑",
+      "correct": "กํ๑"
     },
     {
-      "word": "อ่๊",
-      "correct": "อ๊"
+      "word": "กํก",
+      "correct": "กํก"
     },
     {
-      "word": "อ้๋",
-      "correct": "อ๋"
+      "word": "กํฤ",
+      "correct": "กํฤ"
     },
     {
-      "word": "อ้์",
-      "correct": "อ์"
+      "word": "กํฦ",
+      "correct": "กํฦ"
     },
     {
-      "word": "อ้ํ",
-      "correct": "อํ"
+      "word": "กํเ",
+      "correct": "กํเ"
     },
     {
-      "word": "อ๊่",
-      "correct": "อ่"
+      "word": "กํแ",
+      "correct": "กํแ"
     },
     {
-      "word": "อ๊้",
-      "correct": "อ้"
+      "word": "กํโ",
+      "correct": "กํโ"
     },
     {
-      "word": "อ๊๊",
-      "correct": "อ๊"
+      "word": "กํใ",
+      "correct": "กํใ"
     },
     {
-      "word": "อ๊๋",
-      "correct": "อ๋"
+      "word": "กํไ",
+      "correct": "กํไ"
     },
     {
-      "word": "อ๊์",
-      "correct": "อ์"
+      "word": "กํๅ",
+      "correct": "กํ"
     },
     {
-      "word": "อ๊ํ",
-      "correct": "อํ"
+      "word": "กํะ",
+      "correct": "กะ"
     },
     {
-      "word": "อ๋่",
-      "correct": "อ่"
+      "word": "กํา",
+      "correct": "กา"
     },
     {
-      "word": "อ๋้",
-      "correct": "อ้"
+      "word": "กํำ",
+      "correct": "กำ"
     },
     {
-      "word": "อ๋๊",
-      "correct": "อ๊"
+      "word": "กํุ",
+      "correct": "กุ"
     },
     {
-      "word": "อ๋๋",
-      "correct": "อ๋"
+      "word": "กํู",
+      "correct": "กู"
     },
     {
-      "word": "อ๋์",
-      "correct": "อ์"
+      "word": "กํิ",
+      "correct": "กิ"
     },
     {
-      "word": "อ๋ํ",
-      "correct": "อํ"
+      "word": "กํั",
+      "correct": "กั"
     },
     {
-      "word": "อ์่",
-      "correct": "อ่"
+      "word": "กํึ",
+      "correct": "กึ"
     },
     {
-      "word": "อ์้",
-      "correct": "อ้"
+      "word": "กํี",
+      "correct": "กี"
     },
     {
-      "word": "อ์๊",
-      "correct": "อ๊"
+      "word": "กํื",
+      "correct": "กื"
     },
     {
-      "word": "อ์๋",
-      "correct": "อ๋"
+      "word": "กํฺ",
+      "correct": "กฺ"
     },
     {
-      "word": "อ์์",
-      "correct": "อ์"
+      "word": "กํ์",
+      "correct": "ก์"
     },
     {
-      "word": "อ์ํ",
-      "correct": "อํ"
+      "word": "กํํ",
+      "correct": "กํ"
     },
     {
-      "word": "อํ่",
-      "correct": "อ่"
+      "word": "กํ็",
+      "correct": "ก็"
     },
     {
-      "word": "อํ้",
-      "correct": "อ้"
+      "word": "กํ๎",
+      "correct": "ก๎"
     },
     {
-      "word": "อํ๊",
-      "correct": "อ๊"
+      "word": "กํ",
+      "correct": "ก"
     },
     {
-      "word": "อํ๋",
-      "correct": "อ๋"
+      "word": "กํ่",
+      "correct": "ก่"
     },
     {
-      "word": "อํ์",
-      "correct": "อ์"
+      "word": "กํ้",
+      "correct": "ก้"
     },
     {
-      "word": "อํํ",
-      "correct": "อํ"
+      "word": "กํ๊",
+      "correct": "ก๊"
+    },
+    {
+      "word": "กํ๋",
+      "correct": "ก๋"
+    },
+    {
+      "word": "ก็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ก็๑",
+      "correct": "ก็๑"
+    },
+    {
+      "word": "ก็ก",
+      "correct": "ก็ก"
+    },
+    {
+      "word": "ก็ฤ",
+      "correct": "ก็ฤ"
+    },
+    {
+      "word": "ก็ฦ",
+      "correct": "ก็ฦ"
+    },
+    {
+      "word": "ก็เ",
+      "correct": "ก็เ"
+    },
+    {
+      "word": "ก็แ",
+      "correct": "ก็แ"
+    },
+    {
+      "word": "ก็โ",
+      "correct": "ก็โ"
+    },
+    {
+      "word": "ก็ใ",
+      "correct": "ก็ใ"
+    },
+    {
+      "word": "ก็ไ",
+      "correct": "ก็ไ"
+    },
+    {
+      "word": "ก็ๅ",
+      "correct": "ก็"
+    },
+    {
+      "word": "ก็ะ",
+      "correct": "กะ"
+    },
+    {
+      "word": "ก็า",
+      "correct": "กา"
+    },
+    {
+      "word": "ก็ำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "ก็ุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "ก็ู",
+      "correct": "กู"
+    },
+    {
+      "word": "ก็ิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "ก็ั",
+      "correct": "กั"
+    },
+    {
+      "word": "ก็ึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "ก็ี",
+      "correct": "กี"
+    },
+    {
+      "word": "ก็ื",
+      "correct": "กื"
+    },
+    {
+      "word": "ก็ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ก็์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ก็ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ก็็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ก็๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ก็",
+      "correct": "ก"
+    },
+    {
+      "word": "ก็่",
+      "correct": "ก่"
+    },
+    {
+      "word": "ก็้",
+      "correct": "ก้"
+    },
+    {
+      "word": "ก็๊",
+      "correct": "ก๊"
+    },
+    {
+      "word": "ก็๋",
+      "correct": "ก๋"
+    },
+    {
+      "word": "ก๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ก๎๑",
+      "correct": "ก๎๑"
+    },
+    {
+      "word": "ก๎ก",
+      "correct": "ก๎ก"
+    },
+    {
+      "word": "ก๎ฤ",
+      "correct": "ก๎ฤ"
+    },
+    {
+      "word": "ก๎ฦ",
+      "correct": "ก๎ฦ"
+    },
+    {
+      "word": "ก๎เ",
+      "correct": "ก๎เ"
+    },
+    {
+      "word": "ก๎แ",
+      "correct": "ก๎แ"
+    },
+    {
+      "word": "ก๎โ",
+      "correct": "ก๎โ"
+    },
+    {
+      "word": "ก๎ใ",
+      "correct": "ก๎ใ"
+    },
+    {
+      "word": "ก๎ไ",
+      "correct": "ก๎ไ"
+    },
+    {
+      "word": "ก๎ๅ",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ก๎ะ",
+      "correct": "กะ"
+    },
+    {
+      "word": "ก๎า",
+      "correct": "กา"
+    },
+    {
+      "word": "ก๎ำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "ก๎ุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "ก๎ู",
+      "correct": "กู"
+    },
+    {
+      "word": "ก๎ิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "ก๎ั",
+      "correct": "กั"
+    },
+    {
+      "word": "ก๎ึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "ก๎ี",
+      "correct": "กี"
+    },
+    {
+      "word": "ก๎ื",
+      "correct": "กื"
+    },
+    {
+      "word": "ก๎ฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ก๎์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ก๎ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ก๎็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ก๎๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ก๎",
+      "correct": "ก"
+    },
+    {
+      "word": "ก๎่",
+      "correct": "ก่"
+    },
+    {
+      "word": "ก๎้",
+      "correct": "ก้"
+    },
+    {
+      "word": "ก๎๊",
+      "correct": "ก๊"
+    },
+    {
+      "word": "ก๎๋",
+      "correct": "ก๋"
     }
   ]

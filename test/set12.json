@@ -1,0 +1,250 @@
+set12 = [
+    {
+      "word": "ฤ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ๑",
+      "correct": "ฤ๑"
+    },
+    {
+      "word": "ฤก",
+      "correct": "ฤก"
+    },
+    {
+      "word": "ฤๅ",
+      "correct": "ฤๅ"
+    },
+    {
+      "word": "ฤฤ",
+      "correct": "ฤฤ"
+    },
+    {
+      "word": "ฤฦ",
+      "correct": "ฤฦ"
+    },
+    {
+      "word": "ฤา",
+      "correct": "ฤา"
+    },
+    {
+      "word": "ฤเ",
+      "correct": "ฤเ"
+    },
+    {
+      "word": "ฤแ",
+      "correct": "ฤแ"
+    },
+    {
+      "word": "ฤโ",
+      "correct": "ฤโ"
+    },
+    {
+      "word": "ฤใ",
+      "correct": "ฤใ"
+    },
+    {
+      "word": "ฤไ",
+      "correct": "ฤไ"
+    },
+    {
+      "word": "ฤะ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤำ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤุ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤู",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤฺ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤิ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤั",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤึ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤี",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤื",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ์",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤํ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ็",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ๎",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ่",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ้",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ๊",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฤ๋",
+      "correct": "ฤ"
+    },
+    {
+      "word": "ฦ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ๑",
+      "correct": "ฦ๑"
+    },
+    {
+      "word": "ฦก",
+      "correct": "ฦก"
+    },
+    {
+      "word": "ฦๅ",
+      "correct": "ฦๅ"
+    },
+    {
+      "word": "ฦฤ",
+      "correct": "ฦฤ"
+    },
+    {
+      "word": "ฦฦ",
+      "correct": "ฦฦ"
+    },
+    {
+      "word": "ฦา",
+      "correct": "ฦา"
+    },
+    {
+      "word": "ฦเ",
+      "correct": "ฦเ"
+    },
+    {
+      "word": "ฦแ",
+      "correct": "ฦแ"
+    },
+    {
+      "word": "ฦโ",
+      "correct": "ฦโ"
+    },
+    {
+      "word": "ฦใ",
+      "correct": "ฦใ"
+    },
+    {
+      "word": "ฦไ",
+      "correct": "ฦไ"
+    },
+    {
+      "word": "ฦะ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦำ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦุ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦู",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦฺ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦิ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦั",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦึ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦี",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦื",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ์",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦํ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ็",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ๎",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ่",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ้",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ๊",
+      "correct": "ฦ"
+    },
+    {
+      "word": "ฦ๋",
+      "correct": "ฦ"
+    }
+  ]

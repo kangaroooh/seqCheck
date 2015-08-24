@@ -1,0 +1,622 @@
+set15 = [
+    {
+        "word": "เ",
+        "correct": "เ"
+    },
+    {
+        "word": "เก",
+        "correct": "เก"
+    },
+    {
+        "word": "เ๑",
+        "correct": "เ"
+    },
+    {
+        "word": "เะ",
+        "correct": "เ"
+    },
+    {
+        "word": "เา",
+        "correct": "เ"
+    },
+    {
+        "word": "เำ",
+        "correct": "เ"
+    },
+    {
+        "word": "เๅ",
+        "correct": "เ"
+    },
+    {
+        "word": "เฤ",
+        "correct": "เ"
+    },
+    {
+        "word": "เฦ",
+        "correct": "เ"
+    },
+    {
+        "word": "เุ",
+        "correct": "เ"
+    },
+    {
+        "word": "เู",
+        "correct": "เ"
+    },
+    {
+        "word": "เฺ",
+        "correct": "เ"
+    },
+    {
+        "word": "เิ",
+        "correct": "เ"
+    },
+    {
+        "word": "เั",
+        "correct": "เ"
+    },
+    {
+        "word": "เึ",
+        "correct": "เ"
+    },
+    {
+        "word": "เี",
+        "correct": "เ"
+    },
+    {
+        "word": "เื",
+        "correct": "เ"
+    },
+    {
+        "word": "เ์",
+        "correct": "เ"
+    },
+    {
+        "word": "เํ",
+        "correct": "เ"
+    },
+    {
+        "word": "เ็",
+        "correct": "เ"
+    },
+    {
+        "word": "เ๎",
+        "correct": "เ"
+    },
+    {
+        "word": "เ",
+        "correct": "เ"
+    },
+    {
+        "word": "เ่",
+        "correct": "เ"
+    },
+    {
+        "word": "เ้",
+        "correct": "เ"
+    },
+    {
+        "word": "เ๊",
+        "correct": "เ"
+    },
+    {
+        "word": "เ๋",
+        "correct": "เ"
+    },
+    {
+        "word": "เเ",
+        "correct": "เ"
+    },
+    {
+        "word": "เแ",
+        "correct": "แ"
+    },
+    {
+        "word": "เโ",
+        "correct": "โ"
+    },
+    {
+        "word": "เใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "เไ",
+        "correct": "ไ"
+    },
+    {
+        "word": "แ",
+        "correct": "แ"
+    },
+    {
+        "word": "แก",
+        "correct": "แก"
+    },
+    {
+        "word": "แ๑",
+        "correct": "แ"
+    },
+    {
+        "word": "แะ",
+        "correct": "แ"
+    },
+    {
+        "word": "แา",
+        "correct": "แ"
+    },
+    {
+        "word": "แำ",
+        "correct": "แ"
+    },
+    {
+        "word": "แๅ",
+        "correct": "แ"
+    },
+    {
+        "word": "แฤ",
+        "correct": "แ"
+    },
+    {
+        "word": "แฦ",
+        "correct": "แ"
+    },
+    {
+        "word": "แุ",
+        "correct": "แ"
+    },
+    {
+        "word": "แู",
+        "correct": "แ"
+    },
+    {
+        "word": "แฺ",
+        "correct": "แ"
+    },
+    {
+        "word": "แิ",
+        "correct": "แ"
+    },
+    {
+        "word": "แั",
+        "correct": "แ"
+    },
+    {
+        "word": "แึ",
+        "correct": "แ"
+    },
+    {
+        "word": "แี",
+        "correct": "แ"
+    },
+    {
+        "word": "แื",
+        "correct": "แ"
+    },
+    {
+        "word": "แ์",
+        "correct": "แ"
+    },
+    {
+        "word": "แํ",
+        "correct": "แ"
+    },
+    {
+        "word": "แ็",
+        "correct": "แ"
+    },
+    {
+        "word": "แ๎",
+        "correct": "แ"
+    },
+    {
+        "word": "แ",
+        "correct": "แ"
+    },
+    {
+        "word": "แ่",
+        "correct": "แ"
+    },
+    {
+        "word": "แ้",
+        "correct": "แ"
+    },
+    {
+        "word": "แ๊",
+        "correct": "แ"
+    },
+    {
+        "word": "แ๋",
+        "correct": "แ"
+    },
+    {
+        "word": "แเ",
+        "correct": "เ"
+    },
+    {
+        "word": "แแ",
+        "correct": "แ"
+    },
+    {
+        "word": "แโ",
+        "correct": "โ"
+    },
+    {
+        "word": "แใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "แไ",
+        "correct": "ไ"
+    },
+    {
+        "word": "โ",
+        "correct": "โ"
+    },
+    {
+        "word": "โก",
+        "correct": "โก"
+    },
+    {
+        "word": "โ๑",
+        "correct": "โ"
+    },
+    {
+        "word": "โะ",
+        "correct": "โ"
+    },
+    {
+        "word": "โา",
+        "correct": "โ"
+    },
+    {
+        "word": "โำ",
+        "correct": "โ"
+    },
+    {
+        "word": "โๅ",
+        "correct": "โ"
+    },
+    {
+        "word": "โฤ",
+        "correct": "โ"
+    },
+    {
+        "word": "โฦ",
+        "correct": "โ"
+    },
+    {
+        "word": "โุ",
+        "correct": "โ"
+    },
+    {
+        "word": "โู",
+        "correct": "โ"
+    },
+    {
+        "word": "โฺ",
+        "correct": "โ"
+    },
+    {
+        "word": "โิ",
+        "correct": "โ"
+    },
+    {
+        "word": "โั",
+        "correct": "โ"
+    },
+    {
+        "word": "โึ",
+        "correct": "โ"
+    },
+    {
+        "word": "โี",
+        "correct": "โ"
+    },
+    {
+        "word": "โื",
+        "correct": "โ"
+    },
+    {
+        "word": "โ์",
+        "correct": "โ"
+    },
+    {
+        "word": "โํ",
+        "correct": "โ"
+    },
+    {
+        "word": "โ็",
+        "correct": "โ"
+    },
+    {
+        "word": "โ๎",
+        "correct": "โ"
+    },
+    {
+        "word": "โ",
+        "correct": "โ"
+    },
+    {
+        "word": "โ่",
+        "correct": "โ"
+    },
+    {
+        "word": "โ้",
+        "correct": "โ"
+    },
+    {
+        "word": "โ๊",
+        "correct": "โ"
+    },
+    {
+        "word": "โ๋",
+        "correct": "โ"
+    },
+    {
+        "word": "โเ",
+        "correct": "เ"
+    },
+    {
+        "word": "โแ",
+        "correct": "แ"
+    },
+    {
+        "word": "โโ",
+        "correct": "โ"
+    },
+    {
+        "word": "โใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "โไ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใก",
+        "correct": "ใก"
+    },
+    {
+        "word": "ใ๑",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใะ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใา",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใำ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใๅ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใฤ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใฦ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใุ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใู",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใฺ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใิ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใั",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใึ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใี",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใื",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ์",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใํ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ็",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ๎",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ่",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ้",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ๊",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใ๋",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใเ",
+        "correct": "เ"
+    },
+    {
+        "word": "ใแ",
+        "correct": "แ"
+    },
+    {
+        "word": "ใโ",
+        "correct": "โ"
+    },
+    {
+        "word": "ใใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ใไ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไก",
+        "correct": "ไก"
+    },
+    {
+        "word": "ไ๑",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไะ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไา",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไำ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไๅ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไฤ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไฦ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไุ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไู",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไฺ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไิ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไั",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไึ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไี",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไื",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ์",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไํ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ็",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ๎",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ่",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ้",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ๊",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไ๋",
+        "correct": "ไ"
+    },
+    {
+        "word": "ไเ",
+        "correct": "เ"
+    },
+    {
+        "word": "ไแ",
+        "correct": "แ"
+    },
+    {
+        "word": "ไโ",
+        "correct": "โ"
+    },
+    {
+        "word": "ไใ",
+        "correct": "ใ"
+    },
+    {
+        "word": "ไไ",
+        "correct": "ไ"
+    }
+  ]

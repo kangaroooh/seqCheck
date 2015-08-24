@@ -1,98 +1,1042 @@
   set4 = [
-      {
-          "word": "ฤๅ",
-          "correct": "ฤๅ"
+    {
+      "word": "ใก",
+      "correct": "ใก"
     },
-      {
-          "word": "ฤก",
-          "correct": "ฤก"
+    {
+      "word": "ใก๑",
+      "correct": "ใก๑"
     },
-      {
-          "word": "ฤ๑",
-          "correct": "ฤ๑"
+    {
+      "word": "ใกก",
+      "correct": "ใกก"
     },
-      {
-          "word": "ฤฤ",
-          "correct": "ฤฤ"
+    {
+      "word": "ใกฤ",
+      "correct": "ใกฤ"
     },
-      {
-          "word": "ฤฦ",
-          "correct": "ฤฦ"
+    {
+      "word": "ใกฦ",
+      "correct": "ใกฦ"
     },
-      {
-          "word": "ฤะ",
-          "correct": "ฤ"
+    {
+      "word": "ใกเ",
+      "correct": "ใกเ"
     },
-      {
-          "word": "ฤา",
-          "correct": "ฤา"
+    {
+      "word": "ใกแ",
+      "correct": "ใกแ"
     },
-      {
-          "word": "ฤำ",
-          "correct": "ฤ"
+    {
+      "word": "ใกโ",
+      "correct": "ใกโ"
     },
-      {
-          "word": "ฤุ",
-          "correct": "ฤ"
+    {
+      "word": "ใกใ",
+      "correct": "ใกใ"
     },
-      {
-          "word": "ฤู",
-          "correct": "ฤ"
+    {
+      "word": "ใกไ",
+      "correct": "ใกไ"
     },
-      {
-          "word": "ฤฺ",
-          "correct": "ฤ"
+    {
+      "word": "ใกๅ",
+      "correct": "ใก"
     },
-      {
-          "word": "ฤิ",
-          "correct": "ฤ"
+    {
+      "word": "ใกฺ",
+      "correct": "กฺ"
     },
-      {
-          "word": "ฤั",
-          "correct": "ฤ"
+    {
+      "word": "ใก์",
+      "correct": "ก์"
     },
-      {
-          "word": "ฤึ",
-          "correct": "ฤ"
+    {
+      "word": "ใกํ",
+      "correct": "กํ"
     },
-      {
-          "word": "ฤี",
-          "correct": "ฤ"
+    {
+      "word": "ใก็",
+      "correct": "ก็"
     },
-      {
-          "word": "ฤื",
-          "correct": "ฤ"
+    {
+      "word": "ใก๎",
+      "correct": "ก๎"
     },
-      {
-          "word": "ฤ์",
-          "correct": "ฤ"
+    {
+      "word": "ใกะ",
+      "correct": "กะ"
     },
-      {
-          "word": "ฤํ",
-          "correct": "ฤ"
+    {
+      "word": "ใกา",
+      "correct": "กา"
     },
-      {
-          "word": "ฤ็",
-          "correct": "ฤ"
+    {
+      "word": "ใกำ",
+      "correct": "กำ"
     },
-      {
-          "word": "ฤ๎",
-          "correct": "ฤ"
+    {
+      "word": "ใกุ",
+      "correct": "กุ"
     },
-      {
-          "word": "ฤ่",
-          "correct": "ฤ"
+    {
+      "word": "ใกู",
+      "correct": "กู"
     },
-      {
-          "word": "ฤ้",
-          "correct": "ฤ"
+    {
+      "word": "ใกิ",
+      "correct": "กิ"
     },
-      {
-          "word": "ฤ๊",
-          "correct": "ฤ"
+    {
+      "word": "ใกั",
+      "correct": "กั"
     },
-      {
-          "word": "ฤ๋",
-          "correct": "ฤ"
+    {
+      "word": "ใกึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "ใกี",
+      "correct": "กี"
+    },
+    {
+      "word": "ใกื",
+      "correct": "กื"
+    },
+    {
+      "word": "ไก",
+      "correct": "ไก"
+    },
+    {
+      "word": "ไก๑",
+      "correct": "ไก๑"
+    },
+    {
+      "word": "ไกก",
+      "correct": "ไกก"
+    },
+    {
+      "word": "ไกฤ",
+      "correct": "ไกฤ"
+    },
+    {
+      "word": "ไกฦ",
+      "correct": "ไกฦ"
+    },
+    {
+      "word": "ไกเ",
+      "correct": "ไกเ"
+    },
+    {
+      "word": "ไกแ",
+      "correct": "ไกแ"
+    },
+    {
+      "word": "ไกโ",
+      "correct": "ไกโ"
+    },
+    {
+      "word": "ไกใ",
+      "correct": "ไกใ"
+    },
+    {
+      "word": "ไกไ",
+      "correct": "ไกไ"
+    },
+    {
+      "word": "ไกๅ",
+      "correct": "ไก"
+    },
+    {
+      "word": "ไกฺ",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ไก์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ไกํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ไก็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ไก๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ไกะ",
+      "correct": "กะ"
+    },
+    {
+      "word": "ไกา",
+      "correct": "กา"
+    },
+    {
+      "word": "ไกำ",
+      "correct": "กำ"
+    },
+    {
+      "word": "ไกุ",
+      "correct": "กุ"
+    },
+    {
+      "word": "ไกู",
+      "correct": "กู"
+    },
+    {
+      "word": "ไกิ",
+      "correct": "กิ"
+    },
+    {
+      "word": "ไกั",
+      "correct": "กั"
+    },
+    {
+      "word": "ไกึ",
+      "correct": "กึ"
+    },
+    {
+      "word": "ไกี",
+      "correct": "กี"
+    },
+    {
+      "word": "ไกื",
+      "correct": "กื"
+    },
+    {
+      "word": "ใก่",
+      "correct": "ใก่"
+    },
+    {
+      "word": "ใก่๑",
+      "correct": "ใก่๑"
+    },
+    {
+      "word": "ใก่ก",
+      "correct": "ใก่ก"
+    },
+    {
+      "word": "ใก่ฤ",
+      "correct": "ใก่ฤ"
+    },
+    {
+      "word": "ใก่ฦ",
+      "correct": "ใก่ฦ"
+    },
+    {
+      "word": "ใก่เ",
+      "correct": "ใก่เ"
+    },
+    {
+      "word": "ใก่แ",
+      "correct": "ใก่แ"
+    },
+    {
+      "word": "ใก่โ",
+      "correct": "ใก่โ"
+    },
+    {
+      "word": "ใก่ใ",
+      "correct": "ใก่ใ"
+    },
+    {
+      "word": "ใก่ไ",
+      "correct": "ใก่ไ"
+    },
+    {
+      "word": "ใก่ๅ",
+      "correct": "ใก่"
+    },
+    {
+      "word": "ใกฺ่",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ใก่์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ใก่ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ใก่็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ใก่๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ใก่ะ",
+      "correct": "ก่ะ"
+    },
+    {
+      "word": "ใก่า",
+      "correct": "ก่า"
+    },
+    {
+      "word": "ใก่ำ",
+      "correct": "ก่ำ"
+    },
+    {
+      "word": "ใกุ่",
+      "correct": "กุ่"
+    },
+    {
+      "word": "ใกู่",
+      "correct": "กู่"
+    },
+    {
+      "word": "ใก่ิ",
+      "correct": "กิ่"
+    },
+    {
+      "word": "ใก่ั",
+      "correct": "กั่"
+    },
+    {
+      "word": "ใก่ึ",
+      "correct": "กึ่"
+    },
+    {
+      "word": "ใก่ี",
+      "correct": "กี่"
+    },
+    {
+      "word": "ใก่ื",
+      "correct": "กื่"
+    },
+    {
+      "word": "ไก่",
+      "correct": "ไก่"
+    },
+    {
+      "word": "ไก่๑",
+      "correct": "ไก่๑"
+    },
+    {
+      "word": "ไก่ก",
+      "correct": "ไก่ก"
+    },
+    {
+      "word": "ไก่ฤ",
+      "correct": "ไก่ฤ"
+    },
+    {
+      "word": "ไก่ฦ",
+      "correct": "ไก่ฦ"
+    },
+    {
+      "word": "ไก่เ",
+      "correct": "ไก่เ"
+    },
+    {
+      "word": "ไก่แ",
+      "correct": "ไก่แ"
+    },
+    {
+      "word": "ไก่โ",
+      "correct": "ไก่โ"
+    },
+    {
+      "word": "ไก่ใ",
+      "correct": "ไก่ใ"
+    },
+    {
+      "word": "ไก่ไ",
+      "correct": "ไก่ไ"
+    },
+    {
+      "word": "ไก่ๅ",
+      "correct": "ไก่"
+    },
+    {
+      "word": "ไกฺ่",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ไก่์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ไก่ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ไก่็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ไก่๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ไก่ะ",
+      "correct": "ก่ะ"
+    },
+    {
+      "word": "ไก่า",
+      "correct": "ก่า"
+    },
+    {
+      "word": "ไก่ำ",
+      "correct": "ก่ำ"
+    },
+    {
+      "word": "ไกุ่",
+      "correct": "กุ่"
+    },
+    {
+      "word": "ไกู่",
+      "correct": "กู่"
+    },
+    {
+      "word": "ไก่ิ",
+      "correct": "กิ่"
+    },
+    {
+      "word": "ไก่ั",
+      "correct": "กั่"
+    },
+    {
+      "word": "ไก่ึ",
+      "correct": "กึ่"
+    },
+    {
+      "word": "ไก่ี",
+      "correct": "กี่"
+    },
+    {
+      "word": "ไก่ื",
+      "correct": "กื่"
+    },
+    {
+      "word": "ใก้",
+      "correct": "ใก้"
+    },
+    {
+      "word": "ใก้๑",
+      "correct": "ใก้๑"
+    },
+    {
+      "word": "ใก้ก",
+      "correct": "ใก้ก"
+    },
+    {
+      "word": "ใก้ฤ",
+      "correct": "ใก้ฤ"
+    },
+    {
+      "word": "ใก้ฦ",
+      "correct": "ใก้ฦ"
+    },
+    {
+      "word": "ใก้เ",
+      "correct": "ใก้เ"
+    },
+    {
+      "word": "ใก้แ",
+      "correct": "ใก้แ"
+    },
+    {
+      "word": "ใก้โ",
+      "correct": "ใก้โ"
+    },
+    {
+      "word": "ใก้ใ",
+      "correct": "ใก้ใ"
+    },
+    {
+      "word": "ใก้ไ",
+      "correct": "ใก้ไ"
+    },
+    {
+      "word": "ใก้ๅ",
+      "correct": "ใก้"
+    },
+    {
+      "word": "ใกฺ้",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ใก้์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ใก้ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ใก้็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ใก้๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ใก้ะ",
+      "correct": "ก้ะ"
+    },
+    {
+      "word": "ใก้า",
+      "correct": "ก้า"
+    },
+    {
+      "word": "ใก้ำ",
+      "correct": "ก้ำ"
+    },
+    {
+      "word": "ใกุ้",
+      "correct": "กุ้"
+    },
+    {
+      "word": "ใกู้",
+      "correct": "กู้"
+    },
+    {
+      "word": "ใก้ิ",
+      "correct": "กิ้"
+    },
+    {
+      "word": "ใก้ั",
+      "correct": "กั้"
+    },
+    {
+      "word": "ใก้ึ",
+      "correct": "กึ้"
+    },
+    {
+      "word": "ใก้ี",
+      "correct": "กี้"
+    },
+    {
+      "word": "ใก้ื",
+      "correct": "กื้"
+    },
+    {
+      "word": "ไก้",
+      "correct": "ไก้"
+    },
+    {
+      "word": "ไก้๑",
+      "correct": "ไก้๑"
+    },
+    {
+      "word": "ไก้ก",
+      "correct": "ไก้ก"
+    },
+    {
+      "word": "ไก้ฤ",
+      "correct": "ไก้ฤ"
+    },
+    {
+      "word": "ไก้ฦ",
+      "correct": "ไก้ฦ"
+    },
+    {
+      "word": "ไก้เ",
+      "correct": "ไก้เ"
+    },
+    {
+      "word": "ไก้แ",
+      "correct": "ไก้แ"
+    },
+    {
+      "word": "ไก้โ",
+      "correct": "ไก้โ"
+    },
+    {
+      "word": "ไก้ใ",
+      "correct": "ไก้ใ"
+    },
+    {
+      "word": "ไก้ไ",
+      "correct": "ไก้ไ"
+    },
+    {
+      "word": "ไก้ๅ",
+      "correct": "ไก้"
+    },
+    {
+      "word": "ไกฺ้",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ไก้์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ไก้ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ไก้็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ไก้๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ไก้ะ",
+      "correct": "ก้ะ"
+    },
+    {
+      "word": "ไก้า",
+      "correct": "ก้า"
+    },
+    {
+      "word": "ไก้ำ",
+      "correct": "ก้ำ"
+    },
+    {
+      "word": "ไกุ้",
+      "correct": "กุ้"
+    },
+    {
+      "word": "ไกู้",
+      "correct": "กู้"
+    },
+    {
+      "word": "ไก้ิ",
+      "correct": "กิ้"
+    },
+    {
+      "word": "ไก้ั",
+      "correct": "กั้"
+    },
+    {
+      "word": "ไก้ึ",
+      "correct": "กึ้"
+    },
+    {
+      "word": "ไก้ี",
+      "correct": "กี้"
+    },
+    {
+      "word": "ไก้ื",
+      "correct": "กื้"
+    },
+    {
+      "word": "ใก๊",
+      "correct": "ใก๊"
+    },
+    {
+      "word": "ใก๊๑",
+      "correct": "ใก๊๑"
+    },
+    {
+      "word": "ใก๊ก",
+      "correct": "ใก๊ก"
+    },
+    {
+      "word": "ใก๊ฤ",
+      "correct": "ใก๊ฤ"
+    },
+    {
+      "word": "ใก๊ฦ",
+      "correct": "ใก๊ฦ"
+    },
+    {
+      "word": "ใก๊เ",
+      "correct": "ใก๊เ"
+    },
+    {
+      "word": "ใก๊แ",
+      "correct": "ใก๊แ"
+    },
+    {
+      "word": "ใก๊โ",
+      "correct": "ใก๊โ"
+    },
+    {
+      "word": "ใก๊ใ",
+      "correct": "ใก๊ใ"
+    },
+    {
+      "word": "ใก๊ไ",
+      "correct": "ใก๊ไ"
+    },
+    {
+      "word": "ใก๊ๅ",
+      "correct": "ใก๊"
+    },
+    {
+      "word": "ใกฺ๊",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ใก๊์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ใก๊ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ใก๊็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ใก๊๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ใก๊ะ",
+      "correct": "ก๊ะ"
+    },
+    {
+      "word": "ใก๊า",
+      "correct": "ก๊า"
+    },
+    {
+      "word": "ใก๊ำ",
+      "correct": "ก๊ำ"
+    },
+    {
+      "word": "ใกุ๊",
+      "correct": "กุ๊"
+    },
+    {
+      "word": "ใกู๊",
+      "correct": "กู๊"
+    },
+    {
+      "word": "ใก๊ิ",
+      "correct": "กิ๊"
+    },
+    {
+      "word": "ใก๊ั",
+      "correct": "กั๊"
+    },
+    {
+      "word": "ใก๊ึ",
+      "correct": "กึ๊"
+    },
+    {
+      "word": "ใก๊ี",
+      "correct": "กี๊"
+    },
+    {
+      "word": "ใก๊ื",
+      "correct": "กื๊"
+    },
+    {
+      "word": "ไก๊",
+      "correct": "ไก๊"
+    },
+    {
+      "word": "ไก๊๑",
+      "correct": "ไก๊๑"
+    },
+    {
+      "word": "ไก๊ก",
+      "correct": "ไก๊ก"
+    },
+    {
+      "word": "ไก๊ฤ",
+      "correct": "ไก๊ฤ"
+    },
+    {
+      "word": "ไก๊ฦ",
+      "correct": "ไก๊ฦ"
+    },
+    {
+      "word": "ไก๊เ",
+      "correct": "ไก๊เ"
+    },
+    {
+      "word": "ไก๊แ",
+      "correct": "ไก๊แ"
+    },
+    {
+      "word": "ไก๊โ",
+      "correct": "ไก๊โ"
+    },
+    {
+      "word": "ไก๊ใ",
+      "correct": "ไก๊ใ"
+    },
+    {
+      "word": "ไก๊ไ",
+      "correct": "ไก๊ไ"
+    },
+    {
+      "word": "ไก๊ๅ",
+      "correct": "ไก๊"
+    },
+    {
+      "word": "ไกฺ๊",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ไก๊์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ไก๊ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ไก๊็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ไก๊๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ไก๊ะ",
+      "correct": "ก๊ะ"
+    },
+    {
+      "word": "ไก๊า",
+      "correct": "ก๊า"
+    },
+    {
+      "word": "ไก๊ำ",
+      "correct": "ก๊ำ"
+    },
+    {
+      "word": "ไกุ๊",
+      "correct": "กุ๊"
+    },
+    {
+      "word": "ไกู๊",
+      "correct": "กู๊"
+    },
+    {
+      "word": "ไก๊ิ",
+      "correct": "กิ๊"
+    },
+    {
+      "word": "ไก๊ั",
+      "correct": "กั๊"
+    },
+    {
+      "word": "ไก๊ึ",
+      "correct": "กึ๊"
+    },
+    {
+      "word": "ไก๊ี",
+      "correct": "กี๊"
+    },
+    {
+      "word": "ไก๊ื",
+      "correct": "กื๊"
+    },
+    {
+      "word": "ใก๋",
+      "correct": "ใก๋"
+    },
+    {
+      "word": "ใก๋๑",
+      "correct": "ใก๋๑"
+    },
+    {
+      "word": "ใก๋ก",
+      "correct": "ใก๋ก"
+    },
+    {
+      "word": "ใก๋ฤ",
+      "correct": "ใก๋ฤ"
+    },
+    {
+      "word": "ใก๋ฦ",
+      "correct": "ใก๋ฦ"
+    },
+    {
+      "word": "ใก๋เ",
+      "correct": "ใก๋เ"
+    },
+    {
+      "word": "ใก๋แ",
+      "correct": "ใก๋แ"
+    },
+    {
+      "word": "ใก๋โ",
+      "correct": "ใก๋โ"
+    },
+    {
+      "word": "ใก๋ใ",
+      "correct": "ใก๋ใ"
+    },
+    {
+      "word": "ใก๋ไ",
+      "correct": "ใก๋ไ"
+    },
+    {
+      "word": "ใก๋ๅ",
+      "correct": "ใก๋"
+    },
+    {
+      "word": "ใกฺ๋",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ใก๋์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ใก๋ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ใก๋็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ใก๋๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ใก๋ะ",
+      "correct": "ก๋ะ"
+    },
+    {
+      "word": "ใก๋า",
+      "correct": "ก๋า"
+    },
+    {
+      "word": "ใก๋ำ",
+      "correct": "ก๋ำ"
+    },
+    {
+      "word": "ใกุ๋",
+      "correct": "กุ๋"
+    },
+    {
+      "word": "ใกู๋",
+      "correct": "กู๋"
+    },
+    {
+      "word": "ใก๋ิ",
+      "correct": "กิ๋"
+    },
+    {
+      "word": "ใก๋ั",
+      "correct": "กั๋"
+    },
+    {
+      "word": "ใก๋ึ",
+      "correct": "กึ๋"
+    },
+    {
+      "word": "ใก๋ี",
+      "correct": "กี๋"
+    },
+    {
+      "word": "ใก๋ื",
+      "correct": "กื๋"
+    },
+    {
+      "word": "ไก๋",
+      "correct": "ไก๋"
+    },
+    {
+      "word": "ไก๋๑",
+      "correct": "ไก๋๑"
+    },
+    {
+      "word": "ไก๋ก",
+      "correct": "ไก๋ก"
+    },
+    {
+      "word": "ไก๋ฤ",
+      "correct": "ไก๋ฤ"
+    },
+    {
+      "word": "ไก๋ฦ",
+      "correct": "ไก๋ฦ"
+    },
+    {
+      "word": "ไก๋เ",
+      "correct": "ไก๋เ"
+    },
+    {
+      "word": "ไก๋แ",
+      "correct": "ไก๋แ"
+    },
+    {
+      "word": "ไก๋โ",
+      "correct": "ไก๋โ"
+    },
+    {
+      "word": "ไก๋ใ",
+      "correct": "ไก๋ใ"
+    },
+    {
+      "word": "ไก๋ไ",
+      "correct": "ไก๋ไ"
+    },
+    {
+      "word": "ไก๋ๅ",
+      "correct": "ไก๋"
+    },
+    {
+      "word": "ไกฺ๋",
+      "correct": "กฺ"
+    },
+    {
+      "word": "ไก๋์",
+      "correct": "ก์"
+    },
+    {
+      "word": "ไก๋ํ",
+      "correct": "กํ"
+    },
+    {
+      "word": "ไก๋็",
+      "correct": "ก็"
+    },
+    {
+      "word": "ไก๋๎",
+      "correct": "ก๎"
+    },
+    {
+      "word": "ไก๋ะ",
+      "correct": "ก๋ะ"
+    },
+    {
+      "word": "ไก๋า",
+      "correct": "ก๋า"
+    },
+    {
+      "word": "ไก๋ำ",
+      "correct": "ก๋ำ"
+    },
+    {
+      "word": "ไกุ๋",
+      "correct": "กุ๋"
+    },
+    {
+      "word": "ไกู๋",
+      "correct": "กู๋"
+    },
+    {
+      "word": "ไก๋ิ",
+      "correct": "กิ๋"
+    },
+    {
+      "word": "ไก๋ั",
+      "correct": "กั๋"
+    },
+    {
+      "word": "ไก๋ึ",
+      "correct": "กึ๋"
+    },
+    {
+      "word": "ไก๋ี",
+      "correct": "กี๋"
+    },
+    {
+      "word": "ไก๋ื",
+      "correct": "กื๋"
     }
   ]
