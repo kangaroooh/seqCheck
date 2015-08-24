@@ -457,7 +457,7 @@ describe('Tip 6', function () {
         klear();
     }
 });
-/*
+
 describe('Tip 7', function () {
 
     var L = set7.length;
@@ -503,7 +503,7 @@ describe('Tip 7', function () {
         checkval(w, c, input.value);
         klear();
     }
-});*/
+});
 
 function sleep(milliseconds) {
     var start = new Date().getTime();
