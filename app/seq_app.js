@@ -1218,6 +1218,10 @@ function keySequenceCheck(all, lastKeyTxt) {
         case 7:
             state = 37;
             break;
+        case 8:
+            z = '';
+            state = 321;
+            break;
         case 15:
             if (xClass == 15) {
                 z = [x, x = z][0];
@@ -1281,16 +1285,6 @@ function keySequenceCheck(all, lastKeyTxt) {
                 w = '';
                 state = 2143;
             }
-            break;
-        case 8:
-            if (xClass == 15) {
-                v = '';
-                y = '';
-            } else {
-                y = '';
-                w = '';
-            }
-            state = 2142;
             break;
         case 12:
             if (xClass == 15) {

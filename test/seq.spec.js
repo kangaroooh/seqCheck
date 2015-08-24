@@ -1,4 +1,4 @@
-/*describe('Tip 11', function () {
+describe('Tip 11', function () {
 
     var L = set11.length;
     var input = document.getElementById("input");
@@ -503,9 +503,9 @@ describe('Tip 7', function () {
         checkval(w, c, input.value);
         klear();
     }
-});*/
+});
 
-describe('ROB', function () {
+/*describe('ROB', function () {
 
     var L = rob.length;
     var input = document.getElementById("input");
@@ -550,7 +550,7 @@ describe('ROB', function () {
         checkval(w, c, input.value);
         klear();
     }
-});
+});*/
 
 function sleep(milliseconds) {
     var start = new Date().getTime();
