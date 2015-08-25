@@ -7,8 +7,7 @@ var classTable = genClassTable();
 var state = 0;
 var backup_state = 0;
 
-// key sequence handler, use to get text from textfield then slice
-// and pass to check class function
+// key sequence handler, use to get & update text of textfield
 function ksHandler(event) {
 
     var dbug1 = document.getElementById("dbug1"),
@@ -37,7 +36,6 @@ function ksHandler(event) {
         fullText = keySequenceCheck(all, lastKeyTxt);
     }
 
-
     // display data
     input.value = fullText;
 
@@ -50,7 +48,7 @@ function ksHandler(event) {
 
 /*
     keySequenceCheck(fullText)
-    argument : fullText (value from textbox)
+    parameter : fullText (value from textbox)
     return : a String which is already processed
 
 
@@ -61,8 +59,6 @@ function ksHandler(event) {
     accepted or not.
 
     Please debug for more understanding.
-
-
 */
 
 function keySequenceCheck(all, lastKeyTxt) {
@@ -1976,15 +1972,16 @@ function keySequenceCheck(all, lastKeyTxt) {
 /*
     getCurrentState(fullText)
 
+    parameter : fullText (text up to the position where the user would like to get the state )
+
     This function will determine the state in the FSM. it is useful when working with backspace
     z is the last character in the string
     y is the character before z
-    x,w follow the same principle of y
+    x,w,v follow the same principle of y
 
     The idea is to read the fullText string from end to start to find
-    1. unique case (ex. z is in BV1, so it must be at the state 211 only)
-    2. correlation case (ex. z is tone, x is LV1. it's obvious that it must be at 32)
-    return state
+
+    return : state of the fullText in integer
 */
 function getCurrentState(fullText) {
 
@@ -1993,7 +1990,6 @@ function getCurrentState(fullText) {
     if (fullTextLength == 0) {
         return 0;
     }
-    base = fullText.slice(0, fullTextLength - 5),
 
         v = fullText[fullTextLength - 5],
         w = fullText[fullTextLength - 4],
@@ -2003,34 +1999,28 @@ function getCurrentState(fullText) {
 
     if (v != null) {
         var vClass = getClass(v.charCodeAt(0));
-
         console.log("wclass = " + vClass);
     }
     if (w != null) {
         var wClass = getClass(w.charCodeAt(0));
-
         console.log("wclass = " + wClass);
     }
     if (x != null) {
         var xClass = getClass(x.charCodeAt(0));
-
         console.log("xclass = " + xClass);
     }
     if (y != null) {
         var yClass = getClass(y.charCodeAt(0));
-
         console.log("yclass = " + yClass)
     }
     if (z != null) {
         var zClass = getClass(z.charCodeAt(0));
-
         console.log("zclass = " + zClass);
     }
 
 
     switch (zClass) {
-
-        //only for dotted case
+        //only for forward case (CONS, LV1, LV2, LV3)
     case 11:
         state = 11;
         break;
@@ -2046,22 +2036,18 @@ function getCurrentState(fullText) {
     case 6:
         state = 6;
         break;
-
     case 1:
     case 111:
         state = 0;
         break;
-
         // BV1
     case 12:
         state = 211;
         break;
-
     case 20:
     case 13:
         state = 212;
         break;
-
         // cons case
     case 2:
         switch (yClass) {
@@ -2082,7 +2068,6 @@ function getCurrentState(fullText) {
             break;
         }
         break;
-
         // AV1 case
     case 19:
         switch (xClass) {
@@ -2093,7 +2078,6 @@ function getCurrentState(fullText) {
             state = 211;
         }
         break;
-
         // AV3 case
     case 21:
         switch (xClass) {
@@ -2104,7 +2088,6 @@ function getCurrentState(fullText) {
             state = 213;
         }
         break;
-
         // TONE case
     case 15:
         if (yClass == 2) {
@@ -2121,7 +2104,6 @@ function getCurrentState(fullText) {
             state = 2111;
             break;
         }
-
         switch (xClass) {
         case 3:
             state = 32;
@@ -2139,7 +2121,6 @@ function getCurrentState(fullText) {
             state = 0;
         }
         break;
-
     case 7: // deals with sara -a
         switch (yClass) {
         case 15: // TONE
@@ -2178,10 +2159,8 @@ function getCurrentState(fullText) {
             } else {
                 state = 2146;
             }
-
             break;
         }
-
         break;
     case 9: // sara -aum
         if (yClass == 15) {
@@ -2198,7 +2177,6 @@ function getCurrentState(fullText) {
             } else {
                 state = 32;
             }
-
         } else {
             state = 2142;
         }
@@ -2247,10 +2225,10 @@ function klear() {
 
 /*
     getClass(ch) function
-    argument : character in ascii format
+    parameter : character (in ascii format)
     return : class of the argument character
 
-    This function is used to classify the class of specific THAI character. It's a BIG THAI over there.
+    This function is used to classify the class of specific THAI character.
     There existed 'CTRL' class once. I just leave the commented code here, in case anyone would like
     to further develop it
 */
@@ -2282,9 +2260,10 @@ function getClass(ch) {
 
 /*
     genClassTable()
-    return : dict[ascii_code] = class, its ascii code as a key and its class as a value
+    return : class from dict[ascii_code]
 
     just to generate class lookup table for the sake of laziness
+
 */
 function genClassTable() {
 
